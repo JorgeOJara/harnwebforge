@@ -96,7 +96,7 @@ export const makeitForMe = class
     num1 >= 100 ? boldTable = "Misc":displayNothing();
 
     let finalbirthPplaceResult;
-
+     console.log(num1 + " " + num2)
      if(boldTable == "Barbarian")
      {
         num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Barbarian[0]:displayNothing();
@@ -126,18 +126,18 @@ export const makeitForMe = class
         num2 >= 76 && num2 <= 100? finalbirthPplaceResult =  done.birthTable.Chybisa[3]: displayNothing();
 
      }
-     if(boldTable == "Kaldor")
      {
         num2 >= 1 && num2 <= 2? finalbirthPplaceResult =  done.birthTable.Kaldor[0]:displayNothing();
+        if(boldTable == "Kaldor")
         num2 >= 3 && num2 <= 4? finalbirthPplaceResult = done.birthTable.Kaldor[1]:displayNothing();
-        num2 >= 5 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Kaldor[2]:displayNothing();
         num2 >= 7 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Kaldor[3]:displayNothing();
-        num2 >= 10 && num2 <= 11? finalbirthPplaceResult = done.birthTable.Kaldor[4]:displayNothing();
+        num2 >= 5 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Kaldor[2]:displayNothing();
         num2 >= 12 && num2 <= 17? finalbirthPplaceResult = done.birthTable.Kaldor[5]:displayNothing();
         num2 >= 18 ? finalbirthPplaceResult = done.birthTable.Kaldor[6]: displayNothing();
         num2 >= 19 && num2 <= 20? finalbirthPplaceResult = done.birthTable.Kaldor[7]:displayNothing();
         num2 >= 21 && num2 <= 22? finalbirthPplaceResult = done.birthTable.Kaldor[8]:displayNothing();
         num2 >= 23 ? finalbirthPplaceResult = done.birthTable.Kaldor[9]:displayNothing();
+        num2 >= 10 && num2 <= 11? finalbirthPplaceResult = done.birthTable.Kaldor[4]:displayNothing();
         num2 >= 24 && num2 <= 31? finalbirthPplaceResult = done.birthTable.Kaldor[10]:displayNothing();
         num2 >= 32 && num2 <= 33? finalbirthPplaceResult = done.birthTable.Kaldor[11]:displayNothing();
         num2 >= 34 && num2 <= 36? finalbirthPplaceResult = done.birthTable.Kaldor[12]:displayNothing();
@@ -298,13 +298,43 @@ export const makeitForMe = class
      }
      if(boldTable == "Tharda")
      {
-        
+       num2 >= 1 && num2 <= 3? finalbirthPplaceResult = done.birthTable.Tharda[0]: displayNothing();
+       num2 >= 4 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Tharda[1]: displayNothing();
+       num2 >= 7 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Tharda[2]: displayNothing();
+       num2 >= 10 && num2 <= 24? finalbirthPplaceResult = done.birthTable.Tharda[3]: displayNothing();
+       num2 >= 25 ? finalbirthPplaceResult = done.birthTable.Tharda[4]: displayNothing();
+       num2 >= 26 && num2 <= 30? finalbirthPplaceResult = done.birthTable.Tharda[5]: displayNothing();
+       num2 >= 31 && num2 <= 33? finalbirthPplaceResult = done.birthTable.Tharda[6]: displayNothing();
+       num2 >= 34 && num2 <= 38? finalbirthPplaceResult = done.birthTable.Tharda[7]: displayNothing();
+       num2 >= 39 && num2 <= 42? finalbirthPplaceResult = done.birthTable.Tharda[8]: displayNothing();
+       num2 >= 43 && num2 <= 44? finalbirthPplaceResult = done.birthTable.Tharda[9]: displayNothing();
+       num2 >= 45 && num2 <= 51? finalbirthPplaceResult = done.birthTable.Tharda[10]: displayNothing();
+       num2 >= 52 && num2 <= 54? finalbirthPplaceResult = done.birthTable.Tharda[11]: displayNothing();
+       num2 >= 55 && num2 <= 59? finalbirthPplaceResult = done.birthTable.Tharda[12]: displayNothing();
+       num2 >= 60 && num2 <= 64? finalbirthPplaceResult = done.birthTable.Tharda[13]: displayNothing();
+       num2 >= 65 && num2 <= 69? finalbirthPplaceResult = done.birthTable.Tharda[14]: displayNothing();
+       num2 >= 70 && num2 <= 72? finalbirthPplaceResult = done.birthTable.Tharda[15]: displayNothing();
+       num2 >= 73 && num2 <= 76? finalbirthPplaceResult = done.birthTable.Tharda[16]: displayNothing();
+       num2 >= 77 && num2 <= 78? finalbirthPplaceResult = done.birthTable.Tharda[17]: displayNothing();
+       num2 >= 79 && num2 <= 84? finalbirthPplaceResult = done.birthTable.Tharda[18]: displayNothing();
+       num2 >= 85 && num2 <= 86? finalbirthPplaceResult = done.birthTable.Tharda[19]: displayNothing();
+       num2 >= 87 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Tharda[20]: displayNothing();
+       num2 >= 96 ? finalbirthPplaceResult = done.birthTable.Tharda[21]: displayNothing();
+       num2 >= 97 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Tharda[22]: displayNothing();
+
      }
      if(boldTable == "Misc")
      {
-        
+         num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Misc[0]: displayNothing();
+         num2 >= 87 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[1]: displayNothing();
+         num2 >= 6 && num2 <= 90? finalbirthPplaceResult = done.birthTable.Misc[2]: displayNothing();
+         num2 >= 91 && num2 <= 93? finalbirthPplaceResult = done.birthTable.Misc[3]: displayNothing();
+         num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
+         num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
+
      console.log(finalbirthPplaceResult)
+      //   end of function 
    }
 
 
