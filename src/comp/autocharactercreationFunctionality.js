@@ -105,7 +105,7 @@ export const makeitForMe = class
     num1 >= 100 ? boldTable = "Misc":displayNothing();
 
     let finalbirthPplaceResult;
-     console.log(num1 + " " + num2)
+   //   console.log(num1 + " " + num2)
      if(boldTable == "Barbarian")
      {
         num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Barbarian[0]:displayNothing();
@@ -346,9 +346,26 @@ export const makeitForMe = class
       //   end of function 
    }
 
-   giveMeAsocialClass()
+   giveMeAsocialClass(culture)
    {
       // it needs Culture from the birth table of place of birth
+      switch(culture) {
+         case "Barbarian":
+           // Tribal roll
+
+           break;
+         case "Melderyn":
+           // Viking
+
+           break;
+         case "Tharda":
+            // Imperial
+
+              break;
+         default:
+           // Feudal class
+
+       }
    }
 
 

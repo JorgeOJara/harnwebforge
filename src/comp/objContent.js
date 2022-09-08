@@ -35,5 +35,8 @@ export const objContent =
    weapons:[],
    armor:[],
    psyche:"",
-   stats:{itsAlive:true}
+   stats:{itsAlive:true},
+   items:{
+             gold:100
+       }
 }

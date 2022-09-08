@@ -32,6 +32,19 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
     </form>
+            {/* gender */}
+            <div className="form-group">
+          {/* <label class="">Group</label>  */}
+          <select
+            autoComplete="off"
+            className="bg-secondary pl-2 text-white form-control"
+            name="group"
+          >
+            <option value="null">Sex</option>
+            <option value="null">Female</option>
+            <option value="null">Male</option>
+          </select>
+        </div>
         {/* race */}
 
         <div className="form-group">
@@ -47,19 +60,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             <option value="null">Chinese</option>
           </select>
         </div>
-        {/* gender */}
-        <div className="form-group">
-          {/* <label class="">Group</label>  */}
-          <select
-            autoComplete="off"
-            className="bg-secondary pl-2 text-white form-control"
-            name="group"
-          >
-            <option value="null">Sex</option>
-            <option value="null">Female</option>
-            <option value="null">Male</option>
-          </select>
-        </div>
+
         <div className="row form-group">
           <div className="col">
             <label className="">Birthday</label>{" "}
@@ -95,19 +96,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
           </select>
         </div>
         <div class="col">
+
 <label class="">Culture</label> 
-          <select
-            autoComplete="off"
-            className="bg-secondary pl-2 text-white form-control"
-            name="group"
-          >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
-          </select>
+      <h5>Viking</h5>
         </div>
       </div>
 
