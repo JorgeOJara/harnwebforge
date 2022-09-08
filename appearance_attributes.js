@@ -1,7 +1,7 @@
 // frame => 3d6 +/- modifier if needed
 const frame = {
 "Modifiers":[-3,-2,+3],
-"Frame":['Scant','Light','Medium'.'Heavy','Massive']
+"Frame":['Scant','Light','Medium','Heavy','Massive']
 }
 
 // height => male listed first, female second, khuzdul are same 4d6
