@@ -1,3 +1,4 @@
+import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import { ValueGetter } from "./variablesContainer";
 const done = new ValueGetter();
 
@@ -341,31 +342,81 @@ export const makeitForMe = class
          num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
          num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
-     console.log(boldTable);
-     console.log(finalbirthPplaceResult);
+     console.log("culture  " + boldTable);
+     console.log("place  " + finalbirthPplaceResult);
+     this.giveMeAsocialClass(88,boldTable,finalbirthPplaceResult)
       //   end of function 
    }
 
-   giveMeAsocialClass(culture)
+   giveMeAsocialClass(num,culture,finalplace)
    {
-      // it needs Culture from the birth table of place of birth
+      // it needs a number from 1 - 100
+      //  also needs a culture -> from boldTable headers
+      // finally it needs a finalplace value for misc culture...
+
+      // this function depends on giveMeABirthPlace() 
+      let fSocialClass;
+      function displayNothing(){}
+
+
       switch(culture) {
          case "Barbarian":
-           // Tribal roll
-
+           // Tribal 
+          //   if this its your culture this are the values for you social classes
+         //  also the social classes avaliables
+               num >= 1 && num <= 10? fSocialClass = "Slave": displayNothing();
+               num >= 11 && num <= 99? fSocialClass = "Unguilded": displayNothing();
+               num == 100? fSocialClass = "Noble": displayNothing();
            break;
          case "Melderyn":
            // Viking
-
+          //   if this its your culture this are the values for you social classes
+         //  also the social classes avaliables
+                  num >= 1 && num <= 15? fSocialClass = "Slave": displayNothing();
+                  num >= 16 && num <= 80? fSocialClass = "Serf": displayNothing();
+                  num >= 81 && num <= 83? fSocialClass = "Unguilded": displayNothing();
+                  num >= 84 && num <= 98? fSocialClass = "Guilded": displayNothing();
+                  num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
            break;
          case "Tharda":
             // Imperial
-
+           //   if this its your culture this are the values for you social classes
+          //  also the social classes avaliables
+               num >= 1 && num <= 25? fSocialClass = "Slave": displayNothing();
+               num >= 26 && num <= 90? fSocialClass = "Unguilded": displayNothing();
+               num >= 91 && num <= 98? fSocialClass = "Guilded": displayNothing();
+               num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
               break;
          default:
-           // Feudal class
-
-       }
+         //   first find if there its misc culture before enythin....
+              if(finalplace == "Habe")
+              {
+                //  Khuzan
+               //   if this its your culture this are the values for you social classes
+              //  also the social classes avaliables
+                      num >= 1 && num <= 15? fSocialClass = "Unguilded": displayNothing();
+                      num >= 16 && num <= 98? fSocialClass = "Guilded": displayNothing();
+                      num >= 99 && num <= 100? fSocialClass = "Noble": displayNothing();
+              }else if(finalplace== "elshavel" || finalplace == "ulfshafen")
+              {
+               // Sindarin
+              //   if this its your culture this are the values for you social classes
+             //  also the social classes avaliables
+                     num >= 1 && num <= 70? fSocialClass = "Unguilded": displayNothing();
+                     num >= 71 && num <= 99? fSocialClass = "Guilded": displayNothing();
+                     num >= 100 ? fSocialClass = "Noble": displayNothing();
+              }else{
+               // Feudal
+              //  if this its your culture this are the values for you social classes
+             //  also the social classes avaliables
+                 num >= 1 && num <= 15? fSocialClass = "Slave": displayNothing();
+                 num >= 16 && num <= 70? fSocialClass = "Serf": displayNothing();
+                 num >= 71 && num <= 93? fSocialClass = "Unguilded": displayNothing();
+                 num >= 94 && num <= 98? fSocialClass = "Guilded": displayNothing();
+                 num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
+              }
+             console.log(fSocialClass);  
+        }
    }
 
 
