@@ -85,14 +85,23 @@ export const makeitForMe = class
    {
     let boldTable;
     function displayNothing(){return null;}
+   //  Tribal  social class
     num1 >= 1 && num1 <= 18? boldTable = "Barbarian":displayNothing();
+   //  Feudal social class
     num1 >= 19 ? boldTable = "Chybisa": displayNothing();
+   //  Feudal  social class
     num1 >= 20 && num1 <= 32? boldTable = "Kaldor": displayNothing();
+   //  Feudal  social class
     num1 >= 33 && num1 <= 44? boldTable = "Kanday": displayNothing();
+   //  Feudal social class
     num1 >= 45 && num1 <= 64? boldTable = "Melderyn": displayNothing();
+   //  viking social class
     num1 >= 65 && num1 <= 74? boldTable = "Orbaal": displayNothing();
+   //  Feudal social class
     num1 >= 75 && num1 <= 86? boldTable = "Rethem": displayNothing();
+   //  imperial social class
     num1 >= 87 && num1 <= 99? boldTable = "Tharda": displayNothing();
+   //  deep down on the place might change social class
     num1 >= 100 ? boldTable = "Misc":displayNothing();
 
     let finalbirthPplaceResult;
@@ -332,11 +341,15 @@ export const makeitForMe = class
          num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
          num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
-
-     console.log(finalbirthPplaceResult)
+     console.log(boldTable);
+     console.log(finalbirthPplaceResult);
       //   end of function 
    }
 
+   giveMeAsocialClass()
+   {
+      // it needs Culture from the birth table of place of birth
+   }
 
 
 

@@ -118,6 +118,8 @@ birthTable = {
 
 "Tharda":['Bythe','Cestor','Chenad','Coranan','Dumon','Eidru','Esuron','Firis','Fobin','Geminost','Geshtei','Hediro','Hibut','Imrium','Kuseme','Moleryn','Noru','Ostenor','Parnan','Peden','Shiran','Stimos','Telen'],
 
+// elshavel Sindarin
+// ulfshafen Sindarin
 "Misc":['Elshavel','Habe','Noron','Trobridge','Ulfshafen']
 }
 
