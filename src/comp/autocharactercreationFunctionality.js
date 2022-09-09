@@ -501,6 +501,48 @@ export const makeitForMe = class
       console.log(finalFrame);
    }
 
+
+   // wight function I do it on sunday
+
+      // space reserve
+       // space reserve
+        // space reserve
+         // space reserve
+          // space reserve
+           // space reserve
+            // space reserve
+             // space reserve
+              // space reserve
+               // space reserve
+                // space reserve
+                 // space reserve
+                  // space reserve
+
+    // end of weight function.......
+
+
+   itsMyCharacterCute()
+   {
+      // it needs race for the modiers... race
+
+      // They say that cute·ness can not be measure I pruve them wrong with this function
+      // this function will tell you how cute your Character its...
+
+      //  3d6  = Frame Scant Light Medium Heavy Massive
+      let CuteValue = this.roll(6) + this.roll(6) + this.roll(6);
+      let finalcuteValue;
+       
+      // THIS DISPLAY NONE FUNCTION ITS JUST TO PATCH THE ERROR...🤫
+      function displayNone(){return null}
+
+      CuteValue >= 1 && CuteValue <= 5? finalcuteValue = "Ugly":displayNone()
+      CuteValue >= 6 && CuteValue <= 8? finalcuteValue = "Plain":displayNone()
+      CuteValue >= 9 && CuteValue <= 12? finalcuteValue = "Average":displayNone()
+      CuteValue >= 13 && CuteValue <= 15? finalcuteValue = "Attractive":displayNone()
+      CuteValue >= 16? finalcuteValue = "Handsome":displayNone()
+      console.log(finalcuteValue);
+   }
+
 //   you can write your next method here.......⬇️⬇️⬇️
 
 
