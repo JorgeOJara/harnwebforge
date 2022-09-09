@@ -475,12 +475,32 @@ export const makeitForMe = class
            Sex == "Male"? finalheight = 54 + theCreatedValueToAdd: displayNothing();
            Sex == "female"? finalheight = 52 + theCreatedValueToAdd: displayNothing();
        } 
-      
+      // make the results into feets ......
        let convertIntonormal = finalheight / 12;
+       let finalDisplayebleValue = convertIntonormal.toFixed(1)
 
-       
-       console.log(convertIntonormal.toFixed(1));
+       console.log(finalDisplayebleValue);
    }
+
+   howFatItsMycharacter()
+   {
+      // THIS FUNCTION GIVES YOU BACK THE FRAME OF THE CHARACTER
+      //  3d6  = Frame Scant Light Medium Heavy Massive
+      let fatvalue = this.roll(6) + this.roll(6) + this.roll(6);
+      let finalFrame;
+       
+      // THIS DISPLAY NONE FUNCTION ITS JUST TO PATCH THE ERROR...🤫
+      function displayNone(){return null}
+
+      fatvalue >= 1 && fatvalue <= 5? finalFrame = "Scant":displayNone()
+      fatvalue >= 6 && fatvalue <= 8? finalFrame = "Light":displayNone()
+      fatvalue >= 9 && fatvalue <= 12? finalFrame = "Medium":displayNone()
+      fatvalue >= 13 && fatvalue <= 15? finalFrame = "Heavy":displayNone()
+      fatvalue >= 16? finalFrame = "Massive":displayNone()
+
+      console.log(finalFrame);
+   }
+
 //   you can write your next method here.......⬇️⬇️⬇️
 
 
