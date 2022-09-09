@@ -10,13 +10,15 @@ const done = new ValueGetter();
 // so if you are creating a character and you wanna avoid the dificulty of choosing the information for the character youself
 // this class got you... with enough functions to do the character for you...
 
+// later on the code you should make a function manager that check the values fiven and request values from here 
+// values that the player did not provide on the form you can ask here for a random value and build a character 
+// out of nothing.....
+
 export const makeitForMe = class
 {
     // 100 roll
    chooseRaceForMe(num)
-   //  this function choose you characters gender...
-   //  sorry but there its only 2 genders on this game 🤷‍♂️
-   // it expects a random number from 1 - 100 
+      // this functions helps you choose the Race of your character....
    {
          if(num <= 97){
               return "Human" ;
@@ -25,6 +27,9 @@ export const makeitForMe = class
 // 100 roll
       chooseSexForMe(num,Species)
       {
+    //  this function choose you characters gender...
+   //  sorry but there its only 2 genders on this game 🤷‍♂️
+  // it expects a random number from 1 - 100 
           if(Species == "Human")
           {
              if(num <= 48)
@@ -52,8 +57,8 @@ export const makeitForMe = class
       chooseMyBirthdayForMe(num12,num30)
       {
 
-         // this functions as the names impplies helps you choose your day of birth also gives you a sunsigns
-         // values back 
+         // this functions as the names impplies helps you choose your day of birth also gives you a sunsigns value back..
+         // later Note also return the actual value of the birthday before the sunsigns
 
          // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
        
