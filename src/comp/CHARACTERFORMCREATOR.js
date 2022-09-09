@@ -824,7 +824,7 @@ name="group"
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
 </div>
   <button className="btn btn-secondary b"
-  onClick={()=>autoBuild.giveMeABirthPlace(roll(100),roll(100))}
+  onClick={()=>autoBuild.giveMeMyHeiGHt("Sindarin","Male")}
   >
         <i className="text-danger fas fa-trash o">Create</i>
 </button>

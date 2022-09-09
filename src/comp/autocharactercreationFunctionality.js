@@ -16,13 +16,28 @@ const done = new ValueGetter();
 
 export const makeitForMe = class
 {
+   //  this function helps you with internal rolls. on this object
+   // Use it for everytime you need a ramdom number generated
+   //  it expects a number with the max value -> this.roll(100) its the same as saying = 1 -100
+    roll(number){
+      let  min = Math.ceil(1);
+      let  max = Math.floor(number); 
+       return Math.floor(Math.random() * (max - min + 1) + min);
+     }
+
     // 100 roll
    chooseRaceForMe(num)
       // this functions helps you choose the Race of your character....
    {
+      let RaceProvided;
+
          if(num <= 97){
-              return "Human" ;
-         }else if(num == 98){ return "Sindarin" }else{ return 'Khuzdul';}
+              RaceProvided =  "Human" ;
+         }
+         else if(num == 98)
+         {  RaceProvided =  "Sindarin" }else{ RaceProvided =  'Khuzdul';}
+
+      return RaceProvided;
    }
 // 100 roll
       chooseSexForMe(num,Species)
@@ -436,6 +451,35 @@ export const makeitForMe = class
               }
              console.log(fSocialClass);  
         }
+   }
+   giveMeMyHeiGHt(Race,Sex)
+   {
+      let theCreatedValueToAdd =  this.roll(6) + this.roll(6) + this.roll(6) + this.roll(6);
+      let finalheight; 
+      function displayNothing(){return null;}
+      
+      switch(Race) {
+         case "Sindarin":
+            // code  Male  = 51  female = 50
+                 Sex == "Male"? finalheight = 51 + theCreatedValueToAdd: displayNothing();
+                 Sex == "female"? finalheight = 50 + theCreatedValueToAdd: displayNothing();
+           break;
+         case "Khuzdul":
+           // code  male  = 40  female = 40
+          //   because they are both the same rule value  there its no diference if a male or female
+         // thats why it dosent need a if statement
+                 finalheight = 40 + theCreatedValueToAdd;
+             break;
+         default:
+           // code  male  = 54  female = 52
+           Sex == "Male"? finalheight = 54 + theCreatedValueToAdd: displayNothing();
+           Sex == "female"? finalheight = 52 + theCreatedValueToAdd: displayNothing();
+       } 
+      
+       let convertIntonormal = finalheight / 12;
+
+       
+       console.log(convertIntonormal.toFixed(1));
    }
 //   you can write your next method here.......⬇️⬇️⬇️
 
