@@ -3,8 +3,8 @@ import { objContent } from './objContent';
 import  { ValueGetter } from './variablesContainer';
 import { makeitForMe } from './autocharactercreationFunctionality';
 
-// example avatar to try
-// https://canime.files.wordpress.com/2010/05/mask-dtb.jpg
+// this component, its the form on the website, where the magic happens..
+// IN here you can found all the form imputs also the desing and structure of the form
 
 export const CHARACTERFORMCREATOR = (props) =>{
   const dt =  new ValueGetter();

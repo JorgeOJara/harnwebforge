@@ -1,3 +1,5 @@
+// this should be the end result to safe in the database for later use..
+// this object will contain all the information for the character including status
 export const objContent = 
 {
    Name:"",

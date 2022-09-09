@@ -2,10 +2,21 @@ import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import { ValueGetter } from "./variablesContainer";
 const done = new ValueGetter();
 
+//  this are all functions to create a character automaticly 
+// in here you can find a function to automate every part of the character 
+// all the functions in here require some paramaters one more than others check onn the function itself for more information
+   //  of what it expects to work...
+
+// so if you are creating a character and you wanna avoid the dificulty of choosing the information for the character youself
+// this class got you... with enough functions to do the character for you...
+
 export const makeitForMe = class
 {
     // 100 roll
    chooseRaceForMe(num)
+   //  this function choose you characters gender...
+   //  sorry but there its only 2 genders on this game 🤷‍♂️
+   // it expects a random number from 1 - 100 
    {
          if(num <= 97){
               return "Human" ;
@@ -40,16 +51,14 @@ export const makeitForMe = class
 // roll 30 for day
       chooseMyBirthdayForMe(num12,num30)
       {
-        // let mul = 0;
 
-        // num12 > 12?mul  = (num12 -2) *30:mul = (num12 -1) *30;
+         // this functions as the names impplies helps you choose your day of birth also gives you a sunsigns
+         // values back 
+
+         // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
+       
          let mul  = (num12 -1) *30;
-         
-        //  console.log(num12)
-        //  console.log(mul)
-
          let results  = mul + num30;
-
          
          let sunsigns ="";
          function displayNothing(){return null;}
@@ -84,6 +93,9 @@ export const makeitForMe = class
 
    giveMeABirthPlace(num1,num2)
    {
+   // this functions helps you get a place of birth for you character according to the Harn games maps and locations
+   // its a long function but simple, expects 2 numbers from 1-100
+   // depending on the number you might drop in a place 
     let boldTable;
     function displayNothing(){return null;}
    //  Tribal  social class
@@ -350,6 +362,8 @@ export const makeitForMe = class
 
    giveMeAsocialClass(num,culture,finalplace)
    {
+      //  this functions helps you choose the social class of you character......
+
       // it needs a number from 1 - 100
       //  also needs a culture -> from boldTable headers
       // finally it needs a finalplace value for misc culture...
@@ -418,10 +432,10 @@ export const makeitForMe = class
              console.log(fSocialClass);  
         }
    }
+//   you can write your next method here.......⬇️⬇️⬇️
 
 
-
-   // all functions  before this ending brack......
+// all functions  before this ending brack......⬆️⬆️⬆️
 }
 
 

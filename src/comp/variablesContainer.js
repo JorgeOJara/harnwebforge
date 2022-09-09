@@ -1,4 +1,5 @@
-
+//  this its a big class that contains simple values for the game nothing else ... just values
+// it helps to recall information of the game 
 export class ValueGetter{
 // frame => 3d6 +/- modifier if needed
 frame = {
