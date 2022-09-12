@@ -556,6 +556,33 @@ export const makeitForMe = class
       console.log(finalcuteValue);
    }
 
+   // CoMPlexion
+     // 1d100
+     tellMeMyCoMPlexion(num,Race)
+     {
+       // Human Sindarin Khuzdul
+       let howdarkItsMySkin;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 27? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 28 && num <= 74? howdarkItsMySkin = "Medium" :displayNone() 
+         num  >= 75 && num <= 100? howdarkItsMySkin = "Dark" :displayNone() 
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 97? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 98 && num <= 99? howdarkItsMySkin = "Medium" :displayNone() 
+         num  >= 100 ? howdarkItsMySkin = "Dark" :displayNone() 
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 90? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 91 && num <= 100? howdarkItsMySkin = "Medium" :displayNone() 
+       }
+       
+       return howdarkItsMySkin; 
+     }
 //   you can write your next method here.......⬇️⬇️⬇️
 
 
