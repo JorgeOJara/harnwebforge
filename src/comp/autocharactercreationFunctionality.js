@@ -449,7 +449,7 @@ export const makeitForMe = class
                  num >= 94 && num <= 98? fSocialClass = "Guilded": displayNothing();
                  num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
               }
-             console.log(fSocialClass);  
+             return fSocialClass;  
         }
    }
    giveMeMyHeiGHt(Race,Sex)
@@ -478,8 +478,8 @@ export const makeitForMe = class
       // make the results into feets ......
        let convertIntonormal = finalheight / 12;
        let finalDisplayebleValue = convertIntonormal.toFixed(1)
-
-       console.log(finalDisplayebleValue);
+   // first return its the inches values second feets values
+       return [finalheight,finalDisplayebleValue];
    }
 
    howFatItsMycharacter()
@@ -498,7 +498,7 @@ export const makeitForMe = class
       fatvalue >= 13 && fatvalue <= 15? finalFrame = "Heavy":displayNone()
       fatvalue >= 16? finalFrame = "Massive":displayNone()
 
-      console.log(finalFrame);
+      return finalFrame;
    }
 
 
@@ -528,7 +528,7 @@ export const makeitForMe = class
 
       //  multiply the modifier  with the default value
          results = initialWeight * modifier;
-         console.log(results.toFixed(0))
+         return results.toFixed(0)
       }
 
     // end of weight function.......
