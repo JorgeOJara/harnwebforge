@@ -583,6 +583,81 @@ export const makeitForMe = class
        
        return howdarkItsMySkin; 
      }
+
+
+     whatsMyHairColor(num,Race)
+     {
+       // Human Sindarin Khuzdul
+        //  Brown Black Red Silver Blond
+       let HairColor;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 40? HairColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 55? HairColor = "Black" :displayNone() 
+         num  >= 56 && num <= 65? HairColor = "Red" :displayNone() 
+         num  >= 66 && num <= 70? HairColor = "Silver" :displayNone()
+         num  >= 71 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 25? HairColor = "Brown" :displayNone() 
+         num  >= 26 && num <= 48? HairColor = "Black" :displayNone() 
+         num  >= 49 && num <= 50? HairColor = "Red" :displayNone() 
+         num  >= 51 && num <= 60? HairColor = "Silver" :displayNone()
+         num  >= 61 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 40? HairColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 45? HairColor = "Black" :displayNone() 
+         num  >= 46 && num <= 70? HairColor = "Red" :displayNone() 
+         num  >= 71 && num <= 90? HairColor = "Silver" :displayNone()
+         num  >= 91 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       
+        console.log(HairColor); 
+     }
+     whatsMyEyeColor(num,Race)
+     {
+       // Human Sindarin Khuzdul
+        //  Brown Hazel Gray Violet Green Blue
+       let eyeColor;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 40? eyeColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 45? eyeColor = "Hazel" :displayNone() 
+         num  >= 46 && num <= 55? eyeColor = "Gray" :displayNone() 
+         num  >= 56? eyeColor = "Violet" :displayNone()
+         num  >= 57 && num <= 70? eyeColor = "Green" :displayNone()
+         num  >= 71 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 15? eyeColor = "Brown" :displayNone() 
+         num  >= 16 && num <= 20? eyeColor = "Hazel" :displayNone() 
+         num  >= 21 && num <= 65? eyeColor = "Gray" :displayNone() 
+         num  >= 66 && num <= 75? eyeColor = "Violet" :displayNone()
+         num  >= 76 && num <= 80? eyeColor = "Green" :displayNone()
+         num  >= 81 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 50? eyeColor = "Brown" :displayNone() 
+         num  >= 51 && num <= 55? eyeColor = "Hazel" :displayNone() 
+         num  >= 56 && num <= 69? eyeColor = "Gray" :displayNone() 
+         num  >= 70? eyeColor = "Violet" :displayNone()
+         num  >= 71 && num <= 85? eyeColor = "Green" :displayNone()
+         num  >= 86 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       
+        console.log(eyeColor); 
+     }
+
+
+
+
 //   you can write your next method here.......⬇️⬇️⬇️
 
 
