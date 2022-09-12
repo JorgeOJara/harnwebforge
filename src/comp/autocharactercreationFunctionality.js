@@ -652,7 +652,7 @@ export const makeitForMe = class
          num  >= 86 && num <= 100? eyeColor = "Blue" :displayNone()
        }
        
-        console.log(eyeColor); 
+        return eyeColor; 
      }
 
 
