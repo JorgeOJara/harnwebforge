@@ -504,19 +504,32 @@ export const makeitForMe = class
 
    // wight function I do it on sunday
 
-      // space reserve
-       // space reserve
-        // space reserve
-         // space reserve
-          // space reserve
-           // space reserve
-            // space reserve
-             // space reserve
-              // space reserve
-               // space reserve
-                // space reserve
-                 // space reserve
-                  // space reserve
+      //  WeiGHt
+      howHavyItsMyCharacter(Ht,Frame)
+      {
+         // it needs the frame for the modifiers 
+         // also it needs the Haight  for the default weight 
+         // the height needs to be in inches not foots.. like its displayed
+         let initialWeight;
+         let modifier;
+         let results;
+         function displatNone(){return null;}
+         // finalWeight
+         done.finalWeight.Weight.map(d =>
+            {
+               d[0] == Ht? initialWeight = d[1] :displatNone();
+            })
+     // ['Scant',0.8],['Light',0.9],['Medium',1],['Heavy',1.1],['Massive',1.2]
+         Frame == "Scant"?modifier = 0.8: displatNone();
+         Frame == "Light"?modifier = 0.9: displatNone();
+         Frame == "Medium"?modifier = 1: displatNone();
+         Frame == "Heavy"?modifier = 1.1: displatNone();
+         Frame == "Massive"?modifier= 1.2:displatNone();
+
+      //  multiply the modifier  with the default value
+         results = initialWeight * modifier;
+         console.log(results.toFixed(0))
+      }
 
     // end of weight function.......
 
@@ -545,6 +558,8 @@ export const makeitForMe = class
 
 //   you can write your next method here.......⬇️⬇️⬇️
 
+
+ 
 
 // all functions  before this ending brack......⬆️⬆️⬆️
 }
