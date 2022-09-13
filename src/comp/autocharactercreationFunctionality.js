@@ -448,7 +448,7 @@ export const makeitForMe = class
                  num >= 94 && num <= 98? fSocialClass = "Guilded": displayNothing();
                  num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
               }
-             console.log(fSocialClass);  
+             return fSocialClass;  
         }
    }
    giveMeMyHeiGHt(Race,Sex)
@@ -477,8 +477,8 @@ export const makeitForMe = class
       // make the results into feets ......
        let convertIntonormal = finalheight / 12;
        let finalDisplayebleValue = convertIntonormal.toFixed(1)
-
-       console.log(finalDisplayebleValue);
+   // first return its the inches values second feets values
+       return [finalheight,finalDisplayebleValue];
    }
 
    howFatItsMycharacter()
@@ -497,25 +497,38 @@ export const makeitForMe = class
       fatvalue >= 13 && fatvalue <= 15? finalFrame = "Heavy":displayNone()
       fatvalue >= 16? finalFrame = "Massive":displayNone()
 
-      console.log(finalFrame);
+      return finalFrame;
    }
 
 
    // wight function I do it on sunday
 
-      // space reserve
-       // space reserve
-        // space reserve
-         // space reserve
-          // space reserve
-           // space reserve
-            // space reserve
-             // space reserve
-              // space reserve
-               // space reserve
-                // space reserve
-                 // space reserve
-                  // space reserve
+      //  WeiGHt
+      howHavyItsMyCharacter(Ht,Frame)
+      {
+         // it needs the frame for the modifiers 
+         // also it needs the Haight  for the default weight 
+         // the height needs to be in inches not foots.. like its displayed
+         let initialWeight;
+         let modifier;
+         let results;
+         function displatNone(){return null;}
+         // finalWeight
+         done.finalWeight.Weight.map(d =>
+            {
+               d[0] == Ht? initialWeight = d[1] :displatNone();
+            })
+     // ['Scant',0.8],['Light',0.9],['Medium',1],['Heavy',1.1],['Massive',1.2]
+         Frame == "Scant"?modifier = 0.8: displatNone();
+         Frame == "Light"?modifier = 0.9: displatNone();
+         Frame == "Medium"?modifier = 1: displatNone();
+         Frame == "Heavy"?modifier = 1.1: displatNone();
+         Frame == "Massive"?modifier= 1.2:displatNone();
+
+      //  multiply the modifier  with the default value
+         results = initialWeight * modifier;
+         return results.toFixed(0)
+      }
 
     // end of weight function.......
 
@@ -542,8 +555,112 @@ export const makeitForMe = class
       console.log(finalcuteValue);
    }
 
+   // CoMPlexion
+     // 1d100
+     tellMeMyCoMPlexion(num,Race)
+     {
+       // Human Sindarin Khuzdul
+       let howdarkItsMySkin;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 27? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 28 && num <= 74? howdarkItsMySkin = "Medium" :displayNone() 
+         num  >= 75 && num <= 100? howdarkItsMySkin = "Dark" :displayNone() 
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 97? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 98 && num <= 99? howdarkItsMySkin = "Medium" :displayNone() 
+         num  >= 100 ? howdarkItsMySkin = "Dark" :displayNone() 
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 90? howdarkItsMySkin = "Fair" :displayNone() 
+         num  >= 91 && num <= 100? howdarkItsMySkin = "Medium" :displayNone() 
+       }
+       
+       return howdarkItsMySkin; 
+     }
+
+
+     whatsMyHairColor(num,Race)
+     {
+       // Human Sindarin Khuzdul
+        //  Brown Black Red Silver Blond
+       let HairColor;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 40? HairColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 55? HairColor = "Black" :displayNone() 
+         num  >= 56 && num <= 65? HairColor = "Red" :displayNone() 
+         num  >= 66 && num <= 70? HairColor = "Silver" :displayNone()
+         num  >= 71 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 25? HairColor = "Brown" :displayNone() 
+         num  >= 26 && num <= 48? HairColor = "Black" :displayNone() 
+         num  >= 49 && num <= 50? HairColor = "Red" :displayNone() 
+         num  >= 51 && num <= 60? HairColor = "Silver" :displayNone()
+         num  >= 61 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 40? HairColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 45? HairColor = "Black" :displayNone() 
+         num  >= 46 && num <= 70? HairColor = "Red" :displayNone() 
+         num  >= 71 && num <= 90? HairColor = "Silver" :displayNone()
+         num  >= 91 && num <= 100? HairColor = "Blond" :displayNone()
+       }
+       
+        console.log(HairColor); 
+     }
+     whatsMyEyeColor(num,Race)
+     {
+       // Human Sindarin Khuzdul
+        //  Brown Hazel Gray Violet Green Blue
+       let eyeColor;
+       function displayNone(){return null;}
+       if(Race == "Human")
+       {
+         num  >= 1 && num <= 40? eyeColor = "Brown" :displayNone() 
+         num  >= 41 && num <= 45? eyeColor = "Hazel" :displayNone() 
+         num  >= 46 && num <= 55? eyeColor = "Gray" :displayNone() 
+         num  >= 56? eyeColor = "Violet" :displayNone()
+         num  >= 57 && num <= 70? eyeColor = "Green" :displayNone()
+         num  >= 71 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       if(Race == "Sindarin")
+       {
+         num  >= 1 && num <= 15? eyeColor = "Brown" :displayNone() 
+         num  >= 16 && num <= 20? eyeColor = "Hazel" :displayNone() 
+         num  >= 21 && num <= 65? eyeColor = "Gray" :displayNone() 
+         num  >= 66 && num <= 75? eyeColor = "Violet" :displayNone()
+         num  >= 76 && num <= 80? eyeColor = "Green" :displayNone()
+         num  >= 81 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       if(Race == "Khuzdul")
+       {
+         num  >= 1 && num <= 50? eyeColor = "Brown" :displayNone() 
+         num  >= 51 && num <= 55? eyeColor = "Hazel" :displayNone() 
+         num  >= 56 && num <= 69? eyeColor = "Gray" :displayNone() 
+         num  >= 70? eyeColor = "Violet" :displayNone()
+         num  >= 71 && num <= 85? eyeColor = "Green" :displayNone()
+         num  >= 86 && num <= 100? eyeColor = "Blue" :displayNone()
+       }
+       
+        return eyeColor; 
+     }
+
+
+
+
 //   you can write your next method here.......⬇️⬇️⬇️
 
+
+ 
 
 // all functions  before this ending brack......⬆️⬆️⬆️
 }
