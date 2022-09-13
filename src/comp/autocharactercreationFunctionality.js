@@ -654,11 +654,22 @@ export const makeitForMe = class
         return eyeColor; 
      }
 
-
-
-
 //   you can write your next method here.......⬇️⬇️⬇️
-
+   dexterityAttribute(Race){
+      let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
+      switch(Race) {
+         case "Sindarin":
+            // Sindarin gets 2 additonal point in Dexterity
+            dexterity = dexterity + 2;
+            break;
+            //Khuzdul gets 1 additonal point in Dexterity
+         case "Khuzdul":
+            dexterity = dexterity + 1;
+            break;
+         default:
+            return dexterity;    
+       }
+     }
 
  
 
