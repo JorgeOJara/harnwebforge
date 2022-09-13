@@ -657,21 +657,17 @@ export const makeitForMe = class
 //   you can write your next method here.......⬇️⬇️⬇️
    dexterityAttribute(Race){
       let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
-      switch(Race) {
-         case "Sindarin":
-            // Sindarin gets 2 additonal point in Dexterity
-            dexterity = dexterity + 2;
-            break;
-            //Khuzdul gets 1 additonal point in Dexterity
-         case "Khuzdul":
-            dexterity = dexterity + 1;
-            break;
-         default:
-            return dexterity;    
-       }
+      // Sindarin gets 2 additonal point in Dexterity
+      if(Race === "Sindarin"){
+         dexterity = dexterity + 2;
+      }
+      //Khuzdul gets 1 additonal point in Dexterity
+      if(Race === "Khuzdul"){
+         dexterity = dexterity + 1;
+      }   
+      return dexterity;    
      }
 
- 
 
 // all functions  before this ending brack......⬆️⬆️⬆️
 }
