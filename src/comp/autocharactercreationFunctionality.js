@@ -5,20 +5,19 @@ const done = new ValueGetter();
 //  this are all functions to create a character automaticly 
 // in here you can find a function to automate every part of the character 
 // all the functions in here require some paramaters one more than others check onn the function itself for more information
-   //  of what it expects to work...
+//of what it expects to work...
 
 // so if you are creating a character and you wanna avoid the dificulty of choosing the information for the character youself
 // this class got you... with enough functions to do the character for you...
 
-// later on the code you should make a function manager that check the values fiven and request values from here 
-// values that the player did not provide on the form you can ask here for a random value and build a character 
-// out of nothing.....
+//Later on the code you should make a function manager that check the values fiven and request values from here 
+//Values that the player did not provide on the form you can ask here for a random value and build a character out of nothing.....
 
 export const makeitForMe = class
 {
-   //  this function helps you with internal rolls. on this object
-   // Use it for everytime you need a ramdom number generated
-   //  it expects a number with the max value -> this.roll(100) its the same as saying = 1 -100
+   //This function helps you with internal rolls. on this object
+   //Use it for everytime you need a ramdom number generated
+   //It expects a number with the max value -> this.roll(100) its the same as saying = 1 -100
     roll(number){
       let  min = Math.ceil(1);
       let  max = Math.floor(number); 
@@ -43,7 +42,7 @@ export const makeitForMe = class
       chooseSexForMe(num,Species)
       {
     //  this function choose you characters gender...
-   //  sorry but there its only 2 genders on this game 🤷‍♂️
+   //  sorry but there its only 2 genders on this game (lol) 🤷‍♂️
   // it expects a random number from 1 - 100 
           if(Species == "Human")
           {
