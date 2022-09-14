@@ -668,6 +668,34 @@ export const makeitForMe = class
       return dexterity;    
      }
 
+     agilityAttribute(finalFrame, Race){
+         let agility = this.roll(6) + this.roll(6) + this.roll(6); 
+         if(finalFrame === "Scant"){
+            agility = agility + 2;
+            if(Race === "Sindarin"){
+               agility = agility + 2;
+            }
+         }
+         if(finalFrame === "Light"){
+            agility = agility + 1;
+            if(Race === "Sindarin"){
+               agility = agility + 2;
+            }
+         }
+         if(finalFrame === "Heavy"){
+            agility = agility - 1;
+            if(Race === "Sindarin"){
+               agility = agility + 2;
+            }
+         }
+         if(finalFrame === "Massive"){
+            agility = agility + 2;
+            if(Race === "Sindarin"){
+               agility = agility - 2;
+            }
+         }
+         return agility;
+     }
 
 // all functions  before this ending brack......⬆️⬆️⬆️
 }
