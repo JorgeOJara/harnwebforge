@@ -23,7 +23,8 @@ export const makeitForMe = class
       let  max = Math.floor(number); 
        return Math.floor(Math.random() * (max - min + 1) + min);
      }
-
+   //   function to solve if error...
+   displayNone(){return null;}
     // 100 roll
    chooseRaceForMe(num)
       // this functions helps you choose the Race of your character....
@@ -710,30 +711,14 @@ export const makeitForMe = class
 
      agilityAttribute(finalFrame, Race){
          let agility = this.roll(6) + this.roll(6) + this.roll(6); 
-         if(finalFrame === "Scant"){
-            agility = agility + 2;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Light"){
-            agility = agility + 1;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Heavy"){
-            agility = agility - 1;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Massive"){
-            agility = agility + 2;
-            if(Race === "Sindarin"){
-               agility = agility - 2;
-            }
-         }
+
+         Race === "Sindarin"?agility = agility + 2: this.displayNone();
+
+         if(finalFrame === "Scant"){ agility = agility + 2; }
+         if(finalFrame === "Light"){ agility = agility + 1; }
+         if(finalFrame === "Heavy"){ agility = agility - 1; }
+         if(finalFrame === "Massive"){ agility = agility + 2; }
+
          return agility;
      }
 
