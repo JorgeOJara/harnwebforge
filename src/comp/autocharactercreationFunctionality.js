@@ -23,7 +23,8 @@ export const makeitForMe = class
       let  max = Math.floor(number); 
        return Math.floor(Math.random() * (max - min + 1) + min);
      }
-
+   //   function to solve if error...
+   displayNone(){return null;}
     // 100 roll
    chooseRaceForMe(num)
       // this functions helps you choose the Race of your character....
@@ -526,8 +527,9 @@ export const makeitForMe = class
          Frame == "Massive"?modifier= 1.2:displatNone();
 
       //  multiply the modifier  with the default value
+      // testing function call.. howHavyItsMyCharacter(56,"Medium")
          results = initialWeight * modifier;
-         return results.toFixed(0)
+         return results.toFixed(0);
       }
 
     // end of weight function.......
@@ -654,6 +656,45 @@ export const makeitForMe = class
         return eyeColor; 
      }
 
+   //   strenGtH
+//   this function will give you the strenGtH value 
+     howItsMycharacterStrenGtH(Weight,Race)
+     {
+      let strenGtH = this.roll(6) + this.roll(6) + this.roll(6); 
+      function displayNone(){return null;}
+      
+      // Modifiers for the Races
+      Race === "Khuzdul"? strenGtH = strenGtH + 4 :displayNone()
+      Race === "Sindarin"?strenGtH = strenGtH + 1 :displayNone()
+
+      // depending on the weight rage you get penalties or  added points for your strenGtH
+
+      Weight  >= 1   && Weight <= 85 ? strenGtH = strenGtH - 4 :displayNone() 
+      Weight  >= 86  && Weight <= 110? strenGtH = strenGtH - 3 :displayNone() 
+      Weight  >= 111 && Weight <= 130? strenGtH = strenGtH - 2 :displayNone() 
+      Weight  >= 131 && Weight <= 145? strenGtH = strenGtH - 1 :displayNone() 
+      Weight  >= 146 && Weight <= 155? strenGtH = strenGtH - 0 :displayNone()
+      Weight  >= 156 && Weight <= 170? strenGtH = strenGtH + 1 :displayNone()
+      Weight  >= 171 && Weight <= 190? strenGtH = strenGtH + 2 :displayNone()
+      Weight  >= 192 && Weight <= 215? strenGtH = strenGtH + 3 :displayNone()
+      Weight  >= 216 && Weight <= 500? strenGtH = strenGtH + 4 :displayNone()
+
+      // get the value back...
+        return strenGtH;
+     }
+
+   //    Stamina...
+   whatsMyCharacterStamina(Race)
+   {
+      let Stamina  = this.roll(6) + this.roll(6) + this.roll(6); 
+      function displayNone(){return null;}
+      
+      // Modifiers for the Races
+      Race === "Khuzdul"? Stamina = Stamina + 4 :displayNone()
+      Race === "Sindarin"?Stamina = Stamina + 1 :displayNone()
+
+      console.log(Stamina);
+   }
 //   you can write your next method here.......⬇️⬇️⬇️
    dexterityAttribute(Race){
       let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
@@ -670,30 +711,14 @@ export const makeitForMe = class
 
      agilityAttribute(finalFrame, Race){
          let agility = this.roll(6) + this.roll(6) + this.roll(6); 
-         if(finalFrame === "Scant"){
-            agility = agility + 2;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Light"){
-            agility = agility + 1;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Heavy"){
-            agility = agility - 1;
-            if(Race === "Sindarin"){
-               agility = agility + 2;
-            }
-         }
-         if(finalFrame === "Massive"){
-            agility = agility + 2;
-            if(Race === "Sindarin"){
-               agility = agility - 2;
-            }
-         }
+
+         Race === "Sindarin"?agility = agility + 2: this.displayNone();
+
+         if(finalFrame === "Scant"){ agility = agility + 2; }
+         if(finalFrame === "Light"){ agility = agility + 1; }
+         if(finalFrame === "Heavy"){ agility = agility - 1; }
+         if(finalFrame === "Massive"){ agility = agility + 2; }
+
          return agility;
      }
 
