@@ -824,7 +824,7 @@ name="group"
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
 </div>
   <button className="btn btn-secondary b"
-  onClick={()=>autoBuild.agilityAttribute("Heavy","Khuzdul")}
+  onClick={()=>autoBuild.eyesightAttribute("Barbarian")}
   >
         <i className="text-danger fas fa-trash o">Create</i>
 </button>

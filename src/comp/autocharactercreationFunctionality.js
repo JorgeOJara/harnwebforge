@@ -696,7 +696,9 @@ export const makeitForMe = class
       console.log(Stamina);
    }
 //   you can write your next method here.......⬇️⬇️⬇️
+   
    dexterityAttribute(Race){
+      //Using roll function to calcultate 3D6
       let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
       // Sindarin gets 2 additonal point in Dexterity
       if(Race === "Sindarin"){
@@ -708,7 +710,6 @@ export const makeitForMe = class
       }   
       return dexterity;    
      }
-
      agilityAttribute(finalFrame, Race){
          let agility = this.roll(6) + this.roll(6) + this.roll(6); 
 
@@ -717,12 +718,42 @@ export const makeitForMe = class
          if(finalFrame === "Scant"){ agility = agility + 2; }
          if(finalFrame === "Light"){ agility = agility + 1; }
          if(finalFrame === "Heavy"){ agility = agility - 1; }
-         if(finalFrame === "Massive"){ agility = agility + 2; }
+         if(finalFrame === "Massive"){ agility = agility - 2; }
 
          return agility;
      }
 
+     eyesightAttribute(Culture="", Race=""){
+         let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
+         switch(Culture){
+            case "Barbarian":
+               eyesight = eyesight + 1;
+               break;
+            default:
+               if(Race === "Sindarin"){eyesight = eyesight + 2;}
+               if(Race === "Khuzdul"){eyesight = eyesight + 1;}
+         }
+         console.log(eyesight);
+     }
+
+     /**  hearingAttribute(boldTable, Species){
+         let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
+         if(boldTable === "Barbarian"){hearing = hearing + 2;}
+         if(Species === "Sindarin"){ hearing = hearing + 2; }
+         if(Species === "Khuzdul"){ hearing = hearing + 2; }
+
+         return hearing;
+     }
+     smellAttribute(boldTable, Species){
+      let smell = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(boldTable === "Barbarian"){smell = smell + 2;}
+      if(Species === "Sindarin"){ smell = smell + 3; }
+      if(Species === "Khuzdul"){ smell = smell + 2; }
+
+      return smell;
+  } */
 // all functions  before this ending brack......⬆️⬆️⬆️
+
 }
 
 
