@@ -116,30 +116,30 @@ export const makeitForMe = class
    // this functions helps you get a place of birth for you character according to the Harn games maps and locations
    // its a long function but simple, expects 2 numbers from 1-100
    // depending on the number you might drop in a place 
-    let boldTable;
+    let Culture;
     function displayNothing(){return null;}
    //  Tribal  social class
-    num1 >= 1 && num1 <= 18? boldTable = "Barbarian":displayNothing();
+    num1 >= 1 && num1 <= 18? Culture = "Barbarian":displayNothing();
    //  Feudal social class
-    num1 >= 19 ? boldTable = "Chybisa": displayNothing();
+    num1 >= 19 ? Culture = "Chybisa": displayNothing();
    //  Feudal  social class
-    num1 >= 20 && num1 <= 32? boldTable = "Kaldor": displayNothing();
+    num1 >= 20 && num1 <= 32? Culture = "Kaldor": displayNothing();
    //  Feudal  social class
-    num1 >= 33 && num1 <= 44? boldTable = "Kanday": displayNothing();
+    num1 >= 33 && num1 <= 44? Culture = "Kanday": displayNothing();
    //  Feudal social class
-    num1 >= 45 && num1 <= 64? boldTable = "Melderyn": displayNothing();
+    num1 >= 45 && num1 <= 64? Culture = "Melderyn": displayNothing();
    //  viking social class
-    num1 >= 65 && num1 <= 74? boldTable = "Orbaal": displayNothing();
+    num1 >= 65 && num1 <= 74? Culture = "Orbaal": displayNothing();
    //  Feudal social class
-    num1 >= 75 && num1 <= 86? boldTable = "Rethem": displayNothing();
+    num1 >= 75 && num1 <= 86? Culture = "Rethem": displayNothing();
    //  imperial social class
-    num1 >= 87 && num1 <= 99? boldTable = "Tharda": displayNothing();
+    num1 >= 87 && num1 <= 99? Culture = "Tharda": displayNothing();
    //  deep down on the place might change social class
-    num1 >= 100 ? boldTable = "Misc":displayNothing();
+    num1 >= 100 ? Culture = "Misc":displayNothing();
 
     let finalbirthPplaceResult;
    //   console.log(num1 + " " + num2)
-     if(boldTable == "Barbarian")
+     if(Culture == "Barbarian")
      {
         num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Barbarian[0]:displayNothing();
         num2 >= 6 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Barbarian[1]: displayNothing();
@@ -160,7 +160,7 @@ export const makeitForMe = class
         num2 >= 93 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Barbarian[16]: displayNothing();
         num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Barbarian[17]: displayNothing();
      }
-     if(boldTable == "Chybisa")
+     if(Culture == "Chybisa")
      {
         num2 >= 1 && num2 <= 40? finalbirthPplaceResult = done.birthTable.Chybisa[0]:displayNothing();
         num2 >= 41 && num2 <= 60? finalbirthPplaceResult =  done.birthTable.Chybisa[1]: displayNothing();
@@ -170,7 +170,7 @@ export const makeitForMe = class
      }
      {
         num2 >= 1 && num2 <= 2? finalbirthPplaceResult =  done.birthTable.Kaldor[0]:displayNothing();
-        if(boldTable == "Kaldor")
+        if(Culture == "Kaldor")
         num2 >= 3 && num2 <= 4? finalbirthPplaceResult = done.birthTable.Kaldor[1]:displayNothing();
         num2 >= 7 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Kaldor[3]:displayNothing();
         num2 >= 5 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Kaldor[2]:displayNothing();
@@ -202,7 +202,7 @@ export const makeitForMe = class
         num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Kaldor[29]:displayNothing();
      }
 
-     if(boldTable == "Kanday")
+     if(Culture == "Kanday")
      {
         num2 >= 1 && num2 <= 16? finalbirthPplaceResult = done.birthTable.Kanday[0]:displayNothing();
         num2 >= 17 && num2 <= 18? finalbirthPplaceResult = done.birthTable.Kanday[1]:displayNothing();
@@ -232,7 +232,7 @@ export const makeitForMe = class
         num2 >= 991 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Kanday[25]:displayNothing();
         
      }
-     if(boldTable == "Melderyn")
+     if(Culture == "Melderyn")
      {
       num2 >= 1 && num2 <= 10? finalbirthPplaceResult = done.birthTable.Melderyn[0]:displayNothing();
       num2 >= 11 && num2 <= 20? finalbirthPplaceResult = done.birthTable.Melderyn[1]:displayNothing();
@@ -265,7 +265,7 @@ export const makeitForMe = class
       num2 >= 97 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Melderyn[27]:displayNothing();
       num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Melderyn[28]:displayNothing();
      }
-     if(boldTable == "Orbaal")
+     if(Culture == "Orbaal")
      {
 
       num2 >= 1 && num2 <= 2? finalbirthPplaceResult = done.birthTable.Orbaal[0]: displayNothing();
@@ -310,7 +310,7 @@ export const makeitForMe = class
 
 
      }
-     if(boldTable == "Rethem")
+     if(Culture == "Rethem")
      {
        num2 >= 1 && num2 <= 2? finalbirthPplaceResult = done.birthTable.Rethem[0]: displayNothing();
        num2 >= 3 && num2 <= 4? finalbirthPplaceResult = done.birthTable.Rethem[1]: displayNothing();
@@ -338,7 +338,7 @@ export const makeitForMe = class
        num2 >= 95 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Rethem[23]: displayNothing();
        num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Rethem[24]: displayNothing();
      }
-     if(boldTable == "Tharda")
+     if(Culture == "Tharda")
      {
        num2 >= 1 && num2 <= 3? finalbirthPplaceResult = done.birthTable.Tharda[0]: displayNothing();
        num2 >= 4 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Tharda[1]: displayNothing();
@@ -365,7 +365,7 @@ export const makeitForMe = class
        num2 >= 97 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Tharda[22]: displayNothing();
 
      }
-     if(boldTable == "Misc")
+     if(Culture == "Misc")
      {
          num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Misc[0]: displayNothing();
          num2 >= 87 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[1]: displayNothing();
@@ -374,9 +374,9 @@ export const makeitForMe = class
          num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
          num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
-     console.log("culture  " + boldTable);
+     console.log("culture  " + Culture);
      console.log("place  " + finalbirthPplaceResult);
-     this.giveMeAsocialClass(88,boldTable,finalbirthPplaceResult)
+     this.giveMeAsocialClass(88,Culture,finalbirthPplaceResult)
       //   end of function 
    }
 
@@ -385,7 +385,7 @@ export const makeitForMe = class
       //  this functions helps you choose the social class of you character......
 
       // it needs a number from 1 - 100
-      //  also needs a culture -> from boldTable headers
+      //  also needs a culture -> from Culture headers
       // finally it needs a finalplace value for misc culture...
 
       // this function depends on giveMeABirthPlace() 
@@ -723,35 +723,31 @@ export const makeitForMe = class
          return agility;
      }
 
-     eyesightAttribute(Culture="", Race=""){
-         let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
-         switch(Culture){
-            case "Barbarian":
-               eyesight = eyesight + 1;
-               break;
-            default:
-               if(Race === "Sindarin"){eyesight = eyesight + 2;}
-               if(Race === "Khuzdul"){eyesight = eyesight + 1;}
-         }
-         console.log(eyesight);
-     }
+     eyesightAttribute(Culture, Species){
+      let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(Culture === "Barbarian"){eyesight = eyesight + 2;}
+      if(Species === "Sindarin"){ eyesight = eyesight + 2; }
+      if(Species === "Khuzdul"){ eyesight = eyesight + 2; }
 
-     /**  hearingAttribute(boldTable, Species){
+         return eyesight;
+  }
+
+     hearingAttribute(Culture, Species){
          let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
-         if(boldTable === "Barbarian"){hearing = hearing + 2;}
+         if(Culture === "Barbarian"){hearing = hearing + 2;}
          if(Species === "Sindarin"){ hearing = hearing + 2; }
          if(Species === "Khuzdul"){ hearing = hearing + 2; }
 
          return hearing;
      }
-     smellAttribute(boldTable, Species){
+     smellAttribute(Culture, Species){
       let smell = this.roll(6) + this.roll(6) + this.roll(6); 
-      if(boldTable === "Barbarian"){smell = smell + 2;}
+      if(Culture === "Barbarian"){smell = smell + 2;}
       if(Species === "Sindarin"){ smell = smell + 3; }
       if(Species === "Khuzdul"){ smell = smell + 2; }
 
       return smell;
-  } */
+  } 
 // all functions  before this ending brack......⬆️⬆️⬆️
 
 }
