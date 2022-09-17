@@ -709,37 +709,37 @@ export const makeitForMe = class
          dexterity = dexterity + 1;
       }   
       return dexterity;    
-     }
-     agilityAttribute(finalFrame, Race){
-         let agility = this.roll(6) + this.roll(6) + this.roll(6); 
+   }
+   agilityAttribute(finalFrame, Race){
+      let agility = this.roll(6) + this.roll(6) + this.roll(6); 
 
-         Race === "Sindarin"?agility = agility + 2: this.displayNone();
+      Race === "Sindarin"?agility = agility + 2: this.displayNone();
 
-         if(finalFrame === "Scant"){ agility = agility + 2; }
-         if(finalFrame === "Light"){ agility = agility + 1; }
-         if(finalFrame === "Heavy"){ agility = agility - 1; }
-         if(finalFrame === "Massive"){ agility = agility - 2; }
+      if(finalFrame === "Scant"){ agility = agility + 2; }
+      if(finalFrame === "Light"){ agility = agility + 1; }
+      if(finalFrame === "Heavy"){ agility = agility - 1; }
+      if(finalFrame === "Massive"){ agility = agility - 2; }
 
-         return agility;
-     }
+      return agility;
+   }
 
-     eyesightAttribute(Culture, Species){
+   eyesightAttribute(Culture, Species){
       let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
       if(Culture === "Barbarian"){eyesight = eyesight + 2;}
       if(Species === "Sindarin"){ eyesight = eyesight + 2; }
       if(Species === "Khuzdul"){ eyesight = eyesight + 2; }
 
-         return eyesight;
+      return eyesight;
   }
 
-     hearingAttribute(Culture, Species){
-         let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
-         if(Culture === "Barbarian"){hearing = hearing + 2;}
-         if(Species === "Sindarin"){ hearing = hearing + 2; }
-         if(Species === "Khuzdul"){ hearing = hearing + 2; }
+   hearingAttribute(Culture, Species){
+      let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(Culture === "Barbarian"){hearing = hearing + 2;}
+      if(Species === "Sindarin"){ hearing = hearing + 2; }
+      if(Species === "Khuzdul"){ hearing = hearing + 2; }
 
-         return hearing;
-     }
+      return hearing;
+   }
      smellAttribute(Culture, Species){
       let smell = this.roll(6) + this.roll(6) + this.roll(6); 
       if(Culture === "Barbarian"){smell = smell + 2;}
@@ -747,7 +747,20 @@ export const makeitForMe = class
       if(Species === "Khuzdul"){ smell = smell + 2; }
 
       return smell;
-  } 
+   }
+      voiceAttribute(Race){
+         let voice = this.roll(6) + this.roll(6) + this.roll(6);
+         let voiceDescription = "";
+         if(Race === "Sindarin"){voice = voice + 2};
+         if(voice >= 3 && voice <= 4){voiceDescription = "Unbearable"};
+         if(voice >= 5 && voice <=8){voiceDescription = "Unpleasant "};
+         if(voice >= 9 && voice <= 12){voiceDescription = "Average"};
+         if(voice >= 13 && voice <= 15){voiceDescription = "Pleasant"};
+         if(voice >= 16 && voice <= 17){voiceDescription = "Excelent"};
+         if(voice >= 18){voiceDescription = "Unearthly"};
+
+         return voiceDescription
+      }
 // all functions  before this ending brack......⬆️⬆️⬆️
 
 }
