@@ -761,6 +761,42 @@ export const makeitForMe = class
 
          return voiceDescription
       }
+
+      intelligenceAttribute(){
+         let intelligence = this.roll(6) + this.roll(6) + this.roll(6);
+         let memory = "";
+         let reasoning = "";
+         let intelligenceArray = [];
+
+         if(intelligence >= 3 && intelligence<= 5){
+            memory = "Absent minded";
+            reasoning = "Moronic/Stupid";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 6 && intelligence <= 8){
+            memory = "Forgetful";
+            reasoning = "Short witted";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 9 && intelligence <= 12){
+            memory = "Average";
+            reasoning = "Average";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 13 && intelligence <= 15){
+            memory = "Good";
+            reasoning = "Clever";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 16){
+            memory = "Excellent";
+            reasoning = "Genius";
+            intelligenceArray.push(memory, reasoning);
+         }
+
+         return intelligenceArray;
+
+      }
 // all functions  before this ending brack......⬆️⬆️⬆️
 
 }
