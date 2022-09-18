@@ -823,13 +823,7 @@ name="group"
 <label className="medic">Psyche</label>
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
 </div>
-  <button className="btn btn-secondary b"
-<<<<<<< HEAD
-  onClick={()=>autoBuild.intelligenceAttribute()}
-=======
-  onClick={()=>  autoBuild.agilityAttribute("Heavy","Khuzdul")}
->>>>>>> main
-  >
+  <button className="btn btn-secondary b" onClick={()=>  autoBuild.agilityAttribute("Heavy","Khuzdul")} >
         <i className="text-danger fas fa-trash o">Create</i>
 </button>
 </>             
