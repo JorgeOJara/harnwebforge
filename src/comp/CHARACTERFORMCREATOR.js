@@ -704,7 +704,7 @@ name="group"
 </select>
 </div>
 <div class="col">
-<label class="">Armor</label> 
+<label class="">armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -722,7 +722,7 @@ name="group"
 
 <div class="row form-group">
 <div class="col">
-<label class="">Armor</label> 
+<label class="">armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -737,7 +737,7 @@ name="group"
 </select>
 </div>
 <div class="col">
-<label class="">Armor</label> 
+<label class="">armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -755,7 +755,7 @@ name="group"
 
 <div class="row form-group">
 <div class="col">
-<label class="">Armor</label> 
+<label class="">armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -770,7 +770,7 @@ name="group"
 </select>
 </div>
 <div class="col">
-<label class="">Armor</label> 
+<label class="">armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -786,7 +786,7 @@ name="group"
 </div>
 </div> 
 
-{/* end or gear */}
+{/* end of gear */}
 
 <div className="form-group">
 <label className="medic">Psyche</label>
