@@ -116,30 +116,30 @@ export const makeitForMe = class
    // this functions helps you get a place of birth for you character according to the Harn games maps and locations
    // its a long function but simple, expects 2 numbers from 1-100
    // depending on the number you might drop in a place 
-    let boldTable;
+    let Culture;
     function displayNothing(){return null;}
    //  Tribal  social class
-    num1 >= 1 && num1 <= 18? boldTable = "Barbarian":displayNothing();
+    num1 >= 1 && num1 <= 18? Culture = "Barbarian":displayNothing();
    //  Feudal social class
-    num1 >= 19 ? boldTable = "Chybisa": displayNothing();
+    num1 >= 19 ? Culture = "Chybisa": displayNothing();
    //  Feudal  social class
-    num1 >= 20 && num1 <= 32? boldTable = "Kaldor": displayNothing();
+    num1 >= 20 && num1 <= 32? Culture = "Kaldor": displayNothing();
    //  Feudal  social class
-    num1 >= 33 && num1 <= 44? boldTable = "Kanday": displayNothing();
+    num1 >= 33 && num1 <= 44? Culture = "Kanday": displayNothing();
    //  Feudal social class
-    num1 >= 45 && num1 <= 64? boldTable = "Melderyn": displayNothing();
+    num1 >= 45 && num1 <= 64? Culture = "Melderyn": displayNothing();
    //  viking social class
-    num1 >= 65 && num1 <= 74? boldTable = "Orbaal": displayNothing();
+    num1 >= 65 && num1 <= 74? Culture = "Orbaal": displayNothing();
    //  Feudal social class
-    num1 >= 75 && num1 <= 86? boldTable = "Rethem": displayNothing();
+    num1 >= 75 && num1 <= 86? Culture = "Rethem": displayNothing();
    //  imperial social class
-    num1 >= 87 && num1 <= 99? boldTable = "Tharda": displayNothing();
+    num1 >= 87 && num1 <= 99? Culture = "Tharda": displayNothing();
    //  deep down on the place might change social class
-    num1 >= 100 ? boldTable = "Misc":displayNothing();
+    num1 >= 100 ? Culture = "Misc":displayNothing();
 
     let finalbirthPplaceResult;
    //   console.log(num1 + " " + num2)
-     if(boldTable == "Barbarian")
+     if(Culture == "Barbarian")
      {
         num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Barbarian[0]:displayNothing();
         num2 >= 6 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Barbarian[1]: displayNothing();
@@ -160,7 +160,7 @@ export const makeitForMe = class
         num2 >= 93 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Barbarian[16]: displayNothing();
         num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Barbarian[17]: displayNothing();
      }
-     if(boldTable == "Chybisa")
+     if(Culture == "Chybisa")
      {
         num2 >= 1 && num2 <= 40? finalbirthPplaceResult = done.birthTable.Chybisa[0]:displayNothing();
         num2 >= 41 && num2 <= 60? finalbirthPplaceResult =  done.birthTable.Chybisa[1]: displayNothing();
@@ -170,7 +170,7 @@ export const makeitForMe = class
      }
      {
         num2 >= 1 && num2 <= 2? finalbirthPplaceResult =  done.birthTable.Kaldor[0]:displayNothing();
-        if(boldTable == "Kaldor")
+        if(Culture == "Kaldor")
         num2 >= 3 && num2 <= 4? finalbirthPplaceResult = done.birthTable.Kaldor[1]:displayNothing();
         num2 >= 7 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Kaldor[3]:displayNothing();
         num2 >= 5 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Kaldor[2]:displayNothing();
@@ -202,7 +202,7 @@ export const makeitForMe = class
         num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Kaldor[29]:displayNothing();
      }
 
-     if(boldTable == "Kanday")
+     if(Culture == "Kanday")
      {
         num2 >= 1 && num2 <= 16? finalbirthPplaceResult = done.birthTable.Kanday[0]:displayNothing();
         num2 >= 17 && num2 <= 18? finalbirthPplaceResult = done.birthTable.Kanday[1]:displayNothing();
@@ -232,7 +232,7 @@ export const makeitForMe = class
         num2 >= 991 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Kanday[25]:displayNothing();
         
      }
-     if(boldTable == "Melderyn")
+     if(Culture == "Melderyn")
      {
       num2 >= 1 && num2 <= 10? finalbirthPplaceResult = done.birthTable.Melderyn[0]:displayNothing();
       num2 >= 11 && num2 <= 20? finalbirthPplaceResult = done.birthTable.Melderyn[1]:displayNothing();
@@ -265,7 +265,7 @@ export const makeitForMe = class
       num2 >= 97 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Melderyn[27]:displayNothing();
       num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Melderyn[28]:displayNothing();
      }
-     if(boldTable == "Orbaal")
+     if(Culture == "Orbaal")
      {
 
       num2 >= 1 && num2 <= 2? finalbirthPplaceResult = done.birthTable.Orbaal[0]: displayNothing();
@@ -310,7 +310,7 @@ export const makeitForMe = class
 
 
      }
-     if(boldTable == "Rethem")
+     if(Culture == "Rethem")
      {
        num2 >= 1 && num2 <= 2? finalbirthPplaceResult = done.birthTable.Rethem[0]: displayNothing();
        num2 >= 3 && num2 <= 4? finalbirthPplaceResult = done.birthTable.Rethem[1]: displayNothing();
@@ -338,7 +338,7 @@ export const makeitForMe = class
        num2 >= 95 && num2 <= 98? finalbirthPplaceResult = done.birthTable.Rethem[23]: displayNothing();
        num2 >= 99 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Rethem[24]: displayNothing();
      }
-     if(boldTable == "Tharda")
+     if(Culture == "Tharda")
      {
        num2 >= 1 && num2 <= 3? finalbirthPplaceResult = done.birthTable.Tharda[0]: displayNothing();
        num2 >= 4 && num2 <= 6? finalbirthPplaceResult = done.birthTable.Tharda[1]: displayNothing();
@@ -365,7 +365,7 @@ export const makeitForMe = class
        num2 >= 97 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Tharda[22]: displayNothing();
 
      }
-     if(boldTable == "Misc")
+     if(Culture == "Misc")
      {
          num2 >= 1 && num2 <= 5? finalbirthPplaceResult = done.birthTable.Misc[0]: displayNothing();
          num2 >= 87 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[1]: displayNothing();
@@ -374,9 +374,9 @@ export const makeitForMe = class
          num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
          num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
-     console.log("culture  " + boldTable);
+     console.log("culture  " + Culture);
      console.log("place  " + finalbirthPplaceResult);
-     this.giveMeAsocialClass(88,boldTable,finalbirthPplaceResult)
+     this.giveMeAsocialClass(88,Culture,finalbirthPplaceResult)
       //   end of function 
    }
 
@@ -385,7 +385,7 @@ export const makeitForMe = class
       //  this functions helps you choose the social class of you character......
 
       // it needs a number from 1 - 100
-      //  also needs a culture -> from boldTable headers
+      //  also needs a culture -> from Culture headers
       // finally it needs a finalplace value for misc culture...
 
       // this function depends on giveMeABirthPlace() 
@@ -696,7 +696,9 @@ export const makeitForMe = class
       console.log(Stamina);
    }
 //   you can write your next method here.......⬇️⬇️⬇️
+   
    dexterityAttribute(Race){
+      //Using roll function to calcultate 3D6
       let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
       // Sindarin gets 2 additonal point in Dexterity
       if(Race === "Sindarin"){
@@ -707,21 +709,108 @@ export const makeitForMe = class
          dexterity = dexterity + 1;
       }   
       return dexterity;    
-     }
+   }
+   agilityAttribute(finalFrame, Race){
+      let agility = this.roll(6) + this.roll(6) + this.roll(6); 
 
-     agilityAttribute(finalFrame, Race){
-         let agility = this.roll(6) + this.roll(6) + this.roll(6); 
+      Race === "Sindarin"?agility = agility + 2: this.displayNone();
 
-         Race === "Sindarin"?agility = agility + 2: this.displayNone();
+      if(finalFrame === "Scant"){ agility = agility + 2; }
+      if(finalFrame === "Light"){ agility = agility + 1; }
+      if(finalFrame === "Heavy"){ agility = agility - 1; }
+      if(finalFrame === "Massive"){ agility = agility - 2; }
 
-         if(finalFrame === "Scant"){ agility = agility + 2; }
-         if(finalFrame === "Light"){ agility = agility + 1; }
-         if(finalFrame === "Heavy"){ agility = agility - 1; }
-         if(finalFrame === "Massive"){ agility = agility + 2; }
+      return agility;
+   }
 
-         return agility;
-     }
+   eyesightAttribute(Culture, Species){
+      let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(Culture === "Barbarian"){eyesight = eyesight + 2;}
+      if(Species === "Sindarin"){ eyesight = eyesight + 2; }
+      if(Species === "Khuzdul"){ eyesight = eyesight + 2; }
 
+      return eyesight;
+  }
+
+   hearingAttribute(Culture, Species){
+      let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(Culture === "Barbarian"){hearing = hearing + 2;}
+      if(Species === "Sindarin"){ hearing = hearing + 2; }
+      if(Species === "Khuzdul"){ hearing = hearing + 2; }
+
+      return hearing;
+   }
+     smellAttribute(Culture, Species){
+      let smell = this.roll(6) + this.roll(6) + this.roll(6); 
+      if(Culture === "Barbarian"){smell = smell + 2;}
+      if(Species === "Sindarin"){ smell = smell + 3; }
+      if(Species === "Khuzdul"){ smell = smell + 2; }
+
+      return smell;
+   }
+      voiceAttribute(Race){
+         let voice = this.roll(6) + this.roll(6) + this.roll(6);
+         let voiceDescription = "";
+         if(Race === "Sindarin"){voice = voice + 2};
+         if(voice >= 3 && voice <= 4){voiceDescription = "Unbearable"};
+         if(voice >= 5 && voice <=8){voiceDescription = "Unpleasant "};
+         if(voice >= 9 && voice <= 12){voiceDescription = "Average"};
+         if(voice >= 13 && voice <= 15){voiceDescription = "Pleasant"};
+         if(voice >= 16 && voice <= 17){voiceDescription = "Excelent"};
+         if(voice >= 18){voiceDescription = "Unearthly"};
+
+         return voiceDescription
+      }
+
+      intelligenceAttribute(){
+         let intelligence = this.roll(6) + this.roll(6) + this.roll(6);
+         let memory = "";
+         let reasoning = "";
+         let intelligenceArray = [];
+
+         if(intelligence >= 3 && intelligence<= 5){
+            memory = "Absent minded";
+            reasoning = "Moronic/Stupid";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 6 && intelligence <= 8){
+            memory = "Forgetful";
+            reasoning = "Short witted";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 9 && intelligence <= 12){
+            memory = "Average";
+            reasoning = "Average";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 13 && intelligence <= 15){
+            memory = "Good";
+            reasoning = "Clever";
+            intelligenceArray.push(memory, reasoning);
+         }
+         if(intelligence >= 16){
+            memory = "Excellent";
+            reasoning = "Genius";
+            intelligenceArray.push(memory, reasoning);
+         }
+
+         return intelligenceArray;
+      }
+
+      auraAttribute(Race, gender){
+         let aura = this.roll(6) + this.roll(6) + this.roll(6);
+
+         if(Race === "Human" && gender === "female"){aura = aura + 2}
+         if(Race === "Sindarin"){aura = aura + 4}
+         if(Race === "Khuzdul"){aura = aura - 2}
+         return aura;
+      }
+
+      willAttribute(Race){
+         let will = this.roll(6) + this.roll(6) + this.roll(6);
+         if(Race === "Khuzdul"){will = will + 3}
+         return will; 
+      }
 // all functions  before this ending brack......⬆️⬆️⬆️
 }
 
