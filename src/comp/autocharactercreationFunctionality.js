@@ -795,10 +795,23 @@ export const makeitForMe = class
          }
 
          return intelligenceArray;
+      }
 
+      auraAttribute(Race, gender){
+         let aura = this.roll(6) + this.roll(6) + this.roll(6);
+
+         if(Race === "Human" && gender === "female"){aura = aura + 2}
+         if(Race === "Sindarin"){aura = aura + 4}
+         if(Race === "Khuzdul"){aura = aura - 2}
+         return aura;
+      }
+
+      willAttribute(Race){
+         let will = this.roll(6) + this.roll(6) + this.roll(6);
+         if(Race === "Khuzdul"){will = will + 3}
+         return will; 
       }
 // all functions  before this ending brack......⬆️⬆️⬆️
-
 }
 
 
