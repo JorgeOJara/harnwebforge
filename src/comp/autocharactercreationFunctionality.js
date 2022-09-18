@@ -811,6 +811,7 @@ export const makeitForMe = class
          if(Race === "Khuzdul"){will = will + 3}
          return will; 
       }
+      
       moralAttribute(Race){
          let moral = this.roll(6) + this.roll(6) + this.roll(6);
          if(Race === "Sindarin"){moral = moral + 3}
