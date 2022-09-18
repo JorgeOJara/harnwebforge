@@ -824,7 +824,11 @@ name="group"
 <input type="checkbox" id="vehicle1" name="vehicle1" value="Bike"></input>
 </div>
   <button className="btn btn-secondary b"
+<<<<<<< HEAD
   onClick={()=>autoBuild.intelligenceAttribute()}
+=======
+  onClick={()=>  autoBuild.agilityAttribute("Heavy","Khuzdul")}
+>>>>>>> main
   >
         <i className="text-danger fas fa-trash o">Create</i>
 </button>
