@@ -1,4 +1,4 @@
-import React, { setState ,useState,useEffect } from 'react';
+import React, { setState ,useState,useEffect,Redirect } from 'react';
 import logo from './imgs/pngegg.png';
 import alita from './imgs/azula.jpg';
 
@@ -10,30 +10,28 @@ import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
 import { SidePanels } from './sidePannel';
 
+
 export const Main = ()=>{
 
 // here we safe all the content in objects and then push it into the array
  // the array its going to the server, to be saved.....
  // using axios we send the mainContainer to a mongodb micro service..  
-  const obj = {}
-  const mainContainer = [];
-  
-
-  // useEffect(() => {
-  //   const interval = setInterval(() => {
-  //     console.log('This will run every second!');
-  //   }, 1000);
-  //   return () => clearInterval(interval);
-  // }, []);
+useEffect(()=>{
+  const queryParams = new URLSearchParams(window.location.search)
+  const term = queryParams.get("code")
+  console.log(term)
+})
 
 
+  // hooks
   const [sidePanel,setSidePanel] = useState(true);
  
   const [Avatare,setAvatare] = useState(alita);
 
+//  change side pannel to none display..
     let sideContainer;
+    sidePanel === true?sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />:<div></div>;
 
-     sidePanel === true?sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />:<div></div>;
      return(
     <>
          {/* saved from url=(0036) */}
@@ -102,7 +100,7 @@ export const Main = ()=>{
                   src={alita}
                   className="rounded-circle avatar-user"
                 />
-                <span className="d-none d-md-inline">ASTRA-CLI</span>
+                <span className="d-none d-md-inline">ASTRA CLI</span>
               </li>
             </ul>
           </nav>
@@ -214,7 +212,6 @@ export const Main = ()=>{
                 </div>
                     {/* <div>No tuppers selected!</div> */}
           </div></div></div></div></div></div></div>
-              
       </main>
     </div>
    </>
