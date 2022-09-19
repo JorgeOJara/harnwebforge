@@ -1,6 +1,5 @@
-
-//Unarmed Strikes
 [
+//Unarmed Strikes
 {id:29715,itemName:"Hand/Arm",skills:"Unarmed",effects:{B:0,E:null,P:null,},Ad:[0,15],wt:null,WQ:null,hm:null,price:null},
 { id:10,itemName:"Foot/Leg/Knee",skills:"Unarmed",effects:{B:1,E:null,P:null},Ad:[5,5],wt:null,WQ:null,hm:null,price:null},
 {id:8762,itemName:"Head",skills:"Unarmed",effects:{B:1,E:null,P:null},Ad:[0,0],wt:null,WQ:null,hm:null,price:null},
@@ -120,5 +119,4 @@
 {id:98732,itemName:"Sling",skills:"Sling",effects:{B:null,E:null,P:null},Ad:[null,null],wt:0.1,WQ:9,hm:null,price:6},
 
 {id:254131,itemName:"Staff Sling",skills:"Sling",effects:{B:1,E:null,P:null},Ad:[5,0],wt:1,WQ:10,hm:-10,price:12}
-
 ]

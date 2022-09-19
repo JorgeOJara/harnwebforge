@@ -7,6 +7,7 @@ import { ProfileCopntent } from './profilecontent';
 import { ProfileCopntentBottom } from './profilecontentBottom';
 import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
+
 import { SidePanels } from './sidePannel';
 
 export const Main = ()=>{
@@ -24,6 +25,7 @@ export const Main = ()=>{
   //   }, 1000);
   //   return () => clearInterval(interval);
   // }, []);
+
 
   const [sidePanel,setSidePanel] = useState(true);
  
