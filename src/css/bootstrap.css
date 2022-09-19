@@ -10495,7 +10495,7 @@ button[data-toggle=collapse].collapsed {
 
 @media (min-width: 768px) {
   .shifted {
-    transform: none;
+    transform: block;
   }
 }
 @keyframes shake {

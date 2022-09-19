@@ -1,4 +1,4 @@
-import React, { setState ,useState } from 'react';
+import React, { setState ,useState,useEffect } from 'react';
 import logo from './imgs/pngegg.png';
 import alita from './imgs/azula.jpg';
 
@@ -7,9 +7,9 @@ import { ProfileCopntent } from './profilecontent';
 import { ProfileCopntentBottom } from './profilecontentBottom';
 import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
+import { SidePanels } from './sidePannel';
 
 export const Main = ()=>{
-
 
 // here we safe all the content in objects and then push it into the array
  // the array its going to the server, to be saved.....
@@ -17,11 +17,23 @@ export const Main = ()=>{
   const obj = {}
   const mainContainer = [];
   
+
+  // useEffect(() => {
+  //   const interval = setInterval(() => {
+  //     console.log('This will run every second!');
+  //   }, 1000);
+  //   return () => clearInterval(interval);
+  // }, []);
+
+  const [sidePanel,setSidePanel] = useState(true);
  
   const [Avatare,setAvatare] = useState(alita);
 
+    let sideContainer;
+
+     sidePanel === true?sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />:<div></div>;
      return(
-        <>
+    <>
          {/* saved from url=(0036) */}
         <meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
         <meta
@@ -149,76 +161,10 @@ export const Main = ()=>{
                 {/* start of side panel */}
 
 
-
-                <div id="list" className="col-12 col-md-5 h-100">
-                  <div className="mb-4 h-100 card" style={{}}>
-                    <div className="bg-primary d-flex align-items-center justify-content-between card-header">
-                      Your Characters
-                      <div className="row align-items-center" slot="cardTitle">
-                        <button
-                          data-toggle="tooltip"
-                          title="Expand All"
-                          className="btn btn-none"
-                          value=""
-                          style={{}}
-                        >
-                          <i className="fas fa-plus-square" />
-                        </button>
-                        <button
-                          data-toggle="tooltip"
-                          title="Collapse All"
-                          className="pl-0 btn btn-none"
-                          value=""
-                          style={{}}
-                        >
-                          <i className="fas fa-minus-square" />
-                        </button>
-                        <div disabled="false" className="d-none d-md-inline dropdown">
-                          <button
-                            ariahaspopup="true"
-                            className="p-0 dropdown-toggle btn btn-none"
-                            value=""
-                            style={{}}
-                          >
-                            <i className="fas fa-plus" />
-                          </button>
-                          <div className="dropdown-menu dropdown-menu-right">
-                            <button className="dropdown-item">Add Tupper</button>
-                            <button className="dropdown-item">Add Group</button>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                    <div className="overflow-auto h-100 p-3">
-                      No characters registered!
-                      <div id="spacer" className="p-4" />
-                    </div>
-                  </div>
-                  <div className="position-absolute text-right floating-action-menu mx-2 d-md-none active"
-                    style={{ bottom: 20, right: 20 }}
-                  >
-                    <div className="action-menu">
-                      <div className="floating-action">
-                        <div className="badge badge-dark">Add Tupper</div>
-                        <button className="btn btn-floating btn-sm btn-success">
-                          <i className="fas fa-plus" />
-                        </button>
-                      </div>
-                      <div className="floating-action">
-                        <div className="badge badge-dark">Add Group</div>
-                        <button className="btn btn-floating btn-sm btn-info">
-                          <i className="fas fa-plus" />
-                        </button>
-                      </div>
-                    </div>
-                    <div className="d-block action-button">
-                      <button className="btn btn-floating btn-primary">
-                        <i className="fas fa-plus" />
-                      </button>
-                    </div>
-                  </div>
-                </div> 
-
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
+        {/* < SidePanel changeSidePanel={content=>setSidePanel(content)} />          */}
+        {sideContainer}
+{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
 
 {/* end of side panel */}
                 {/* form */}
@@ -260,13 +206,15 @@ export const Main = ()=>{
            already setup with the content to be send and saved...
            */}
                     <CHARACTERFORMCREATOR  changeAvatar={content=>setAvatare(content)}/>
-                    
+         
                     {/*end of the character creation functions. */}   
+      
                 </div>
                     {/* <div>No tuppers selected!</div> */}
           </div></div></div></div></div></div></div>
+              
       </main>
     </div>
-  </>
+   </>
   )
 }
