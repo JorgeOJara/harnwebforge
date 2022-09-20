@@ -19,9 +19,8 @@ export const Main = ()=>{
 useEffect(()=>{
   const queryParams = new URLSearchParams(window.location.search)
   const term = queryParams.get("code")
-  console.log(term)
-})
-
+  console.log(term);
+});
 
   // hooks
   const [sidePanel,setSidePanel] = useState(true);
