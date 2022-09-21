@@ -3,10 +3,10 @@
 export const objContent = 
 {
    Name:"hope",
-   ocupation:"",
+   ocupation:"rnner",
    Avatare:"",
    Race:"",
-   Sex:"",
+   Sex: "",
    Birthday:"",
    birthPlace:"",
    Culture:"",

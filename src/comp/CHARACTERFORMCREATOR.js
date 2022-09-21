@@ -16,7 +16,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
    let  max = Math.floor(number); 
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-      return(
+    return(
 <>
 <form className="form-group">
 <label className="">Birth Atributes</label>

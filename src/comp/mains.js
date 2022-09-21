@@ -11,6 +11,7 @@ import axios from 'axios';
 
 import { SidePanels } from './sidePannel';
 
+
 export const Main = ()=>{
 
 // here we safe all the content in objects and then push it into the array
@@ -32,7 +33,6 @@ const getUserInfo = async (accessToken) => {
   } catch (error) {
       //console.log(error);
     }
-    
   }
 const getToken = async (code) => {
   // App.js
