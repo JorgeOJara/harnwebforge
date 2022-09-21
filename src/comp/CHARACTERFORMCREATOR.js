@@ -16,7 +16,6 @@ export const CHARACTERFORMCREATOR = (props) =>{
    let  max = Math.floor(number); 
     return Math.floor(Math.random() * (max - min + 1) + min);
   }
-
       return(
 <>
 <form className="form-group">
@@ -33,8 +32,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
           </div>
     </form>
             {/* gender */}
-            <div className="form-group">
-          {/* <label class="">Group</label>  */}
+        <div className="form-group">
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -48,7 +46,6 @@ export const CHARACTERFORMCREATOR = (props) =>{
         {/* race */}
 
         <div className="form-group">
-          {/*  <label class="">Group</label>  */}
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -80,8 +77,8 @@ export const CHARACTERFORMCREATOR = (props) =>{
 {/* here */}
 <div class="row form-group">
 {/* input type */}
-<div class="col">
-<label class="">Birth Place</label> 
+<div className="col">
+<label className="">Birth Place</label> 
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -95,17 +92,17 @@ export const CHARACTERFORMCREATOR = (props) =>{
             <option value="null">Handsome</option>
           </select>
         </div>
-        <div class="col">
+        <div className="col">
 
-<label class="">Culture</label> 
+<label className="">Culture</label> 
       <h5>Viking</h5>
         </div>
       </div>
 
-      <div class="row form-group">
+      <div className="row form-group">
 {/* input type */}
-<div class="col">
-<label class="">Social Class</label> 
+<div className="col">
+<label className="">Social Class</label> 
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -146,9 +143,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 
 
 {/* looks */}
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">Height</label>
           <div className="input-group">
             <input
@@ -160,7 +157,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">Weight</label>
           <div className="input-group">
@@ -175,10 +172,10 @@ export const CHARACTERFORMCREATOR = (props) =>{
 </div>
 </div> 
 {/* side content /  format */}
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
-<label class="">COMELINESS</label> 
+<div className="col">
+<label className="">COMELINESS</label> 
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -192,9 +189,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
             <option value="null">Handsome</option>
           </select>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
-    <label class="">Frame</label> 
+    <label className="">Frame</label> 
     <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -213,10 +210,10 @@ export const CHARACTERFORMCREATOR = (props) =>{
 </div> 
 
 {/* last part */}
-  <div class="row form-group">
+  <div className="row form-group">
 {/* input type */}
-<div class="col">
-<label class="">complexion</label> 
+<div className="col">
+<label className="">complexion</label> 
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -230,9 +227,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
             <option value="null">Blond</option>
           </select>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
-    <label class="">Eye Color</label> 
+    <label className="">Eye Color</label> 
     <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -250,7 +247,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
 </div>
 </div> 
 <div className="form-group">
-            <label class=""> Hair Color</label> 
+            <label className=""> Hair Color</label> 
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -272,9 +269,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 
 <h3></h3>
 
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">STRENGTH</label>
           <div className="input-group">
             <input
@@ -286,7 +283,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">STAMINA</label>
           <div className="input-group">
@@ -299,7 +296,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
         </div>
 </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">DEXTERITY</label>
           <div className="input-group">
@@ -316,9 +313,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 {/* triple content /  format */}
 {/*  second stats */}
 
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">AGILITY</label>
           <div className="input-group">
             <input
@@ -330,7 +327,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">HEARING</label>
           <div className="input-group">
@@ -343,7 +340,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
         </div>
 </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">EYESIGHT</label>
           <div className="input-group">
@@ -359,9 +356,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 </div>
 
 {/* last part */}
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">SMELL</label>
           <div className="input-group">
             <input
@@ -373,7 +370,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">VOICE</label>
           <div className="input-group">
@@ -397,9 +394,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 
 {/* Personality Attributes */}
 
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">Intelligence</label>
           <div className="input-group">
             <input
@@ -411,7 +408,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">Aura</label>
           <div className="input-group">
@@ -424,7 +421,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
         </div>
 </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">Will</label>
           <div className="input-group">
@@ -441,9 +438,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 {/* triple content /  format */}
 {/*  second stats */}
 
-<div class="row form-group">
+<div className="row form-group">
 {/* input type */}
-<div class="col">
+<div className="col">
 <label className="">Morality</label>
           <div className="input-group">
             <input
@@ -455,7 +452,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
           </div>
       </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">Deity</label>
           <div className="input-group">
@@ -468,7 +465,7 @@ export const CHARACTERFORMCREATOR = (props) =>{
             />
         </div>
 </div>
-<div class="col">
+<div className="col">
     {/* input type */}
     <label className="">Piety</label>
           <div className="input-group">
@@ -486,9 +483,9 @@ export const CHARACTERFORMCREATOR = (props) =>{
 
 <h3 className="hidders">Choose your Gear and weapons</h3>
 
-<div class="row form-group">
-<div class="col">
-<label class="">Weapon</label> 
+<div className="row form-group">
+<div className="col">
+<label className="">Weapon</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -502,41 +499,8 @@ name="group"
 <option value="null">Handsome</option>
 </select>
 </div>
-<div class="col">
-<label class="">Weapon</label> 
-<select
-autoComplete="off"
-className="bg-secondary pl-2 text-white form-control"
-name="group"
->
-<option value="null"></option>
-<option value="null">Ugly</option>
-<option value="null">Plain</option>
-<option value="null">Average</option>
-<option value="null">Attractive</option>
-<option value="null">Handsome</option>
-</select>
-</div>
-</div> 
-
-<div class="row form-group">
-<div class="col">
-<label class="">Weapon</label> 
-<select
-autoComplete="off"
-className="bg-secondary pl-2 text-white form-control"
-name="group"
->
-<option value="null"></option>
-<option value="null">Ugly</option>
-<option value="null">Plain</option>
-<option value="null">Average</option>
-<option value="null">Attractive</option>
-<option value="null">Handsome</option>
-</select>
-</div>
-<div class="col">
-<label class="">Weapon</label> 
+<div className="col">
+<label className="">Weapon</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -552,9 +516,9 @@ name="group"
 </div>
 </div> 
 
-<div class="row form-group">
-<div class="col">
-<label class="">Weapon</label> 
+<div className="row form-group">
+<div className="col">
+<label className="">Weapon</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -568,8 +532,41 @@ name="group"
 <option value="null">Handsome</option>
 </select>
 </div>
-<div class="col">
-<label class="">Weapon</label> 
+<div className="col">
+<label className="">Weapon</label> 
+<select
+autoComplete="off"
+className="bg-secondary pl-2 text-white form-control"
+name="group"
+>
+<option value="null"></option>
+<option value="null">Ugly</option>
+<option value="null">Plain</option>
+<option value="null">Average</option>
+<option value="null">Attractive</option>
+<option value="null">Handsome</option>
+</select>
+</div>
+</div> 
+
+<div className="row form-group">
+<div className="col">
+<label className="">Weapon</label> 
+<select
+autoComplete="off"
+className="bg-secondary pl-2 text-white form-control"
+name="group"
+>
+<option value="null"></option>
+<option value="null">Ugly</option>
+<option value="null">Plain</option>
+<option value="null">Average</option>
+<option value="null">Attractive</option>
+<option value="null">Handsome</option>
+</select>
+</div>
+<div className="col">
+<label className="">Weapon</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -589,9 +586,9 @@ name="group"
 
 
 {/* gear */}
-<div class="row form-group">
-<div class="col">
-<label class="">Armor</label> 
+<div className="row form-group">
+<div className="col">
+<label className="">Armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -605,41 +602,8 @@ name="group"
 <option value="null">Handsome</option>
 </select>
 </div>
-<div class="col">
-<label class="">Armor</label> 
-<select
-autoComplete="off"
-className="bg-secondary pl-2 text-white form-control"
-name="group"
->
-<option value="null"></option>
-<option value="null">Ugly</option>
-<option value="null">Plain</option>
-<option value="null">Average</option>
-<option value="null">Attractive</option>
-<option value="null">Handsome</option>
-</select>
-</div>
-</div> 
-
-<div class="row form-group">
-<div class="col">
-<label class="">Armor</label> 
-<select
-autoComplete="off"
-className="bg-secondary pl-2 text-white form-control"
-name="group"
->
-<option value="null"></option>
-<option value="null">Ugly</option>
-<option value="null">Plain</option>
-<option value="null">Average</option>
-<option value="null">Attractive</option>
-<option value="null">Handsome</option>
-</select>
-</div>
-<div class="col">
-<label class="">Armor</label> 
+<div className="col">
+<label className="">Armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"
@@ -655,8 +619,8 @@ name="group"
 </div>
 </div> 
 
-<div class="row form-group">
-<div class="col">
+<div className="row form-group">
+<div className="col">
 <label class="">Armor</label> 
 <select
 autoComplete="off"
@@ -671,8 +635,41 @@ name="group"
 <option value="null">Handsome</option>
 </select>
 </div>
-<div class="col">
-<label class="">Armor</label> 
+<div className="col">
+<label className="">Armor</label> 
+<select
+autoComplete="off"
+className="bg-secondary pl-2 text-white form-control"
+name="group"
+>
+<option value="null"></option>
+<option value="null">Ugly</option>
+<option value="null">Plain</option>
+<option value="null">Average</option>
+<option value="null">Attractive</option>
+<option value="null">Handsome</option>
+</select>
+</div>
+</div> 
+
+<div className="row form-group">
+<div className="col">
+<label className="">Armor</label> 
+<select
+autoComplete="off"
+className="bg-secondary pl-2 text-white form-control"
+name="group"
+>
+<option value="null"></option>
+<option value="null">Ugly</option>
+<option value="null">Plain</option>
+<option value="null">Average</option>
+<option value="null">Attractive</option>
+<option value="null">Handsome</option>
+</select>
+</div>
+<div className="col">
+<label className="">Armor</label> 
 <select
 autoComplete="off"
 className="bg-secondary pl-2 text-white form-control"

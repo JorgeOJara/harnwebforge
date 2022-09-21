@@ -7,20 +7,74 @@ import { ProfileCopntent } from './profilecontent';
 import { ProfileCopntentBottom } from './profilecontentBottom';
 import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
+import axios from 'axios';
 
 import { SidePanels } from './sidePannel';
-
 
 export const Main = ()=>{
 
 // here we safe all the content in objects and then push it into the array
  // the array its going to the server, to be saved.....
  // using axios we send the mainContainer to a mongodb micro service..  
-useEffect(()=>{
-  const queryParams = new URLSearchParams(window.location.search)
-  const term = queryParams.get("code")
-  console.log(term);
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+
+const getUserInfo = async (accessToken) => {
+  // console.log(accessToken);
+  // console.log(`User ${accessToken.data.token_type} ${accessToken.data.access_token}`);
+  try {
+      const response = await axios.get('https://discord.com/api/users/@me', {
+          headers: {
+              authorization: `${accessToken.data.token_type} ${accessToken.data.access_token}`
+          }
+      });
+      // console.log(response.data);
+      return response.data;
+  } catch (error) {
+      //console.log(error);
+    }
+    
+  }
+const getToken = async (code) => {
+  // App.js
+  try {
+      const options = new URLSearchParams({
+          client_id:process.env.REACT_APP_CLIENT_ID,
+          client_secret:process.env.REACT_APP_CLIENT_SECRET,
+          code,
+          grant_type: 'authorization_code',
+          redirect_uri:"http://localhost:3000/",
+          scope: 'identify',
+      });
+      const result = await axios.post('https://discord.com/api/oauth2/token', options);
+         return result;
+  } catch (error) {
+  // console.log(error)
+  }
+}
+
+const getInfo = async (code) => {
+  const accessToken = await getToken(code);
+  const userInfo = await getUserInfo(accessToken);
+  localStorage.setItem("username", userInfo.username);
+  window.location.replace("/")
+}
+
+useEffect(() => {
+  //  localStorage.setItem("lastname", "Smith");
+
+   const usernameStore = localStorage.getItem("username");
+
+   if(!usernameStore || usernameStore == "")
+   {
+     const urlSearchParams = new URLSearchParams(window.location.search);
+     const params = Object.fromEntries(urlSearchParams.entries());
+     // console.log(params);
+     if (!params.code) window.location.replace("/login");
+       getInfo(params.code);
+   }else{console.log(usernameStore)}
 });
+
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
   // hooks
   const [sidePanel,setSidePanel] = useState(true);
@@ -62,10 +116,7 @@ useEffect(()=>{
               className="btn-link order-0 order-lg-0 pl-0 pr-3 btn btn-none btn-sm"
               value=""
               style={{}}
-            >
-              {/* <i class="fas fa-bars fa-lg"></i> */}
-            </button>
-            {/* you can add submenu ref: 1010 */}
+            ></button>
             <div className="dropdown-menu">
               <a
                 href=""
