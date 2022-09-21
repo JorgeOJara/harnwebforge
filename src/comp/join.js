@@ -26,7 +26,7 @@ export const Join = ()=>{
                 <button className="btn btn-secondary b" onClick={()=>login()}>Login Using Discord</button>
             </div>
         <div className="bottomleft">
-            <p>Lizzy</p>
+            <p>by Debiano</p>
          </div>
        </div>
   );
