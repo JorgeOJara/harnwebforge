@@ -18,6 +18,10 @@ export const Main = ()=>{
  // the array its going to the server, to be saved.....
  // using axios we send the mainContainer to a mongodb micro service..  
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const [User,setUser]= useState("");
+const [userAvatare,setUserAvatare] = useState("");
+const [UserId,setUserId] = useState(0);
+
 
 const getUserInfo = async (accessToken) => {
   // console.log(accessToken);
@@ -55,14 +59,22 @@ const getToken = async (code) => {
 const getInfo = async (code) => {
   const accessToken = await getToken(code);
   const userInfo = await getUserInfo(accessToken);
-  localStorage.setItem("username", userInfo.username);
+  // console.table(userInfo);
+  // safe information of user to later use...
+  localStorage.setItem("id",userInfo.id);
+  localStorage.setItem("username", userInfo.username + "#" + userInfo.discriminator);
+  localStorage.setItem("userAvatare",userInfo.avatar);
+
+  // clear the api token from the url...
   window.location.replace("/")
 }
 
 useEffect(() => {
   //  localStorage.setItem("lastname", "Smith");
-
+   
+  const idStore = localStorage.getItem("id");
    const usernameStore = localStorage.getItem("username");
+   const userAvatareStore = localStorage.getItem("userAvatare")
 
    if(!usernameStore || usernameStore == "")
    {
@@ -71,8 +83,14 @@ useEffect(() => {
      // console.log(params);
      if (!params.code) window.location.replace("/login");
        getInfo(params.code);
-   }else{console.log(usernameStore)}
+   }else{
+    setUser(usernameStore);
+    setUserAvatare(userAvatareStore);
+    setUserId(idStore)
+  }
 });
+
+const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAvatare + ".png";
 
 //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
@@ -115,7 +133,6 @@ useEffect(() => {
               id="sidebarToggle"
               className="btn-link order-0 order-lg-0 pl-0 pr-3 btn btn-none btn-sm"
               value=""
-              style={{}}
             ></button>
             <div className="dropdown-menu">
               <a
@@ -146,11 +163,12 @@ useEffect(() => {
             <ul className="ml-auto navbar-nav">
               <li className="dropdown nav-item" disabled="false">
                 <img
-                  alt=""
-                  src={alita}
+                  alt="discord avatar"
+                  /////////////////////////////////////////////////////////////////////////////////////////////////////
+                  src={ UserId!=0?imagerFinder: alita }
                   className="rounded-circle avatar-user"
                 />
-                <span className="d-none d-md-inline">ASTRA CLI</span>
+                <span className="d-none d-md-inline">{User}</span>
               </li>
             </ul>
           </nav>
@@ -166,7 +184,7 @@ useEffect(() => {
                     <div className="nav-link-icon">
                       <i className="" slot="leftIcon" />
                     </div>
-                        ASTRA-CLI#2049
+                       {User}
                   </a>
                   <div
                     className="not-allowed"
@@ -177,7 +195,6 @@ useEffect(() => {
                     <a className="nav-link disabled" href="">
                       <div className="nav-link-icon">
                         {/* additional */}
-                        {/* <i class="fas fa-user-cog" slot="leftIcon"></i> */}
                       </div>
                     </a>
                   </div>

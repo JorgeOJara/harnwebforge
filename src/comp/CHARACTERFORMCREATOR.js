@@ -11,6 +11,10 @@ export const CHARACTERFORMCREATOR = (props) =>{
   // const characterSchema  = new objContent;
   const autoBuild = new makeitForMe();
 
+//  const [Character,setCharacter] = useState(objContent)
+//   console.table(Character);
+
+
   function roll(number){
    let  min = Math.ceil(1);
    let  max = Math.floor(number); 
