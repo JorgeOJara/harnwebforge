@@ -164,7 +164,6 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
               <li className="dropdown nav-item" disabled="false">
                 <img
                   alt="discord avatar"
-                  /////////////////////////////////////////////////////////////////////////////////////////////////////
                   src={ UserId!=0?imagerFinder: alita }
                   className="rounded-circle avatar-user"
                 />
