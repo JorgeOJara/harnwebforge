@@ -58,8 +58,6 @@ export const CHARACTERFORMCREATOR = (props) => {
           <option value="Caucasian">White / Caucasian</option>
           <option value="African American">African American</option>
           <option value="Asian">Chinese</option>
-          <option value="Latin American">Latin American</option>
-          <option value="Middle Eastern">Midlle Eastern</option>
         </select>
       </div>
 
