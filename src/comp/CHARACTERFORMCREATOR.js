@@ -110,13 +110,13 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={(e) => setCharacter({ SocialClass: e.target.value})}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="Ugly">Ugly</option>
+            <option value="Plain">Plain</option>
+            <option value="Average">Average</option>
+            <option value="Attractive">Attractive</option>
+            <option value="Handsome">Handsome</option>
           </select>
         </div>
       </div>
