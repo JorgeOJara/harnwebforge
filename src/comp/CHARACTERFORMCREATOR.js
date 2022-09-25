@@ -8,11 +8,30 @@ import { makeitForMe } from "./autocharactercreationFunctionality";
 
 export const CHARACTERFORMCREATOR = (props) => {
   const dt = new ValueGetter();
-  // const characterSchema  = new objContent;
+
   const autoBuild = new makeitForMe();
 
+  // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
-  //console.log(Character);
+  
+  // setting up the data on the object.....
+
+  const setSex = (e) => {let updatedValue = {Sex:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setRace = (e) => {let updatedValue = {Race:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+  const setSunsigns = (e) => {let updatedValue = {Sunsigns:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+  const setbirthPlace = (e) => {let updatedValue = {birthPlace:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+// still neeed to keep adding inputs.............
 
   function roll(number) {
     let min = Math.ceil(1);
@@ -40,8 +59,9 @@ export const CHARACTERFORMCREATOR = (props) => {
           autoComplete="off"
           className="bg-secondary pl-2 text-white form-control"
           name="group"
-          onChange={(e) => setCharacter({ Sex: e.target.value })}
+          onChange={e => setSex(e)}
         >
+          <option value="">choose</option>
           <option value="Female">Female</option>
           <option value="Male">Male</option>
         </select>
@@ -53,14 +73,14 @@ export const CHARACTERFORMCREATOR = (props) => {
           autoComplete="off"
           className="bg-secondary pl-2 text-white form-control"
           name="group"
-          onChange={(e) => setCharacter({Race : e.target.value})}
+          onChange={(e) => setRace(e)}
         >
-          <option value="Caucasian">White / Caucasian</option>
-          <option value="African American">African American</option>
-          <option value="Asian">Chinese</option>
+          <option value="">Choose</option>
+          <option value="Humman">Humman</option>
+          <option value="Sindarin">Sindarin</option>
+          <option value="Khuzdul">Khuzdul</option>
         </select>
-      </div>
-
+      </div> 
       <div className="row form-group">
         <div className="col">
           <label className="">Birthday</label>{" "}
@@ -69,8 +89,12 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="birthday"
             placeholder=""
-            onChange={(e) => setCharacter({Birthday : e.target.value})}
+            onChange={(e) => setSunsigns(e) }
           />
+        </div>
+        <div className="col">
+          <label className="">Sunsigns</label>
+          <h4>Taurus</h4>
         </div>
         <div className="col">
           <label className="" />
@@ -87,13 +111,16 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={(e) => setCharacter({ birthPlace: e.target.value})}
+            onChange={e => setbirthPlace(e)}
           >
+            {/* wee need a table of birth places */}
+
             <option value="ugly">Ugly</option>
             <option value="plain">Plain</option>
             <option value="average">Average</option>
             <option value="attractive">Attractive</option>
             <option value="handsome">Handsome</option>
+
           </select>
         </div>
         <div className="col">
@@ -101,7 +128,6 @@ export const CHARACTERFORMCREATOR = (props) => {
           <h5>Viking</h5>
         </div>
       </div>
-
       <div className="row form-group">
         {/* input type */}
         <div className="col">
@@ -694,7 +720,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => autoBuild.agilityAttribute("Heavy", "Khuzdul")}
+        onClick={() => console.table(Character)}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>

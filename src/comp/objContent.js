@@ -2,12 +2,12 @@
 // this object will contain all the information for the character including status
 export const objContent = 
 {
-   Name:"hope",
-   ocupation:"rnner",
+   Name:"",
+   ocupation:"",
    Avatare:"",
    Race:"",
    Sex: "",
-   Birthday:"",
+   Sunsigns:"",
    birthPlace:"",
    Culture:"",
    SocialClass:"",
