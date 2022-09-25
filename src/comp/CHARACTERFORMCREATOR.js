@@ -31,6 +31,83 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
+
+  const setSocialClass = (e) => {let updatedValue = {SocialClass:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setHeight = (e) => {let updatedValue = {Height:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setweight = (e) => {let updatedValue = {weight:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+  
+  const setcomeliness= (e) => {let updatedValue = {comeliness:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setframe= (e) => {let updatedValue = {frame:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setcomplexion= (e) => {let updatedValue = {complexion:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+ 
+
+  const seteyeColor= (e) => {let updatedValue = {eyeColor:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+  const sethairColor= (e) => {let updatedValue = {hairColor:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setstrength= (e) => {let updatedValue = {strength:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setstamina= (e) => {let updatedValue = {stamina:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setdexterity= (e) => {let updatedValue = {dexterity:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setagility= (e) => {let updatedValue = {agility:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const seteyesight= (e) => {let updatedValue = {eyesight:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const sethearing= (e) => {let updatedValue = {hearing:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setsmell= (e) => {let updatedValue = {smell:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setvoice= (e) => {let updatedValue = {voice:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+  
+
+  // medicalOption it needs to be ramdomize
+
+  const setintelligence= (e) => {let updatedValue = {intelligence:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+  
+  const setAura= (e) => {let updatedValue = {aura:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+    
+  const setwill= (e) => {let updatedValue = {will:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setmorality= (e) => {let updatedValue = {morality:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+  
+
+  const setdeity= (e) => {let updatedValue = {deity:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+  const setpiety= (e) => {let updatedValue = {piety:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
+
+
 // still neeed to keep adding inputs.............
 
   function roll(number) {
@@ -136,7 +213,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={(e) => setCharacter({ SocialClass: e.target.value})}
+            onChange={(e) => setSocialClass(e)}
           >
             <option value="Ugly">Ugly</option>
             <option value="Plain">Plain</option>
@@ -181,6 +258,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setHeight(e)}}
             />
           </div>
         </div>
@@ -194,6 +272,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setweight(e)}}
             />
           </div>
         </div>
@@ -207,13 +286,14 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={e =>{setcomeliness(e)}}
           >
             <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="Ugly">Ugly</option>
+            <option value="Plain">Plain</option>
+            <option value="Average">Average</option>
+            <option value="Attractive">Attractive</option>
+            <option value="Handsome">Handsome</option>
           </select>
         </div>
         <div className="col">
@@ -223,14 +303,15 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={e =>{setframe(e)}}
           >
             <option value="null"></option>
-            <option value="null">Scant</option>
-            <option value="null">Light</option>
-            <option value="null">Medium</option>
-            <option value="null">Heavy</option>
-            <option value="null">Massive</option>
-            <option value="null">theammmmm</option>
+            <option value="Scant">Scant</option>
+            <option value="Light">Light</option>
+            <option value="Medium">Medium</option>
+            <option value="Heavy">Heavy</option>
+            <option value="Massive">Massive</option>
+            <option value="theammmmm">theammmmm</option>
           </select>
         </div>
       </div>
@@ -244,13 +325,14 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={e =>{setcomplexion(e)}}
           >
             <option value="null"></option>
-            <option value="null">Brown</option>
-            <option value="null">Black</option>
-            <option value="null">Red</option>
-            <option value="null">Silver</option>
-            <option value="null">Blond</option>
+            <option value="Brown">Brown</option>
+            <option value="Black">Black</option>
+            <option value="Red">Red</option>
+            <option value="Silver">Silver</option>
+            <option value="Blond">Blond</option>
           </select>
         </div>
         <div className="col">
@@ -260,14 +342,15 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={e =>{seteyeColor(e)}}
           >
             <option value="null"></option>
-            <option value="null">Brown</option>
-            <option value="null">Hazel</option>
-            <option value="null">Gray</option>
-            <option value="null">Violet</option>
-            <option value="null">Green</option>
-            <option value="null">Blue</option>
+            <option value="Brown">Brown</option>
+            <option value="Hazel">Hazel</option>
+            <option value="Gray">Gray</option>
+            <option value="Violet">Violet</option>
+            <option value="Green">Green</option>
+            <option value="Blue">Blue</option>
           </select>
         </div>
       </div>
@@ -277,13 +360,14 @@ export const CHARACTERFORMCREATOR = (props) => {
           autoComplete="off"
           className="bg-secondary pl-2 text-white form-control"
           name="group"
+          onChange={e =>{sethairColor(e)}}
         >
           <option value="null"></option>
-          <option value="null">Brown</option>
-          <option value="null">Black</option>
-          <option value="null">Red</option>
-          <option value="null">Silver</option>
-          <option value="null">Blond</option>
+          <option value="Brown">Brown</option>
+          <option value="Black">Black</option>
+          <option value="Red">Red</option>
+          <option value="Silver">Silver</option>
+          <option value="Blond">Blond</option>
         </select>
       </div>
 
@@ -302,6 +386,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setstrength(e)}}
             />
           </div>
         </div>
@@ -315,6 +400,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setstamina(e)}}
             />
           </div>
         </div>
@@ -328,6 +414,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setdexterity(e)}}
             />
           </div>
         </div>
@@ -346,6 +433,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setagility(e)}}
             />
           </div>
         </div>
@@ -359,6 +447,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{sethearing(e)}}
             />
           </div>
         </div>
@@ -372,6 +461,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{seteyesight(e)}}
             />
           </div>
         </div>
@@ -389,6 +479,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setsmell(e)}}
             />
           </div>
         </div>
@@ -402,6 +493,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setvoice(e)}}
             />
           </div>
         </div>
@@ -431,6 +523,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setintelligence(e)}}
             />
           </div>
         </div>
@@ -444,6 +537,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setAura(e)}}
             />
           </div>
         </div>
@@ -457,6 +551,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setwill(e)}}
             />
           </div>
         </div>
@@ -475,6 +570,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setmorality(e)}}
             />
           </div>
         </div>
@@ -488,6 +584,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setdeity(e)}}
             />
           </div>
         </div>
@@ -501,6 +598,7 @@ export const CHARACTERFORMCREATOR = (props) => {
               className="bg-secondary pl-2 text-white w-50 form-control"
               name="nick"
               placeholder="10"
+              onChange={e =>{setpiety(e)}}
             />
           </div>
         </div>
