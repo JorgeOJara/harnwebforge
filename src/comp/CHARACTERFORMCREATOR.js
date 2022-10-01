@@ -7,6 +7,7 @@ import { makeitForMe } from "./autocharactercreationFunctionality";
 // IN here you can found all the form imputs also the desing and structure of the form
 
 export const CHARACTERFORMCREATOR = (props) => {
+  function displayNone(){return null;}
   const dt = new ValueGetter();
 
   const autoBuild = new makeitForMe();
@@ -30,6 +31,52 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setbirthPlace = (e) => {let updatedValue = {birthPlace:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
 
+  // helps with the group selection of places...
+  const [plc,setplc] = useState(['None']);
+
+  // set the culture according to the value given...
+  const [Culture,setCulture] = useState("")
+  const showMeMyculture = (valueChoosen) =>
+  {
+    if('Barbarian' == valueChoosen) {setCulture("Tribal")}
+
+    if('Melderyn' == valueChoosen) {setCulture("Viking") }
+  
+    if('Tharda' == valueChoosen){ setCulture("Imperial") }
+
+    switch(valueChoosen) {
+      case 'Barbarian':
+          setCulture("Tribal")
+        break;
+      case 'Melderyn':
+          setCulture("Viking")
+        break;
+      case 'Tharda':
+         setCulture("Imperial")
+        break;
+
+      default:
+          setCulture("Feudal")
+     }
+  }
+
+  const setregionalPlace = (e)=>
+  {
+    const val = e.target.value;
+    const region = ["Barbarian","Chybisa","Kaldor","Kanday,","Melderyn","Orbaal","Rethem","Tharda","Misc"];
+    setplc([]);
+    if('Barbarian' == val){dt.birthTable.Barbarian.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Chybisa' == val){ dt.birthTable.Chybisa.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Kaldor' == val){ dt.birthTable.Kaldor.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Kanday' == val){  dt.birthTable.Kanday.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Melderyn' == val){  dt.birthTable.Melderyn.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Orbaal' == val){  dt.birthTable.Orbaal.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Rethem' == val){ dt.birthTable.Rethem.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Tharda' == val){  dt.birthTable.Tharda.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Misc' == val){  dt.birthTable.Misc.map(d =>  setplc(plc => [...plc, d ]))} 
+
+    showMeMyculture(val);
+  }
 
 
   const setSocialClass = (e) => {let updatedValue = {SocialClass:e.target.value};
@@ -188,21 +235,38 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={e => setregionalPlace(e)}
+          >
+            {/* wee need a table of birth places */}
+            
+            <option value="Barbarian">Barbarian</option>
+            <option value="Chybisa">Chybisa</option>
+            <option value="Kaldor">Kaldor</option>
+            <option value="Kanday">Kanday</option>
+            <option value="Melderyn">Melderyn</option>
+            <option value="Orbaal">Orbaal</option>
+            <option value="Rethem">Rethem</option>
+            <option value="Tharda">Tharda</option>
+            <option value="Misc">Misc</option>
+          </select>
+        </div>
+        <div className="col">
+          <label className="">Birth Place</label>
+          <select
+            autoComplete="off"
+            className="bg-secondary pl-2 text-white form-control"
+            name="group"
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
+            {plc.map( d => <option value={d} > {d}</option>)}
 
-            <option value="ugly">Ugly</option>
-            <option value="plain">Plain</option>
-            <option value="average">Average</option>
-            <option value="attractive">Attractive</option>
-            <option value="handsome">Handsome</option>
-
+            {plc}
           </select>
         </div>
         <div className="col">
           <label className="">Culture</label>
-          <h5>Viking</h5>
+          <h5>{ Culture }</h5>
         </div>
       </div>
       <div className="row form-group">

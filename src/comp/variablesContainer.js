@@ -118,11 +118,11 @@ birthTable = {
 "Rethem":['Arketh','Bedenes','Bekar','Chakta','Dasen','Golotha','Henwe','Hyen','Ithiko','Ithius','Menekai','Norienar','Omnis','Phira','Quiso','Quste','Senun','Shostim','Techen','Themeson','Thiri','Tormau','Weseda','Winen','Zaza'],
 
 "Tharda":['Bythe','Cestor','Chenad','Coranan','Dumon','Eidru','Esuron','Firis','Fobin','Geminost','Geshtei','Hediro','Hibut','Imrium','Kuseme','Moleryn','Noru','Ostenor','Parnan','Peden','Shiran','Stimos','Telen'],
-
 // elshavel Sindarin
 // ulfshafen Sindarin
 "Misc":['Elshavel','Habe','Noron','Trobridge','Ulfshafen']
 }
+//regional
 
 //birthdate month
 birthMonth = {

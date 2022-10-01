@@ -145,7 +145,7 @@ export const makeitForMe = class
         num2 >= 6 && num2 <= 9? finalbirthPplaceResult = done.birthTable.Barbarian[1]: displayNothing();
         num2 >= 10 && num2 <= 12? finalbirthPplaceResult = done.birthTable.Barbarian[2]: displayNothing();
         num2 >= 13 && num2 <= 16? finalbirthPplaceResult = done.birthTable.Barbarian[3]: displayNothing();
-        num1 >= 17 ? finalbirthPplaceResult = done.birthTable.Barbarian[4]: displayNothing();
+        num2>= 17 ? finalbirthPplaceResult = done.birthTable.Barbarian[4]: displayNothing();
         num2 >= 18 && num2 <= 23? finalbirthPplaceResult = done.birthTable.Barbarian[5]: displayNothing();
         num2 >= 24 && num2 <= 27? finalbirthPplaceResult = done.birthTable.Barbarian[6]: displayNothing();
         num2 >= 28 && num2 <= 43? finalbirthPplaceResult = done.birthTable.Barbarian[7]: displayNothing();
@@ -391,8 +391,7 @@ export const makeitForMe = class
       // this function depends on giveMeABirthPlace() 
       let fSocialClass;
       function displayNothing(){}
-
-
+      
       switch(culture) {
          case "Barbarian":
            // Tribal 
