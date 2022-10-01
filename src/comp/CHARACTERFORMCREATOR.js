@@ -31,19 +31,18 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setbirthPlace = (e) => {let updatedValue = {birthPlace:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
 
+
+  const setCultures  = (values) => {let updatedValue = {Culture:values};
+  setCharacter(Character => ({...Character,...updatedValue}));}
+
   // helps with the group selection of places...
   const [plc,setplc] = useState(['None']);
 
   // set the culture according to the value given...
-  const [Culture,setCulture] = useState("")
+  const [Culture,setCulture] = useState("");
+
   const showMeMyculture = (valueChoosen) =>
   {
-    if('Barbarian' == valueChoosen) {setCulture("Tribal")}
-
-    if('Melderyn' == valueChoosen) {setCulture("Viking") }
-  
-    if('Tharda' == valueChoosen){ setCulture("Imperial") }
-
     switch(valueChoosen) {
       case 'Barbarian':
           setCulture("Tribal")
@@ -58,6 +57,8 @@ export const CHARACTERFORMCREATOR = (props) => {
       default:
           setCulture("Feudal")
      }
+     console.log(Culture)
+     setCultures(Culture);
   }
 
   const setregionalPlace = (e)=>
@@ -238,7 +239,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setregionalPlace(e)}
           >
             {/* wee need a table of birth places */}
-            
+
             <option value="Barbarian">Barbarian</option>
             <option value="Chybisa">Chybisa</option>
             <option value="Kaldor">Kaldor</option>
