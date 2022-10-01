@@ -231,7 +231,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       <div class="row form-group">
         {/* input type */}
         <div className="col">
-          <label className="">Birth Place</label>
+          <label className="">Birth Region</label>
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
