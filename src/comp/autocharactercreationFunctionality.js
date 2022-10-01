@@ -376,7 +376,7 @@ export const makeitForMe = class
      }
      console.log("culture  " + Culture);
      console.log("place  " + finalbirthPplaceResult);
-     this.giveMeAsocialClass(88,Culture,finalbirthPplaceResult)
+     return [Culture , finalbirthPplaceResult];
       //   end of function 
    }
 
@@ -391,7 +391,7 @@ export const makeitForMe = class
       // this function depends on giveMeABirthPlace() 
       let fSocialClass;
       function displayNothing(){}
-      
+      let RealCulture;
       switch(culture) {
          case "Barbarian":
            // Tribal 
@@ -400,6 +400,7 @@ export const makeitForMe = class
                num >= 1 && num <= 10? fSocialClass = "Slave": displayNothing();
                num >= 11 && num <= 99? fSocialClass = "Unguilded": displayNothing();
                num == 100? fSocialClass = "Noble": displayNothing();
+               RealCulture = "Tribal";
            break;
          case "Melderyn":
            // Viking
@@ -410,6 +411,7 @@ export const makeitForMe = class
                   num >= 81 && num <= 83? fSocialClass = "Unguilded": displayNothing();
                   num >= 84 && num <= 98? fSocialClass = "Guilded": displayNothing();
                   num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
+                  RealCulture = "Viking";
            break;
          case "Tharda":
             // Imperial
@@ -419,6 +421,7 @@ export const makeitForMe = class
                num >= 26 && num <= 90? fSocialClass = "Unguilded": displayNothing();
                num >= 91 && num <= 98? fSocialClass = "Guilded": displayNothing();
                num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
+               RealCulture = "Imperial";
               break;
          default:
          //   first find if there its misc culture before enythin....
@@ -430,7 +433,9 @@ export const makeitForMe = class
                       num >= 1 && num <= 15? fSocialClass = "Unguilded": displayNothing();
                       num >= 16 && num <= 98? fSocialClass = "Guilded": displayNothing();
                       num >= 99 && num <= 100? fSocialClass = "Noble": displayNothing();
-              }else if(finalplace== "elshavel" || finalplace == "ulfshafen")
+                      RealCulture  = "Khuzan";
+              }
+              else if(finalplace== "elshavel" || finalplace == "ulfshafen")
               {
                // Sindarin
               //   if this its your culture this are the values for you social classes
@@ -438,6 +443,7 @@ export const makeitForMe = class
                      num >= 1 && num <= 70? fSocialClass = "Unguilded": displayNothing();
                      num >= 71 && num <= 99? fSocialClass = "Guilded": displayNothing();
                      num >= 100 ? fSocialClass = "Noble": displayNothing();
+                     RealCulture = "Sindarin";
               }else{
                // Feudal
               //  if this its your culture this are the values for you social classes
@@ -447,8 +453,9 @@ export const makeitForMe = class
                  num >= 71 && num <= 93? fSocialClass = "Unguilded": displayNothing();
                  num >= 94 && num <= 98? fSocialClass = "Guilded": displayNothing();
                  num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
+                 RealCulture = "Feudal";
               }
-             return fSocialClass;  
+             return [RealCulture , fSocialClass];  
         }
    }
    giveMeMyHeiGHt(Race,Sex)
