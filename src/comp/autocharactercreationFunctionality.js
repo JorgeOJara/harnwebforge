@@ -374,12 +374,21 @@ export const makeitForMe = class
          num2 >= 94 && num2 <= 95? finalbirthPplaceResult = done.birthTable.Misc[4]: displayNothing();
          num2 >= 96 && num2 <= 100? finalbirthPplaceResult = done.birthTable.Misc[5]: displayNothing();
      }
-     console.log("culture  " + Culture);
-     console.log("place  " + finalbirthPplaceResult);
      return [Culture , finalbirthPplaceResult];
       //   end of function 
    }
+/////////////////////////////////////////////////////////////////////////////////////
+   // we need to do the ocupations function, it comes from culture....
 
+
+
+
+/////////// space for ocupations function......
+
+
+
+
+   ////////////////////////////////////////////////////////////////////////
    giveMeAsocialClass(num,culture,finalplace)
    {
       //  this functions helps you choose the social class of you character......

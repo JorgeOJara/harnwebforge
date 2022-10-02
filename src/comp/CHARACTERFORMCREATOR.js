@@ -1,6 +1,7 @@
-import React, { setState, useState } from "react";
+import React, { setState, useState,useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
+import { weaponsAval } from "./weapons";
 
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
@@ -58,6 +59,7 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   // this its the list of ocupations avaliables for the social class choosen...
   const [ocupation,setOcupation] = useState(["None"]);
+  
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -100,6 +102,7 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setSocialClass = (e) => {
     let updatedValue = {SocialClass:e.target.value};
     setCharacter(Character => ({...Character,...updatedValue}));
+    // call weapons options function to update equipment
 
     if(Culture == "Tribal")
     { 
@@ -346,7 +349,6 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <div className="row form-group">
         {/* input type */}
-        {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className="col">
           <label className="">Social Class</label>
           <select
@@ -360,7 +362,7 @@ export const CHARACTERFORMCREATOR = (props) => {
         </div>
         {/* input type */}
         <div className="col">
-          <label className="">Social Ocupation</label>
+          <label className="">Ocupation</label>
           <select
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
@@ -371,7 +373,6 @@ export const CHARACTERFORMCREATOR = (props) => {
           </select>
         </div>
       </div>
-         {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
       {/* family dev  */}
       <div className="form-group">
         <label className="">Description</label>
@@ -762,12 +763,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+              <option value="None">None</option> 
+            {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -777,12 +774,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+             <option value="None">None</option> 
+             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -795,12 +788,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+              <option value="None">None</option> 
+             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -810,12 +799,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+              <option value="None">None</option> 
+             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -828,12 +813,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+              <option value="None">None</option> 
+               {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -843,12 +824,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+              <option value="None">None</option> 
+             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
