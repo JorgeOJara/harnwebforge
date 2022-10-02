@@ -142,29 +142,33 @@ sunsigns = {
 
 //social class
 socialClass = {
-"Tribal":['Slave','Freeman (unguilded)','Nobility'],
-"Viking":['Slave','Serf (Orbaal only)','Freeman (unguilded)','Freeman (guilded)','Nobility'],
-"Feudal":['Slave (Rethem only)','Serf','Freeman (unguilded)','Freeman (guilded)','Nobility'],
-"Imperial":['Serf','Freeman (unguilded)','Freeman (guilded)','Nobility'],
-"Sindarin":['Freeman (unguilded)','Freeman (guilded)','Nobility'],
-"Khuzan":['Freeman (unguilded)','Freeman (guilded)','Nobility']
+"Tribal":['Slave','Freeman','Nobility'],
+"Viking":['Slave','Freeman','guilded','Nobility'],
+"Feudal":['Slave','Serf','Freeman','guilded','Nobility'],
+"Imperial":['Slave','Freeman','guilded','Nobility'],
+"Sindarin":['Freeman','guilded','Nobility'],
+"Khuzan":['Freeman','guilded','Nobility']
 }
+
+// /////////////////////////////
+  // we need another field that make you choose what it does as part of the social class..
+////////////////////////////
 
 //tribal culture
 tribalCulture = {
-"Slave":['Farmer','Herdsman','Servant/Cook'],
-"Freeman (unguilded)":['Cleric/Shaman','Fisherman','Herdsman','Hunter/Trapper'],
+"Slave":['Farmer','Herdsman','Servant Cook'],
+"Freeman":['Cleric Shaman','Fisherman','Herdsman','Hunter Trapper'],
 "Nobility":['Tribal Chieftain']
 }
 
 //viking culture
 vikingCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook'],
-"Freeman (unguilded)":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Teamster','Thatcher','Toymaker'],
-"Freeman (guilded)":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -176,11 +180,11 @@ vikingCulture = {
 feudalCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook'],
 "Serf":['Farmer','Herdsman','Servant/Cook'],
-"Freeman (unguilded)":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Soldier: Yeoman','Teamster','Thatcher','Toymaker'],
-"Freeman (guilded)":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -191,11 +195,11 @@ feudalCulture = {
 //imperial culture
 imperialCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook','Gladiator/Guard'],
-"Freeman (unguilded)":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Teamster','Thatcher','Toymaker'],
-"Freeman (guilded)":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -205,9 +209,9 @@ imperialCulture = {
 
 //sindarin culture
 sindarinCulture = { 
-"Freeman (unguilded)":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant','Fisherman',
+"Freeman":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant','Fisherman',
 	'Hunter/Trapper','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking','Teamster','Thatcher','Toymaker'],
-"Freeman (guilded)":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
+"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -217,10 +221,10 @@ sindarinCulture = {
 
 //khuzan culture
 khuzanCulture = {
-"Freeman (unguilded)":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant',
+"Freeman":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant',
 	'Hunter/Trapper','Laborer/Longshoreman','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman',
 	'Teamster','Toymaker'],
-"Freeman (guilded)":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
+"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Perfumer','Physician','Potter','Salter','Tentmaker','Thespian','Thief (Lia-Kavair)','Timberwright',
