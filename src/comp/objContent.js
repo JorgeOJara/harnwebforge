@@ -11,7 +11,6 @@ export const objContent =
    birthPlace:"",
    Culture:"",
    SocialClass:"",
-   ocupation:"",
    Description:"",
    height:0,
    weight:0,

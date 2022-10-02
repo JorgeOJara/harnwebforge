@@ -101,7 +101,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 
 //  change side pannel to none display..
     let sideContainer;
-    sidePanel === true?sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />:<div></div>;
+    if(sidePanel === true){sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />};
 
      return(
     <>

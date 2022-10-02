@@ -367,7 +367,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={(e) => setSocialOcupation(e)}
+            onChange={(e) => {setSocialOcupation(e); console.log("something changed")}}
           >
                {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
