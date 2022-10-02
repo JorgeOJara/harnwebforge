@@ -3,15 +3,14 @@
 export const objContent = 
 {
    Name:"",
-   ocupation:"",
+   occupation:"",
    Avatare:"",
    Race:"",
    Sex: "",
-   Sunsigns:"",
+   sunsign:"",
    birthPlace:"",
    Culture:"",
    SocialClass:"",
-   ocupation:"",
    Description:"",
    height:0,
    weight:0,
