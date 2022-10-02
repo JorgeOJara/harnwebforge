@@ -17,6 +17,7 @@ class CheckInput {
     if(this.CharacterObj.height === 0){
         this.CharacterObj.height = autoFill.giveMeMyHeiGHt(this.CharacterObj.Race, this.CharacterObj.Sex);
     }
+    if(this.CharacterObj.frame === ""){this.CharacterObj.frame = autoFill.howFatItsMycharacter();} 
   }
 }
 
