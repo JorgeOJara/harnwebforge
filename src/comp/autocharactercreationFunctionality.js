@@ -83,7 +83,7 @@ export const makeitForMe = class
          let sunsigns ="";
          function displayNothing(){return null;}
 
-            results ==== 1? sunsigns = "Lado (the Galley)": displayNothing();
+            results === 1? sunsigns = "Lado (the Galley)": displayNothing();
             results >= 2 && results <= 5? sunsigns = "Lado-Ulandus cusp":displayNothing();
             results >= 6 && results <= 31? sunsigns = "Ulandus (the Tree)": displayNothing();
             results >= 32 && results <= 35? sunsigns = "Ulandus-Aralius cusp": displayNothing();
@@ -679,8 +679,8 @@ export const makeitForMe = class
       function displayNone(){return null;}
       
       // Modifiers for the Races
-      Race ==== "Khuzdul"? strenGtH = strenGtH + 4 :displayNone()
-      Race ==== "Sindarin"?strenGtH = strenGtH + 1 :displayNone()
+      Race === "Khuzdul"? strenGtH = strenGtH + 4 :displayNone()
+      Race === "Sindarin"?strenGtH = strenGtH + 1 :displayNone()
 
       // depending on the weight rage you get penalties or  added points for your strenGtH
 
@@ -705,8 +705,8 @@ export const makeitForMe = class
       function displayNone(){return null;}
       
       // Modifiers for the Races
-      Race ==== "Khuzdul"? Stamina = Stamina + 4 :displayNone()
-      Race ==== "Sindarin"?Stamina = Stamina + 1 :displayNone()
+      Race === "Khuzdul"? Stamina = Stamina + 4 :displayNone()
+      Race === "Sindarin"?Stamina = Stamina + 1 :displayNone()
 
       console.log(Stamina);
    }
@@ -716,11 +716,11 @@ export const makeitForMe = class
       //Using roll function to calcultate 3D6
       let dexterity = this.roll(6) + this.roll(6) + this.roll(6);  
       // Sindarin gets 2 additonal point in Dexterity
-      if(Race ==== "Sindarin"){
+      if(Race === "Sindarin"){
          dexterity = dexterity + 2;
       }
       //Khuzdul gets 1 additonal point in Dexterity
-      if(Race ==== "Khuzdul"){
+      if(Race === "Khuzdul"){
          dexterity = dexterity + 1;
       }   
       return dexterity;    
@@ -728,45 +728,45 @@ export const makeitForMe = class
    agilityAttribute(finalFrame, Race){
       let agility = this.roll(6) + this.roll(6) + this.roll(6); 
 
-      Race ==== "Sindarin"?agility = agility + 2: this.displayNone();
+      Race === "Sindarin"?agility = agility + 2: this.displayNone();
 
-      if(finalFrame ==== "Scant"){ agility = agility + 2; }
-      if(finalFrame ==== "Light"){ agility = agility + 1; }
-      if(finalFrame ==== "Heavy"){ agility = agility - 1; }
-      if(finalFrame ==== "Massive"){ agility = agility - 2; }
+      if(finalFrame === "Scant"){ agility = agility + 2; }
+      if(finalFrame === "Light"){ agility = agility + 1; }
+      if(finalFrame === "Heavy"){ agility = agility - 1; }
+      if(finalFrame === "Massive"){ agility = agility - 2; }
 
       return agility;
    }
 
    eyesightAttribute(Culture, Species){
       let eyesight = this.roll(6) + this.roll(6) + this.roll(6); 
-      if(Culture ==== "Barbarian"){eyesight = eyesight + 2;}
-      if(Species ==== "Sindarin"){ eyesight = eyesight + 2; }
-      if(Species ==== "Khuzdul"){ eyesight = eyesight + 2; }
+      if(Culture === "Barbarian"){eyesight = eyesight + 2;}
+      if(Species === "Sindarin"){ eyesight = eyesight + 2; }
+      if(Species === "Khuzdul"){ eyesight = eyesight + 2; }
 
       return eyesight;
   }
 
    hearingAttribute(Culture, Species){
       let hearing = this.roll(6) + this.roll(6) + this.roll(6); 
-      if(Culture ==== "Barbarian"){hearing = hearing + 2;}
-      if(Species ==== "Sindarin"){ hearing = hearing + 2; }
-      if(Species ==== "Khuzdul"){ hearing = hearing + 2; }
+      if(Culture === "Barbarian"){hearing = hearing + 2;}
+      if(Species === "Sindarin"){ hearing = hearing + 2; }
+      if(Species === "Khuzdul"){ hearing = hearing + 2; }
 
       return hearing;
    }
      smellAttribute(Culture, Species){
       let smell = this.roll(6) + this.roll(6) + this.roll(6); 
-      if(Culture ==== "Barbarian"){smell = smell + 2;}
-      if(Species ==== "Sindarin"){ smell = smell + 3; }
-      if(Species ==== "Khuzdul"){ smell = smell + 2; }
+      if(Culture === "Barbarian"){smell = smell + 2;}
+      if(Species === "Sindarin"){ smell = smell + 3; }
+      if(Species === "Khuzdul"){ smell = smell + 2; }
 
       return smell;
    }
       voiceAttribute(Race){
          let voice = this.roll(6) + this.roll(6) + this.roll(6);
          let voiceDescription = "";
-         if(Race ==== "Sindarin"){voice = voice + 2};
+         if(Race === "Sindarin"){voice = voice + 2};
          if(voice >= 3 && voice <= 4){voiceDescription = "Unbearable"};
          if(voice >= 5 && voice <=8){voiceDescription = "Unpleasant "};
          if(voice >= 9 && voice <= 12){voiceDescription = "Average"};
@@ -815,21 +815,21 @@ export const makeitForMe = class
       auraAttribute(Race, gender){
          let aura = this.roll(6) + this.roll(6) + this.roll(6);
 
-         if(Race ==== "Human" && gender ==== "female"){aura = aura + 2}
-         if(Race ==== "Sindarin"){aura = aura + 4}
-         if(Race ==== "Khuzdul"){aura = aura - 2}
+         if(Race === "Human" && gender === "female"){aura = aura + 2}
+         if(Race === "Sindarin"){aura = aura + 4}
+         if(Race === "Khuzdul"){aura = aura - 2}
          return aura;
       }
 
       willAttribute(Race){
          let will = this.roll(6) + this.roll(6) + this.roll(6);
-         if(Race ==== "Khuzdul"){will = will + 3}
+         if(Race === "Khuzdul"){will = will + 3}
          return will; 
       }
       
       moralAttribute(Race){
          let moral = this.roll(6) + this.roll(6) + this.roll(6);
-         if(Race ==== "Sindarin"){moral = moral + 3}
+         if(Race === "Sindarin"){moral = moral + 3}
          return moral; 
       }
 // all functions  before this ending brack......⬆️⬆️⬆️
