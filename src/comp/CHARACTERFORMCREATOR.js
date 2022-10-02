@@ -1,16 +1,13 @@
 import React, { setState, useState } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
-import { makeitForMe } from "./autocharactercreationFunctionality";
 
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
 
 export const CHARACTERFORMCREATOR = (props) => {
-  function displayNone(){return null;}
+  
   const dt = new ValueGetter();
-
-  const autoBuild = new makeitForMe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
@@ -27,9 +24,25 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setSunsigns = (e) => {let updatedValue = {Sunsigns:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
 
+ const UpdatesetSocialOptions = () =>
+ {
+      setSocial([]);
+      if(Culture == "Tribal"){ dt.socialClass.Tribal.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Viking"){dt.socialClass.Viking.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Feudal"){dt.socialClass.Feudal.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Imperial"){dt.socialClass.Imperial.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Sindarin"){dt.socialClass.Sindarin.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Khuzan"){dt.socialClass.Khuzan.map(d =>  setSocial(social => [...social, d ]))}
+ }
+  const setbirthPlace = (e) => {
+    let updatedValue = {birthPlace:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));
 
-  const setbirthPlace = (e) => {let updatedValue = {birthPlace:e.target.value};
-  setCharacter(Character => ({...Character,...updatedValue}));}
+  if(e.target.value == "Habe"){ setCulture("Khuzan");}
+  if(e.target.value == "Elshavel"){ setCulture("Sindarin");}
+  if(e.target.value == "Ulfshafen"){ setCulture("Sindarin"); }
+  UpdatesetSocialOptions()
+}
 
 
   const setCultures  = (values) => {let updatedValue = {Culture:values};
@@ -40,6 +53,11 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   // set the culture according to the value given...
   const [Culture,setCulture] = useState("");
+
+  const [social,setSocial] = useState(["None"]);
+
+  // this its the list of ocupations avaliables for the social class choosen...
+  const [ocupation,setOcupation] = useState(["None"]);
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -57,16 +75,16 @@ export const CHARACTERFORMCREATOR = (props) => {
       default:
           setCulture("Feudal")
      }
-     console.log(Culture)
      setCultures(Culture);
+     UpdatesetSocialOptions()
   }
 
   const setregionalPlace = (e)=>
   {
     const val = e.target.value;
-    const region = ["Barbarian","Chybisa","Kaldor","Kanday,","Melderyn","Orbaal","Rethem","Tharda","Misc"];
+
     setplc([]);
-    if('Barbarian' == val){dt.birthTable.Barbarian.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Barbarian' == val){ dt.birthTable.Barbarian.map(d =>  setplc(plc => [...plc, d ])) }
     if('Chybisa' == val){ dt.birthTable.Chybisa.map(d =>  setplc(plc => [...plc, d ])) }
     if('Kaldor' == val){ dt.birthTable.Kaldor.map(d =>  setplc(plc => [...plc, d ])) }
     if('Kanday' == val){  dt.birthTable.Kanday.map(d =>  setplc(plc => [...plc, d ])) }
@@ -75,13 +93,71 @@ export const CHARACTERFORMCREATOR = (props) => {
     if('Rethem' == val){ dt.birthTable.Rethem.map(d =>  setplc(plc => [...plc, d ])) }
     if('Tharda' == val){  dt.birthTable.Tharda.map(d =>  setplc(plc => [...plc, d ])) }
     if('Misc' == val){  dt.birthTable.Misc.map(d =>  setplc(plc => [...plc, d ]))} 
-
     showMeMyculture(val);
   }
 
 
-  const setSocialClass = (e) => {let updatedValue = {SocialClass:e.target.value};
-  setCharacter(Character => ({...Character,...updatedValue}));}
+  const setSocialClass = (e) => {
+    let updatedValue = {SocialClass:e.target.value};
+    setCharacter(Character => ({...Character,...updatedValue}));
+
+    if(Culture == "Tribal")
+    { 
+          setOcupation([]);
+          if(e.target.value == "Slave"){dt.tribalCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+          if(e.target.value == "Freeman"){dt.tribalCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+          if(e.target.value == "Nobility"){dt.tribalCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+  
+    }
+    if(Culture == "Viking")
+    {
+        setOcupation([]);
+        if(e.target.value == "Slave"){dt.vikingCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+        if(e.target.value == "Freeman"){dt.vikingCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+        if(e.target.value == "guilded"){dt.vikingCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+        if(e.target.value == "Nobility"){dt.vikingCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+  
+    }
+    if(Culture == "Feudal")
+    {
+      setOcupation([]);
+      if(e.target.value == "Slave"){dt.feudalCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value== "Serf"){dt.feudalCulture.Serf.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Freeman"){dt.feudalCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "guilded"){dt.feudalCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Nobility"){dt.feudalCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+  
+    }
+    if(Culture == "Imperial")
+    {
+      setOcupation([]);
+      if(e.target.value == "Slave"){dt.imperialCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Freeman"){dt.imperialCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "guilded"){dt.imperialCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Nobility"){dt.imperialCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+    }
+    if(Culture == "Sindarin")
+    {
+      setOcupation([]);
+      if(e.target.value == "Freeman"){dt.sindarinCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "guilded"){dt.sindarinCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Nobility"){dt.sindarinCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+    }
+    if(Culture == "Khuzan")
+    {
+      setOcupation([]);
+      if(e.target.value == "Freeman"){dt.khuzanCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "guilded"){dt.khuzanCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Nobility"){dt.khuzanCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+    }
+}
+  const setSocialOcupation = (e) => {
+
+    let updatedValue = {ocupation:e.target.value};
+    setCharacter(Character => ({...Character,...updatedValue}));
+
+}
+
 
   const setHeight = (e) => {let updatedValue = {Height:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
@@ -239,7 +315,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setregionalPlace(e)}
           >
             {/* wee need a table of birth places */}
-
+            <option value="None">None</option>
             <option value="Barbarian">Barbarian</option>
             <option value="Chybisa">Chybisa</option>
             <option value="Kaldor">Kaldor</option>
@@ -260,9 +336,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
-            {plc.map( d => <option value={d} > {d}</option>)}
-
-            {plc}
+            {plc.map( d => <option value={d}>{d}</option>)}
           </select>
         </div>
         <div className="col">
@@ -272,6 +346,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <div className="row form-group">
         {/* input type */}
+        {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
         <div className="col">
           <label className="">Social Class</label>
           <select
@@ -280,15 +355,23 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => setSocialClass(e)}
           >
-            <option value="Ugly">Ugly</option>
-            <option value="Plain">Plain</option>
-            <option value="Average">Average</option>
-            <option value="Attractive">Attractive</option>
-            <option value="Handsome">Handsome</option>
+               {social.map( d => <option value={d}>{d}</option> )}
+          </select>
+        </div>
+        {/* input type */}
+        <div className="col">
+          <label className="">Social Ocupation</label>
+          <select
+            autoComplete="off"
+            className="bg-secondary pl-2 text-white form-control"
+            name="group"
+            onChange={(e) => setSocialOcupation(e)}
+          >
+               {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
         </div>
       </div>
-
+         {/* /////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
       {/* family dev  */}
       <div className="form-group">
         <label className="">Description</label>
