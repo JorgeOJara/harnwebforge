@@ -139,6 +139,7 @@ sunsigns = {
 "Symbol":['Tree','Wands','Smith','Fire Dragon','Flaming Swords','Salamander','Eagle','Pentacle','Lantern Bearer','Mixer','Chalice','Galley']
 }
 
+
 //social class
 socialClass = {
 "Tribal":['Slave','Freeman (unguilded)','Nobility'],
@@ -148,6 +149,7 @@ socialClass = {
 "Sindarin":['Freeman (unguilded)','Freeman (guilded)','Nobility'],
 "Khuzan":['Freeman (unguilded)','Freeman (guilded)','Nobility']
 }
+
 //tribal culture
 tribalCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook'],

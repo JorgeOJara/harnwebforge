@@ -27,9 +27,25 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setSunsigns = (e) => {let updatedValue = {Sunsigns:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
 
+ const UpdatesetSocialOptions = () =>
+ {
+      setSocial([]);
+      if(Culture == "Tribal"){ dt.socialClass.Tribal.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Viking"){dt.socialClass.Viking.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Feudal"){dt.socialClass.Feudal.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Imperial"){dt.socialClass.Imperial.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Sindarin"){dt.socialClass.Sindarin.map(d =>  setSocial(social => [...social, d ]))}
+      if(Culture == "Khuzan"){dt.socialClass.Khuzan.map(d =>  setSocial(social => [...social, d ]))}
+ }
+  const setbirthPlace = (e) => {
+    let updatedValue = {birthPlace:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));
 
-  const setbirthPlace = (e) => {let updatedValue = {birthPlace:e.target.value};
-  setCharacter(Character => ({...Character,...updatedValue}));}
+  if(e.target.value === "Habe"){ setCulture("Khuzan"); UpdatesetSocialOptions(); }
+  if(e.target.value === "Elshavel"){ setCulture("Sindarin"); UpdatesetSocialOptions();}
+  if(e.target.value === "Ulfshafen"){ setCulture("Sindarin"); UpdatesetSocialOptions(); }
+
+}
 
 
   const setCultures  = (values) => {let updatedValue = {Culture:values};
@@ -40,6 +56,8 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   // set the culture according to the value given...
   const [Culture,setCulture] = useState("");
+
+  const [social,setSocial] = useState(["None"])
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -57,16 +75,16 @@ export const CHARACTERFORMCREATOR = (props) => {
       default:
           setCulture("Feudal")
      }
-     console.log(Culture)
      setCultures(Culture);
+     UpdatesetSocialOptions()
   }
 
   const setregionalPlace = (e)=>
   {
     const val = e.target.value;
-    const region = ["Barbarian","Chybisa","Kaldor","Kanday,","Melderyn","Orbaal","Rethem","Tharda","Misc"];
+
     setplc([]);
-    if('Barbarian' == val){dt.birthTable.Barbarian.map(d =>  setplc(plc => [...plc, d ])) }
+    if('Barbarian' == val){ dt.birthTable.Barbarian.map(d =>  setplc(plc => [...plc, d ])) }
     if('Chybisa' == val){ dt.birthTable.Chybisa.map(d =>  setplc(plc => [...plc, d ])) }
     if('Kaldor' == val){ dt.birthTable.Kaldor.map(d =>  setplc(plc => [...plc, d ])) }
     if('Kanday' == val){  dt.birthTable.Kanday.map(d =>  setplc(plc => [...plc, d ])) }
@@ -77,6 +95,7 @@ export const CHARACTERFORMCREATOR = (props) => {
     if('Misc' == val){  dt.birthTable.Misc.map(d =>  setplc(plc => [...plc, d ]))} 
 
     showMeMyculture(val);
+
   }
 
 
@@ -260,9 +279,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
-            {plc.map( d => <option value={d} > {d}</option>)}
-
-            {plc}
+            {plc.map( d => <option value={d}>{d}</option>)}
           </select>
         </div>
         <div className="col">
@@ -280,11 +297,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => setSocialClass(e)}
           >
-            <option value="Ugly">Ugly</option>
-            <option value="Plain">Plain</option>
-            <option value="Average">Average</option>
-            <option value="Attractive">Attractive</option>
-            <option value="Handsome">Handsome</option>
+            {/* ///////////////////////////////////////////////////////////////////////////////////////////////// */}
+               {social.map( d => <option value={d}>{d}</option> )}
           </select>
         </div>
       </div>
