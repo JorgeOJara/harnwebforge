@@ -339,7 +339,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
-            {plc.map( d => <option value={d}>{d}</option>)}
+            {plc.map( d => <option key={Math.random()} value={d}>{d}</option>)}
           </select>
         </div>
         <div className="col">
@@ -357,7 +357,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => setSocialClass(e)}
           >
-               {social.map( d => <option value={d}>{d}</option> )}
+               {social.map( d => <option key={Math.random()}  value={d}>{d}</option> )}
           </select>
         </div>
         {/* input type */}
@@ -369,7 +369,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => {setSocialOcupation(e); console.log("something changed")}}
           >
-               {ocupation.map( d => <option value={d}>{d}</option> )}
+               {ocupation.map( d => <option key={Math.random()} value={d}>{d}</option> )}
           </select>
         </div>
       </div>
@@ -764,7 +764,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
               <option value="None">None</option> 
-            {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+            {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -775,7 +775,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
              <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+             {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -789,7 +789,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -800,7 +800,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -814,7 +814,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
               <option value="None">None</option> 
-               {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -825,7 +825,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>

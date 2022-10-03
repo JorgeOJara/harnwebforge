@@ -92,8 +92,6 @@ useEffect(() => {
 
 const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAvatare + ".png";
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   // hooks
   const [sidePanel,setSidePanel] = useState(true);
  
@@ -114,7 +112,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
         <meta content="#333333" name="theme-color" /> {/*<base href="/">*/}
 
         {/* CSS only */}
-        {/* <link href="ico/url" rel="icon" type="image/png">  */}
+
         <title>HARN-BOT Dash</title>
         <style
           id="svelte-1sw1rxt-style"
@@ -222,17 +220,10 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
             <div className="container-fluid h-100 d-flex flex-column py-4">
               <div className="h-100 overflow-hidden flex-nowrap row">
 
-
-
                 {/* start of side panel */}
+                     {sideContainer}
+                {/* end of side panel */}
 
-
-{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        {/* < SidePanel changeSidePanel={content=>setSidePanel(content)} />          */}
-        {sideContainer}
-{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-{/* end of side panel */}
                 {/* form */}
                 <div id="details" className="col-12 col-md-7">
                   <div className="h-100 mb-4 p-2 card" style={{}}>
@@ -242,20 +233,15 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
               <div className="w-50 mx-auto my-3">
   
                             {/* block */}
-                            {/* <img src="./Tupperbox Dashboard_files/tupperbox_0_silhouette.png" alt="tupperbox silhouette" class="img-fluid"> */}
-<div className="justify-content-center row">
+    <div className="justify-content-center row">
     <div className="col-auto mb-3">
+    <div className="avatar-wrapper">
 
-                 <div className="avatar-wrapper">
+           {/* avatar creating profile image */}
+            <ProfileCopntent avatar={Avatare} />
+              {/* avatar content ended */}
 
-
-                                  {/* avatar creating profile image */}
-                    
-                                          <ProfileCopntent avatar={Avatare} />
-
-                                  {/* avatar content ended */}
-
-                  </div>
+     </div>
      </div>
      <div className="col-12 col-md">
                    {/* Second session of profile content */}
@@ -265,16 +251,9 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 </div>
                    {/* Character creation... */}
 
-           {/* 
-           here we display the content in pieces to 
-           to be able to work in each object creation individualy..
-           that means before the data gets back here into the parrent container the variables should be
-           already setup with the content to be send and saved...
-           */}
-                    <CHARACTERFORMCREATOR  changeAvatar={content=>setAvatare(content)}/>
+   <CHARACTERFORMCREATOR  changeAvatar={content=>setAvatare(content)}/>
          
-                    {/*end of the character creation functions. */}   
-      
+         {/*end of the character creation functions. */}   
                 </div>
                     {/* <div>No tuppers selected!</div> */}
           </div></div></div></div></div></div></div>

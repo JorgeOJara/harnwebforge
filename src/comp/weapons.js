@@ -20,7 +20,7 @@ export const weaponsAval = [
 
 {id:563537,itemName:"Dagger",skills:"Dagger",effects:{B:1,E:2,P:5},Ad:[5,5],wt:1,WQ:11,hm:null,price:24},
 
-{id:25431,itemName:"Taburi (Kunai)",skills:"Dagger",effects:{B:0,E:null,P:4,},Ad:[5,0],wt:1,WQ:10,hm:null,price:20},
+{id:7697954436,itemName:"Taburi (Kunai)",skills:"Dagger",effects:{B:0,E:null,P:4,},Ad:[5,0],wt:1,WQ:10,hm:null,price:20},
 
 {id:16542,itemName:"Keltan",skills:"Dagger",effects:{B:2,E:0,P:3},Ad:[5,10],wt:2,WQ:12,hm:null,price:36},
 

@@ -381,11 +381,7 @@ export const makeitForMe = class
    // we need to do the ocupations function, it comes from culture....
 
 
-
-
 /////////// space for ocupations function......
-
-
 
 
    ////////////////////////////////////////////////////////////////////////
