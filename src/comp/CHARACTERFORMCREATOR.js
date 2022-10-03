@@ -244,7 +244,7 @@ export const CHARACTERFORMCREATOR = (props) => {
   }
   return (
     <>
-      <form className="form-group">
+      <form className="form-group f">
         <label className="">Birth Atributes</label>
         <div className="input-group">
           <input
