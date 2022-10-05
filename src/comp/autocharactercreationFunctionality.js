@@ -108,7 +108,7 @@ export const makeitForMe = class
             results >= 304 && results <= 329? sunsigns = "Masara (the Chalice)": displayNothing();
             results >= 330 && results <= 333? sunsigns = "Masara-Lado cusp": displayNothing();
             results >= 334 && results <= 360? sunsigns = "Lado (the Galley)": displayNothing();
-            return sunsigns +"  " + results;
+            return sunsigns;
       }
 
    giveMeABirthPlace(num1,num2)
@@ -377,12 +377,60 @@ export const makeitForMe = class
      return [Culture , finalbirthPplaceResult];
       //   end of function 
    }
-/////////////////////////////////////////////////////////////////////////////////////
-   // we need to do the ocupations function, it comes from culture....
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+    chooseMyOcupationForME(socialClass, Culture)
+   {
+      let ocupation = [];
 
-/////////// space for ocupations function......
+      if(Culture == "Tribal")
+      { 
+            if(socialClass == "Slave"){done.tribalCulture.Slave.map(d =>  ocupation.push(d))}
+            if(socialClass == "Freeman"){done.tribalCulture.Freeman.map(d =>  ocupation.push(d))}
+            if(socialClass == "Nobility"){done.tribalCulture.Nobility.map(d => ocupation.push(d))}
+    
+      }
+      if(Culture == "Viking")
+      {
+          if(socialClass == "Slave"){done.vikingCulture.Slave.map(d =>  ocupation.push(d))}
+          if(socialClass == "Freeman"){done.vikingCulture.Freeman.map(d => ocupation.push(d))}
+          if(socialClass == "guilded"){done.vikingCulture.guilded.map(d => ocupation.push(d))}
+          if(socialClass == "Nobility"){done.vikingCulture.Nobility.map(d => ocupation.push(d))}
+    
+      }
+      if(Culture == "Feudal")
+      {
+        if(socialClass == "Slave"){done.feudalCulture.Slave.map(d =>  ocupation.push(d))}
+        if(socialClass == "Serf"){done.feudalCulture.Serf.map(d =>   ocupation.push(d))}
+        if(socialClass == "Freeman"){done.feudalCulture.Freeman.map(d =>  ocupation.push(d))}
+        if(socialClass == "guilded"){done.feudalCulture.guilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Nobility"){done.feudalCulture.Nobility.map(d =>  ocupation.push(d))}
+    
+      }
+      if(Culture == "Imperial")
+      {
+        if(socialClass == "Slave"){done.imperialCulture.Slave.map(d => ocupation.push(d))}
+        if(socialClass == "Freeman"){done.imperialCulture.Freeman.map(d => ocupation.push(d))}
+        if(socialClass == "guilded"){done.imperialCulture.guilded.map(d => ocupation.push(d))}
+        if(socialClass == "Nobility"){done.imperialCulture.Nobility.map(d => ocupation.push(d))}
+      }
+      if(Culture == "Sindarin")
+      {
+        if(socialClass == "Freeman"){done.sindarinCulture.Freeman.map(d =>  ocupation.push(d))}
+        if(socialClass == "guilded"){done.sindarinCulture.guilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Nobility"){done.sindarinCulture.Nobility.map(d => ocupation.push(d))}
+      }
+      if(Culture == "Khuzan")
+      {
+        if(socialClass == "Freeman"){done.khuzanCulture.Freeman.map(d =>  ocupation.push(d) )}
+        if(socialClass == "guilded"){done.khuzanCulture.guilded.map(d =>   ocupation.push(d) )}
+        if(socialClass == "Nobility"){done.khuzanCulture.Nobility.map(d =>   ocupation.push(d) )}
+      }
+      console.table(ocupation)
 
+      /// I need to know how to pick a ocupations from the possible list of opcupations already given....
+   }
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
    ////////////////////////////////////////////////////////////////////////
    giveMeAsocialClass(num,culture,finalplace)
