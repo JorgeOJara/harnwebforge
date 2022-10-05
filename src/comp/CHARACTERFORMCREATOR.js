@@ -2,7 +2,6 @@ import React, { setState, useState,useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
 import { weaponsAval } from "./weapons";
-import { makeitForMe } from "./autocharactercreationFunctionality";
 
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
@@ -10,7 +9,6 @@ import { makeitForMe } from "./autocharactercreationFunctionality";
 export const CHARACTERFORMCREATOR = (props) => {
   
   const dt = new ValueGetter();
-  const autoComplete = new makeitForMe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
@@ -369,7 +367,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={(e) => {setSocialOcupation(e); console.log("something changed")}}
+            onChange={(e) => {setSocialOcupation(e);}}
           >
                {ocupation.map( d => <option key={Math.random()} value={d}>{d}</option> )}
           </select>
@@ -945,7 +943,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => autoComplete.chooseMyOcupationForME(Character.SocialClass,Culture)}
+        onClick={() => console.table(Character)}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>

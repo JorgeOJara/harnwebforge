@@ -1,4 +1,5 @@
 import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
+import { findByAltText } from "@testing-library/react";
 import { ValueGetter } from "./variablesContainer";
 const done = new ValueGetter();
 
@@ -426,7 +427,12 @@ export const makeitForMe = class
         if(socialClass == "guilded"){done.khuzanCulture.guilded.map(d =>   ocupation.push(d) )}
         if(socialClass == "Nobility"){done.khuzanCulture.Nobility.map(d =>   ocupation.push(d) )}
       }
-      console.table(ocupation)
+
+// pick a  ramdom ocupations from avaliable ocupations....
+     let finalOcupation = this.roll(ocupation.length)
+     let ajustOcupation = finalOcupation - 1;
+
+      console.table(ocupation[ajustOcupation])
 
       /// I need to know how to pick a ocupations from the possible list of opcupations already given....
    }
