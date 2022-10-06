@@ -8,7 +8,7 @@ export const ProfileCopntentBottom = ()=>{
 <>
       <div className="form-group">
           <input
-            required=""
+            required="true"
             maxLength={80}
             type="text"
             className="bg-secondary pl-2 text-white form-control-lg form-control"

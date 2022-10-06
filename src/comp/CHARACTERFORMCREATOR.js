@@ -945,7 +945,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => console.log(done.chooseMyBirthdayForMe())}
+        onClick={() => console.table(Character)}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>
