@@ -70,7 +70,7 @@ export const makeitForMe = class
       }
 // roll 12 month
 // roll 30 for day
-      chooseMyBirthdayForMe(num12,num30)
+      chooseMyBirthdayForMe()
       {
 
          // this functions as the names impplies helps you choose your day of birth also gives you a sunsigns value back..
@@ -78,8 +78,8 @@ export const makeitForMe = class
 
          // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
        
-         let mul  = (num12 -1) *30;
-         let results  = mul + num30;
+         let mul  = (this.roll(12) -1) *30;
+         let results  = mul + this.roll(30);
          
          let sunsigns ="";
          function displayNothing(){return null;}
@@ -145,7 +145,7 @@ export const makeitForMe = class
 // It needs a culture and a value from 1 to 100;
    giveBackbirthplace(Culture,num2)
    {
-
+    function displayNothing(){return null;}
     let finalbirthPplaceResult;
     //   console.log(num1 + " " + num2)
       if(Culture == "Barbarian")

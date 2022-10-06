@@ -2,6 +2,7 @@ import React, { setState, useState,useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
 import { weaponsAval } from "./weapons";
+import { makeitForMe } from "./autocharactercreationFunctionality";
 
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
@@ -9,6 +10,7 @@ import { weaponsAval } from "./weapons";
 export const CHARACTERFORMCREATOR = (props) => {
   
   const dt = new ValueGetter();
+  const done =  new makeitForMe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
@@ -943,7 +945,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => console.table(Character)}
+        onClick={() => console.log(done.chooseMyBirthdayForMe())}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>
