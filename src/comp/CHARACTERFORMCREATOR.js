@@ -24,8 +24,13 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
-  const setSunsigns = (e) => {let updatedValue = {Sunsigns:e.target.value};
-  setCharacter(Character => ({...Character,...updatedValue}));}
+  const setSunsigns = (e) => {
+  
+     let sun = e.target.value.split("-")
+     console.log(sun[1] + sun[2])
+     let updatedValue = { Sunsigns : done.chooseMyBirthdayForMe(parseInt(sun[1]),parseInt(sun[2]))}
+    setCharacter(Character => ({...Character,...updatedValue}));
+}
 
  const UpdatesetSocialOptions = () =>
  {

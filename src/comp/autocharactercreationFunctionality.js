@@ -70,20 +70,24 @@ export const makeitForMe = class
       }
 // roll 12 month
 // roll 30 for day
-      chooseMyBirthdayForMe()
+      chooseMyBirthdayForMe(month,day)
       {
 
          // this functions as the names impplies helps you choose your day of birth also gives you a sunsigns value back..
          // later Note also return the actual value of the birthday before the sunsigns
 
          // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
-       
-         let mul  = (this.roll(12) -1) *30;
-         let results  = mul + this.roll(30);
-         
-         let sunsigns ="";
+        let results;
+        if(typeof month !== 'undefined' || typeof day !== 'undefined'){
+            let mul = (month - 1) * 30;
+            results = mul + day;
+        }else{
+          let mul  = (this.roll(12) -1) *30;
+          results  = mul + this.roll(30);
+        }
+        
+         let sunsigns;
          function displayNothing(){return null;}
-
             results == 1? sunsigns = "Lado (the Galley)": displayNothing();
             results >= 2 && results <= 5? sunsigns = "Lado-Ulandus cusp":displayNothing();
             results >= 6 && results <= 31? sunsigns = "Ulandus (the Tree)": displayNothing();
