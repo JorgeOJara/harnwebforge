@@ -1,10 +1,15 @@
 import React, { setState, useState,useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
-import { weaponsAval } from "./weapons";
+
+// the auto generator script.. to help with some things...
 import { makeitForMe } from "./autocharactercreationFunctionality";
 
 
+//  the weapons information object
+import { weaponsAval } from "./weapons";
+
+// the armor information object
 import { ARMORval } from "./armor";
 
 // this component, its the form on the website, where the magic happens..
@@ -12,8 +17,10 @@ import { ARMORval } from "./armor";
 
 export const CHARACTERFORMCREATOR = (props) => {
   
+  // all the main variables are here
   const dt = new ValueGetter();
 
+  // Creating a instance of the auto class...
   const done =  new makeitForMe();
 
   // schema .. of the character
@@ -77,7 +84,7 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   // this its the list of ocupations avaliables for the social class choosen...
   const [ocupation,setOcupation] = useState(["None"]);
-  
+
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -252,7 +259,26 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
+/// weapons hooks
+  const [selectedWeapons,setSelectedWeapons] = useState([]);
+/// armor hook
+   const [selectedArmor,setSelectedArmor] = useState([]);
 
+// collect weapons
+  const weaponsCollector = (e) => 
+  {
+      setSelectedWeapons(selectedWeapons => [...selectedWeapons, e.target.value ]);
+  }
+
+
+// collect Armor
+const ArnorCollector = (e) => 
+{
+   setSelectedArmor(selectedArmor => [...selectedArmor, e.target.value ] )
+}
+
+
+ 
 // still neeed to keep adding inputs.............
 
   function roll(number) {
@@ -780,6 +806,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
               <option value="None">None</option> 
             {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -791,6 +818,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
              <option value="None">None</option> 
              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -805,6 +833,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -816,6 +845,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -830,6 +860,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -841,6 +872,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  weaponsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -856,6 +888,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -867,6 +900,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
              { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -881,6 +915,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -892,6 +927,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -906,6 +942,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -917,6 +954,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  ArnorCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
