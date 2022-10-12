@@ -4,16 +4,24 @@ import { ValueGetter } from "./variablesContainer";
 import { weaponsAval } from "./weapons";
 import { makeitForMe } from "./autocharactercreationFunctionality";
 
+
+import { ARMORval } from "./armor";
+
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
 
 export const CHARACTERFORMCREATOR = (props) => {
   
   const dt = new ValueGetter();
+
   const done =  new makeitForMe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
+
+
+  // display sunsings
+  const [ sun, setsun] = useState("");
   
   // setting up the data on the object.....
 
@@ -27,9 +35,12 @@ export const CHARACTERFORMCREATOR = (props) => {
   const setSunsigns = (e) => {
   
      let sun = e.target.value.split("-")
-     console.log(sun[1] + sun[2])
-     let updatedValue = { Sunsigns : done.chooseMyBirthdayForMe(parseInt(sun[1]),parseInt(sun[2]))}
+     let content = done.chooseMyBirthdayForMe(parseInt(sun[1]),parseInt(sun[2]));
+     setsun(content)
+     let updatedValue = { Sunsigns : content}
+
     setCharacter(Character => ({...Character,...updatedValue}));
+
 }
 
  const UpdatesetSocialOptions = () =>
@@ -305,7 +316,7 @@ export const CHARACTERFORMCREATOR = (props) => {
         </div>
         <div className="col">
           <label className="">Sunsigns</label>
-          <h4>Taurus</h4>
+            <h4>{ sun }</h4>
         </div>
         <div className="col">
           <label className="" />
@@ -346,7 +357,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
-            {plc.map( d => <option key={Math.random()} value={d}>{d}</option>)}
+            {plc.map( d => <option value={d} >{d}</option> )}
           </select>
         </div>
         <div className="col">
@@ -364,7 +375,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => setSocialClass(e)}
           >
-               {social.map( d => <option key={Math.random()}  value={d}>{d}</option> )}
+               { social.map( d => <option value={d} >{d}</option> )}
           </select>
         </div>
         {/* input type */}
@@ -376,7 +387,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => {setSocialOcupation(e);}}
           >
-               {ocupation.map( d => <option key={Math.random()} value={d}>{d}</option> )}
+               {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
         </div>
       </div>
@@ -846,12 +857,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -861,12 +868,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -879,12 +882,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -894,12 +893,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+           { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -912,12 +907,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -927,12 +918,8 @@ export const CHARACTERFORMCREATOR = (props) => {
             className="bg-secondary pl-2 text-white form-control"
             name="group"
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
