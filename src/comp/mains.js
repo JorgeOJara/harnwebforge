@@ -1,10 +1,7 @@
 import React, { setState ,useState,useEffect,Redirect } from 'react';
 import logo from './imgs/pngegg.png';
-import alita from './imgs/azula.jpg';
+import alita from "./imgs/azula.jpg";
 
-
-import { ProfileCopntent } from './profilecontent';
-import { ProfileCopntentBottom } from './profilecontentBottom';
 import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
 import axios from 'axios';
@@ -21,6 +18,9 @@ export const Main = ()=>{
 const [User,setUser]= useState("");
 const [userAvatare,setUserAvatare] = useState("");
 const [UserId,setUserId] = useState(0);
+
+//pass the name to be safe in creation objec
+const [Namer,setName] = useState("");
 
 
 const getUserInfo = async (accessToken) => {
@@ -94,8 +94,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 
   // hooks
   const [sidePanel,setSidePanel] = useState(true);
- 
-  const [Avatare,setAvatare] = useState(alita);
+
 
 //  change side pannel to none display..
     let sideContainer;
@@ -230,28 +229,20 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
                     <div className="overflow-auto h-100 m-2 pr-3 d-flex flex-nowrap flex-column">
                       <div className="h-75 row">
                         <div className="col text-center">
-              <div className="w-50 mx-auto my-3">
+                            <div className="w-50 mx-auto my-3">
   
                             {/* block */}
-    <div className="justify-content-center row">
-    <div className="col-auto mb-3">
-    <div className="avatar-wrapper">
 
-           {/* avatar creating profile image */}
-            <ProfileCopntent avatar={Avatare} />
-              {/* avatar content ended */}
 
-     </div>
-     </div>
-     <div className="col-12 col-md">
-                   {/* Second session of profile content */}
-                            <ProfileCopntentBottom />
-                   {/* second section of profile content ended */}
-        </div>
-</div>
+
+
+
+
+
+                         {/* end block */}
                    {/* Character creation... */}
 
-   <CHARACTERFORMCREATOR  changeAvatar={content=>setAvatare(content)}/>
+   <CHARACTERFORMCREATOR />
          
          {/*end of the character creation functions. */}   
                 </div>

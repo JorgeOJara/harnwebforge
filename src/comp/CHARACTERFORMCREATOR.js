@@ -1,6 +1,12 @@
-import React, { setState, useState,useEffect } from "react";
+import React, { setState, useState, useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
+
+
+import alita from './imgs/azula.jpg';
+// safer... 
+import { checkBeforeSafe } from "./theFiinalStand";
+
 
 // the auto generator script.. to help with some things...
 import { makeitForMe } from "./autocharactercreationFunctionality";
@@ -17,11 +23,17 @@ import { ARMORval } from "./armor";
 
 export const CHARACTERFORMCREATOR = (props) => {
   
+  const [Avatare,setAvatare] = useState(alita);
+
+
   // all the main variables are here
   const dt = new ValueGetter();
 
   // Creating a instance of the auto class...
   const done =  new makeitForMe();
+
+  // checker schema
+  const final  = new checkBeforeSafe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
@@ -259,25 +271,28 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
-/// weapons hooks
-  const [selectedWeapons,setSelectedWeapons] = useState([]);
-/// armor hook
-   const [selectedArmor,setSelectedArmor] = useState([]);
+/// items collected
+  const [itemsc,setItemsc] = useState([]);
 
 // collect weapons
-  const weaponsCollector = (e) => 
+  const itemsCollector = (e) => 
   {
-      setSelectedWeapons(selectedWeapons => [...selectedWeapons, e.target.value ]);
+      setItemsc(itemsc => [...itemsc, e.target.value ]);
   }
 
 
-// collect Armor
-const ArnorCollector = (e) => 
-{
-   setSelectedArmor(selectedArmor => [...selectedArmor, e.target.value ] )
-}
+  const verifier = ()=>
+  {
+     let updatedValue = {items:itemsc};
+     setCharacter(Character => ({...Character,...updatedValue}));
+
+     let updatedV = {Name: props.names};
+     setCharacter(Character => ({...Character,...updatedV}))
 
 
+     final.collect(Character)
+     final.displayer()
+  }
  
 // still neeed to keep adding inputs.............
 
@@ -288,15 +303,78 @@ const ArnorCollector = (e) =>
   }
   return (
     <>
+    {/* testing */}
+    <div className="justify-content-center row">
+    <div className="col-auto mb-3">
+    <div className="avatar-wrapper">
+
+           {/* avatar creating profile image */}
+           <img
+        draggable="false"
+        src={  Avatare }
+        alt="Avatar"
+        className="avatar rounded-circle"
+      />
+      <div
+        className="not-allowed"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="Upgrade to premium to upload avatars!"
+      >
+        <div className="upload-button disabled">
+          <i
+            className="fas fa-upload"
+            aria-hidden="true"
+          />
+        </div>
+     </div>
+              {/* avatar content ended */}
+
+     </div>
+     </div>
+     <div className="col-12 col-md">
+    {/* Second session of profile content */}
+       <div className="form-group">
+          <input
+            required="true"
+            maxLength={80}
+            type="text"
+            className="bg-secondary pl-2 text-white form-control-lg form-control"
+            name="name"
+            placeholder="Full Name"
+            onChange={(event) => {
+              let updatedValue = { Name : event.target.value}
+              setCharacter(Character => ({...Character,...updatedValue}));
+          }}
+          />
+        </div>
+    {/* second section of profile content ended */}
+        </div>
+</div>
+
+
+  {/* name form */}
+     
+
+
+
+
+
+
+
+
+
+
+        {/* ////////// */}
       <form className="form-group f">
-        <label className="">Birth Atributes</label>
+        <label className="">Character sheet</label>
         <div className="input-group">
           <input
             id="avUrl"
             maxLength={250}
             type="url"
             className="bg-secondary pl-2 text-white w-50 form-control"
-            onChange={(event) => props.changeAvatar(event.target.value)}
+            onChange={(event) => setAvatare(event.target.value)}
             placeholder="AVATAR URL"
           />
         </div>
@@ -806,7 +884,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
             {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -818,7 +896,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
              <option value="None">None</option> 
              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -833,7 +911,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -845,7 +923,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -860,7 +938,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -872,7 +950,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  weaponsCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
               {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
@@ -888,7 +966,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -900,7 +978,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
              { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -915,7 +993,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -927,7 +1005,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -942,7 +1020,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -954,7 +1032,7 @@ const ArnorCollector = (e) =>
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={ e =>{  ArnorCollector(e) }}
+            onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
@@ -975,7 +1053,7 @@ const ArnorCollector = (e) =>
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => console.table(Character)}
+        onClick={() => verifier()}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>
