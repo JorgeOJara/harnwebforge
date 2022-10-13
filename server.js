@@ -43,7 +43,7 @@ app.get('/login', function (req, res) {
 /// building the api.....
 app.post("/CreateCharacter",(reques,response)=>{
   
-  let rawdata  = reques.body.main;
+  let rawdata  = reques.body.main.trim();
   let data = JSON.parse(rawdata);
 
   console.log(data)
