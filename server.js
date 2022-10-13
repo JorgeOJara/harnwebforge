@@ -47,7 +47,9 @@ app.post("/CreateCharacter",(reques,response)=>{
   reques.header('Authorization') // "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
   
   let data  = reques.body.main;
-  console.log(typeof data)
+  console.log(JSON.parse(data.name))
+  response.send("done")
+  response.end();
 
   // MongoClient.connect(url, function(err, db) {
   //   if (err) throw err;
