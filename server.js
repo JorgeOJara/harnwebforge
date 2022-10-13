@@ -46,7 +46,7 @@ app.post("/CreateCharacter",(reques,response)=>{
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("mydb");
-    let done =  JSON.parse(reques.body.main);
+    let done =  JSON.parse(reques.body.main[0]);
     dbo.collection("Characters").insertOne(done, function(err, res) {
       if (err) throw err;
        console.log("1 document inserted" + myobj );
