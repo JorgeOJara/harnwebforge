@@ -38,7 +38,9 @@ export const CHARACTERFORMCREATOR = (props) => {
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
 
-
+  // to choose gods
+  const gods =  ["Agrik","Halea","Ilvir","Larani","Morgath","Naveh","Peoni","Sarajin","Save kor","Siem"];
+  
   // display sunsings
   const [ sun, setsun] = useState("");
   
@@ -269,6 +271,7 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   const setpiety= (e) => {let updatedValue = {piety:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
+  
 
 
 /// items collected
@@ -288,9 +291,8 @@ export const CHARACTERFORMCREATOR = (props) => {
   {
       final.collect(Character)
       final.checkforAll()
-      // final.displayer()
+      final.displayer()
   }
-
 
 
   return (
@@ -815,18 +817,16 @@ export const CHARACTERFORMCREATOR = (props) => {
           </div>
         </div>
         <div className="col">
-          {/* input type */}
-          <label className="">Deity</label>
-          <div className="input-group">
-            <input
-              maxLength={500}
-              type="number"
-              className="bg-secondary pl-2 text-white w-50 form-control"
-              name="nick"
-              placeholder="10"
-              onChange={e =>{setdeity(e)}}
-            />
-          </div>
+        <label className="">deity</label>
+        <select
+            autoComplete="on"
+            className="bg-secondary pl-2 text-white form-control"
+            name="group"
+            onChange={e =>{setdeity(e)}}
+          >
+             <option value="None">None</option> 
+               {gods.map( d => <option value={ d }>{ d }</option> )}
+          </select>
         </div>
         <div className="col">
           {/* input type */}

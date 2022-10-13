@@ -78,7 +78,7 @@ export const makeitForMe = class
 
          // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
         let results;
-        if(typeof month !== 'undefined' || typeof day !== 'undefined'){
+        if(month !== 'undefined' || day !== 'undefined'){
             let mul = (month - 1) * 30;
             results = mul + day;
         }else{
@@ -121,7 +121,7 @@ export const makeitForMe = class
    // this functions helps you get a place of birth for you character according to the Harn games maps and locations
    // its a long function but simple, expects 2 numbers from 1-100
    // depending on the number you might drop in a place 
-    let Culture;
+let Culture;
     function displayNothing(){return null;}
    //  Tribal  social class
     num1 >= 1 && num1 <= 18? Culture = "Barbarian":displayNothing();
@@ -442,7 +442,7 @@ export const makeitForMe = class
      let finalOcupation = this.roll(ocupation.length)
      let ajustOcupation = finalOcupation - 1;
 
-      console.table(ocupation[ajustOcupation])
+      return ocupation[ajustOcupation];
 
       /// I need to know how to pick a ocupations from the possible list of opcupations already given....
    }
@@ -554,7 +554,7 @@ export const makeitForMe = class
        let convertIntonormal = finalheight / 12;
        let finalDisplayebleValue = convertIntonormal.toFixed(1)
    // first return its the inches values second feets values
-       return [finalheight,finalDisplayebleValue];
+       return finalheight;
    }
 
    howFatItsMycharacter()
@@ -629,7 +629,7 @@ export const makeitForMe = class
       CuteValue >= 9 && CuteValue <= 12? finalcuteValue = "Average":displayNone()
       CuteValue >= 13 && CuteValue <= 15? finalcuteValue = "Attractive":displayNone()
       CuteValue >= 16? finalcuteValue = "Handsome":displayNone()
-      console.log(finalcuteValue);
+      return finalcuteValue;
    }
 
    // CoMPlexion
@@ -691,9 +691,9 @@ export const makeitForMe = class
          num  >= 71 && num <= 90? HairColor = "Silver" :displayNone()
          num  >= 91 && num <= 100? HairColor = "Blond" :displayNone()
        }
-       
-        console.log(HairColor); 
+       return HairColor;
      }
+
      whatsMyEyeColor(num,Race)
      {
        // Human Sindarin Khuzdul
@@ -768,8 +768,9 @@ export const makeitForMe = class
       Race === "Khuzdul"? Stamina = Stamina + 4 :displayNone()
       Race === "Sindarin"?Stamina = Stamina + 1 :displayNone()
 
-      console.log(Stamina);
+     return Stamina;
    }
+
 //   you can write your next method here.......⬇️⬇️⬇️
    
    dexterityAttribute(Race){
@@ -878,6 +879,7 @@ export const makeitForMe = class
          if(Race === "Human" && gender === "female"){aura = aura + 2}
          if(Race === "Sindarin"){aura = aura + 4}
          if(Race === "Khuzdul"){aura = aura - 2}
+         
          return aura;
       }
 
