@@ -41,15 +41,16 @@ app.get('/login', function (req, res) {
 
 
 /// building the api.....
-app.post("/CreateCharacter",(reques,repsonse)=>{
+app.post("/CreateCharacter",(reques,response)=>{
 
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("mydb");
-    var myobj = JSON.parse(reques.body.main);
+    var myobj = JSON.stringify(reques.body.main);
     dbo.collection("Characters").insertOne(myobj, function(err, res) {
       if (err) throw err;
        console.log("1 document inserted" + myobj );
+       response.send("done...")
       db.close();
     });
   });
