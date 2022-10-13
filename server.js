@@ -44,9 +44,9 @@ app.get('/login', function (req, res) {
 app.post("/CreateCharacter",(reques,response)=>{
   console.log(reques.body.main)
   let rawdata  = reques.body.main;
-  let clean = rawdata.trim();
+  let clean = rawdata.toString();
   let data = JSON.parse(clean);
-  
+
   console.log(data)
   response.send("done")
   response.end();
