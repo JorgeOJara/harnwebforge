@@ -20,7 +20,11 @@ const credentials = {
 	cert: certificate,
 	ca: ca
 };
+// Parse URL-encoded bodies (as sent by HTML forms)
+app.use(express.urlencoded());
 
+// Parse JSON bodies (as sent by API clients)
+app.use(express.json());
 
 // create new express app and save it as "app"
 app.get('/', function (req, res) {
@@ -32,6 +36,15 @@ app.get('/login', function (req, res) {
 app.get('*', function(req, res){
 res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
+
+
+/// building the api.....
+app.post("/CreateCharacter",(reques,repsonse)=>{
+     console.log(reques.body)
+     response.send("got it...")
+     response.end();
+})
+
 
 // Listen both http & https ports
 const httpServer = http.createServer(app);
