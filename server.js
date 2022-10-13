@@ -38,7 +38,7 @@ app.get('/login', function (req, res) {
 
 /// building the api.....
 app.post("/CreateCharacter",(reques,repsonse)=>{
-  console.log(reques.body)
+  console.log(reques.body.main)
   repsonse.send("got it...")
   repsonse.end();
 })
