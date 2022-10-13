@@ -3,7 +3,8 @@ import time;
 
 # update everything using git
 os.system("git add --all")
-print("added")
+os.system("git reset -- .env")
+print("added and remove env")
 time.sleep(3)
 os.system("git commit -m 'Something'")
 print("message added")
