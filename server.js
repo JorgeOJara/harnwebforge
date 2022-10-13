@@ -1,18 +1,34 @@
-const express = require('express');
-const path = require('path');
+const https = require('https');
+const http = require('http');
+
+const fs = require('fs');
+
+
 const app = express();
+app.use(cors());
 
-let done  = 0;
-app.use(express.static(path.join(__dirname, 'build')));
-
+// create new express app and save it as "app"
 app.get('/', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(dirname, 'build', 'index.html'));
 });
 app.get('/login', function (req, res) {
-  res.sendFile(path.join(__dirname, 'build', 'index.html'));
+  res.sendFile(path.join(dirname, 'build', 'index.html'));
 });
 app.get('*', function(req, res){
 res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
-app.listen(80)
 
+// Listen both http & https ports
+const httpServer = http.createServer(app);
+const httpsServer = https.createServer({
+  key: fs.readFileSync('/etc/letsencrypt/live/my_api_url/privkey.pem'),
+  cert: fs.readFileSync('/etc/letsencrypt/live/my_api_url/fullchain.pem'),
+}, app);
+
+httpServer.listen(80, () => {
+    console.log('HTTP Server running on port 80');
+});
+
+httpsServer.listen(443, () => {
+    console.log('HTTPS Server running on port 443');
+});
