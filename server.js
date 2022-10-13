@@ -46,8 +46,9 @@ app.post("/CreateCharacter",(reques,response)=>{
   reques.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
   reques.header('Authorization') // "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
   
-  let data  = reques.body.main;
-  console.log(JSON.parse(data.name))
+  let rawdata  = reques.body.main;
+  let data = JSON.parse(rawdata);
+  console.log(data);
   response.send("done")
   response.end();
 
