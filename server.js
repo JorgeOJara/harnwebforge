@@ -42,27 +42,13 @@ app.get('/login', function (req, res) {
 
 /// building the api.....
 app.post("/CreateCharacter",(reques,response)=>{
-  reques.header('Content-Type')  // "application/json"
-  reques.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
-  reques.header('Authorization') // "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
   
   let rawdata  = reques.body.main;
   let data = JSON.parse(rawdata);
-  console.log(data);
+
+  console.log(data)
   response.send("done")
   response.end();
-
-  // MongoClient.connect(url, function(err, db) {
-  //   if (err) throw err;
-    // var dbo = db.db("mydb");
-
-    // dbo.collection("Characters").insertOne(data, function(err, res) {
-    //   if (err) throw err;
-    //    console.log("1 document inserted" + myobj );
-    //    response.send("done...")
-    //   db.close();
-  //   });
-  // });
 })
 
 app.get('*', function(req, res){
