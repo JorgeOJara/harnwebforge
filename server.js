@@ -23,7 +23,7 @@ res.sendFile(path.join(__dirname, 'build', 'index.html'));
 
 // Listen both http & https ports
 const httpServer = http.createServer(app);
-serverhttps.createServer({    
+httpServer.createServer({    
     key: fs.readFileSync('./key.pem'),    
     cert: fs.readFileSync('./cert.pem'),   
     passphrase: 'lokita1212'
@@ -33,6 +33,6 @@ httpServer.listen(80, () => {
     console.log('HTTP Server running on port 80');
 });
 
-serverhttps.listen(443, () => {
+httpServer.listen(443, () => {
     console.log('HTTPS Server running on port 443');
 });
