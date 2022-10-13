@@ -46,8 +46,8 @@ app.post("/CreateCharacter",(reques,response)=>{
   reques.header('user-agent')    // "Mozilla/5.0 (Macintosh Intel Mac OS X 10_8_5) AppleWebKi..."
   reques.header('Authorization') // "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9..."
   
-  let data  = reques.body.main.name;
-  console.log(data)
+  let data  = reques.body.main;
+  console.log(typeof data)
 
   // MongoClient.connect(url, function(err, db) {
   //   if (err) throw err;
