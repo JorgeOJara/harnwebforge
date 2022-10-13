@@ -5,7 +5,7 @@ import React, {setState ,useState,useEffect} from 'react';
 
 
 export const Join = ()=>{
-    const enlace = "https://discord.com/api/oauth2/authorize?client_id=1006779722988011592&redirect_uri=http%3A%2F%2Flocalhost%3A3000%2F&response_type=code&scope=identify";
+    const enlace = "https://discord.com/api/oauth2/authorize?client_id=1006779722988011592&redirect_uri=http%3A%2F%2Fharnforge.com%2F&response_type=code&scope=identify";
     function login()
 {
     window.location.replace(enlace);
