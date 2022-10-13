@@ -38,6 +38,6 @@ export const objContent =
    armor:[],
    psyche:"",
    itsAlive:true,
-   items:{gold:100},
+   items:[],
    discordUsername:""
 }

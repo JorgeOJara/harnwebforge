@@ -1,10 +1,7 @@
 import React, { setState ,useState,useEffect,Redirect } from 'react';
 import logo from './imgs/pngegg.png';
-import alita from './imgs/azula.jpg';
+import alita from "./imgs/azula.jpg";
 
-
-import { ProfileCopntent } from './profilecontent';
-import { ProfileCopntentBottom } from './profilecontentBottom';
 import { CHARACTERFORMCREATOR } from './CHARACTERFORMCREATOR';
 
 import axios from 'axios';
@@ -21,6 +18,9 @@ export const Main = ()=>{
 const [User,setUser]= useState("");
 const [userAvatare,setUserAvatare] = useState("");
 const [UserId,setUserId] = useState(0);
+
+//pass the name to be safe in creation objec
+const [Namer,setName] = useState("");
 
 
 const getUserInfo = async (accessToken) => {
@@ -92,16 +92,13 @@ useEffect(() => {
 
 const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAvatare + ".png";
 
-//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
-
   // hooks
   const [sidePanel,setSidePanel] = useState(true);
- 
-  const [Avatare,setAvatare] = useState(alita);
+
 
 //  change side pannel to none display..
     let sideContainer;
-    sidePanel === true?sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />:<div></div>;
+    if(sidePanel === true){sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />};
 
      return(
     <>
@@ -114,7 +111,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
         <meta content="#333333" name="theme-color" /> {/*<base href="/">*/}
 
         {/* CSS only */}
-        {/* <link href="ico/url" rel="icon" type="image/png">  */}
+
         <title>HARN-BOT Dash</title>
         <style
           id="svelte-1sw1rxt-style"
@@ -222,59 +219,32 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
             <div className="container-fluid h-100 d-flex flex-column py-4">
               <div className="h-100 overflow-hidden flex-nowrap row">
 
-
-
                 {/* start of side panel */}
+                     {sideContainer}
+                {/* end of side panel */}
 
-
-{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-        {/* < SidePanel changeSidePanel={content=>setSidePanel(content)} />          */}
-        {sideContainer}
-{/* //////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////// */}
-
-{/* end of side panel */}
                 {/* form */}
                 <div id="details" className="col-12 col-md-7">
                   <div className="h-100 mb-4 p-2 card" style={{}}>
                     <div className="overflow-auto h-100 m-2 pr-3 d-flex flex-nowrap flex-column">
                       <div className="h-75 row">
                         <div className="col text-center">
-              <div className="w-50 mx-auto my-3">
+                            <div className="w-50 mx-auto my-3">
   
                             {/* block */}
-                            {/* <img src="./Tupperbox Dashboard_files/tupperbox_0_silhouette.png" alt="tupperbox silhouette" class="img-fluid"> */}
-<div className="justify-content-center row">
-    <div className="col-auto mb-3">
-
-                 <div className="avatar-wrapper">
 
 
-                                  {/* avatar creating profile image */}
-                    
-                                          <ProfileCopntent avatar={Avatare} />
 
-                                  {/* avatar content ended */}
 
-                  </div>
-     </div>
-     <div className="col-12 col-md">
-                   {/* Second session of profile content */}
-                            <ProfileCopntentBottom />
-                   {/* second section of profile content ended */}
-        </div>
-</div>
+
+
+
+                         {/* end block */}
                    {/* Character creation... */}
 
-           {/* 
-           here we display the content in pieces to 
-           to be able to work in each object creation individualy..
-           that means before the data gets back here into the parrent container the variables should be
-           already setup with the content to be send and saved...
-           */}
-                    <CHARACTERFORMCREATOR  changeAvatar={content=>setAvatare(content)}/>
+   <CHARACTERFORMCREATOR />
          
-                    {/*end of the character creation functions. */}   
-      
+         {/*end of the character creation functions. */}   
                 </div>
                     {/* <div>No tuppers selected!</div> */}
           </div></div></div></div></div></div></div>

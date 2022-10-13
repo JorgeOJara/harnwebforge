@@ -1,17 +1,46 @@
-import React, { setState, useState,useEffect } from "react";
+import React, { setState, useState, useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
+
+
+import alita from './imgs/azula.jpg';
+// safer... 
+import { checkBeforeSafe } from "./theFiinalStand";
+
+
+// the auto generator script.. to help with some things...
+import { makeitForMe } from "./autocharactercreationFunctionality";
+
+
+//  the weapons information object
 import { weaponsAval } from "./weapons";
+
+// the armor information object
+import { ARMORval } from "./armor";
 
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
 
 export const CHARACTERFORMCREATOR = (props) => {
   
+  const [Avatare,setAvatare] = useState(alita);
+
+
+  // all the main variables are here
   const dt = new ValueGetter();
+
+  // Creating a instance of the auto class...
+  const done =  new makeitForMe();
+
+  // checker schema
+  const final  = new checkBeforeSafe();
 
   // schema .. of the character
   const [Character, setCharacter] = useState(objContent);
+
+
+  // display sunsings
+  const [ sun, setsun] = useState("");
   
   // setting up the data on the object.....
 
@@ -22,8 +51,16 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
-  const setSunsigns = (e) => {let updatedValue = {Sunsigns:e.target.value};
-  setCharacter(Character => ({...Character,...updatedValue}));}
+  const setSunsigns = (e) => {
+  
+     let sun = e.target.value.split("-")
+     let content = done.chooseMyBirthdayForMe(parseInt(sun[1]),parseInt(sun[2]));
+     setsun(content)
+     let updatedValue = { Sunsigns : content}
+
+    setCharacter(Character => ({...Character,...updatedValue}));
+
+}
 
  const UpdatesetSocialOptions = () =>
  {
@@ -59,7 +96,7 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   // this its the list of ocupations avaliables for the social class choosen...
   const [ocupation,setOcupation] = useState(["None"]);
-  
+
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -234,7 +271,29 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
 
 
+/// items collected
+  const [itemsc,setItemsc] = useState([]);
 
+// collect weapons
+  const itemsCollector = (e) => 
+  {
+      setItemsc(itemsc => [...itemsc, e.target.value ]);
+  }
+
+
+  const verifier = ()=>
+  {
+     let updatedValue = {items:itemsc};
+     setCharacter(Character => ({...Character,...updatedValue}));
+
+     let updatedV = {Name: props.names};
+     setCharacter(Character => ({...Character,...updatedV}))
+
+
+     final.collect(Character)
+     final.displayer()
+  }
+ 
 // still neeed to keep adding inputs.............
 
   function roll(number) {
@@ -244,15 +303,78 @@ export const CHARACTERFORMCREATOR = (props) => {
   }
   return (
     <>
-      <form className="form-group">
-        <label className="">Birth Atributes</label>
+    {/* testing */}
+    <div className="justify-content-center row">
+    <div className="col-auto mb-3">
+    <div className="avatar-wrapper">
+
+           {/* avatar creating profile image */}
+           <img
+        draggable="false"
+        src={  Avatare }
+        alt="Avatar"
+        className="avatar rounded-circle"
+      />
+      <div
+        className="not-allowed"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="Upgrade to premium to upload avatars!"
+      >
+        <div className="upload-button disabled">
+          <i
+            className="fas fa-upload"
+            aria-hidden="true"
+          />
+        </div>
+     </div>
+              {/* avatar content ended */}
+
+     </div>
+     </div>
+     <div className="col-12 col-md">
+    {/* Second session of profile content */}
+       <div className="form-group">
+          <input
+            required="true"
+            maxLength={80}
+            type="text"
+            className="bg-secondary pl-2 text-white form-control-lg form-control"
+            name="name"
+            placeholder="Full Name"
+            onChange={(event) => {
+              let updatedValue = { Name : event.target.value}
+              setCharacter(Character => ({...Character,...updatedValue}));
+          }}
+          />
+        </div>
+    {/* second section of profile content ended */}
+        </div>
+</div>
+
+
+  {/* name form */}
+     
+
+
+
+
+
+
+
+
+
+
+        {/* ////////// */}
+      <form className="form-group f">
+        <label className="">Character sheet</label>
         <div className="input-group">
           <input
             id="avUrl"
             maxLength={250}
             type="url"
             className="bg-secondary pl-2 text-white w-50 form-control"
-            onChange={(event) => props.changeAvatar(event.target.value)}
+            onChange={(event) => setAvatare(event.target.value)}
             placeholder="AVATAR URL"
           />
         </div>
@@ -298,7 +420,7 @@ export const CHARACTERFORMCREATOR = (props) => {
         </div>
         <div className="col">
           <label className="">Sunsigns</label>
-          <h4>Taurus</h4>
+            <h4>{ sun }</h4>
         </div>
         <div className="col">
           <label className="" />
@@ -339,7 +461,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={e => setbirthPlace(e)}
           >
             {/* wee need a table of birth places */}
-            {plc.map( d => <option value={d}>{d}</option>)}
+            {plc.map( d => <option value={d} >{d}</option> )}
           </select>
         </div>
         <div className="col">
@@ -357,7 +479,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="group"
             onChange={(e) => setSocialClass(e)}
           >
-               {social.map( d => <option value={d}>{d}</option> )}
+               { social.map( d => <option value={d} >{d}</option> )}
           </select>
         </div>
         {/* input type */}
@@ -367,7 +489,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
-            onChange={(e) => setSocialOcupation(e)}
+            onChange={(e) => {setSocialOcupation(e);}}
           >
                {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
@@ -762,9 +884,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-            {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+            {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -773,9 +896,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
              <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+             {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -787,9 +911,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -798,9 +923,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -812,9 +938,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-               {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -823,9 +950,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option key={d.id} value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -838,13 +966,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -853,13 +978,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -871,13 +993,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -886,13 +1005,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+           { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -904,13 +1020,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -919,13 +1032,10 @@ export const CHARACTERFORMCREATOR = (props) => {
             autoComplete="off"
             className="bg-secondary pl-2 text-white form-control"
             name="group"
+            onChange={ e =>{  itemsCollector(e) }}
           >
-            <option value="null"></option>
-            <option value="null">Ugly</option>
-            <option value="null">Plain</option>
-            <option value="null">Average</option>
-            <option value="null">Attractive</option>
-            <option value="null">Handsome</option>
+            <option value="None">None</option> 
+            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -943,7 +1053,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       </div>
       <button
         className="btn btn-secondary b"
-        onClick={() => console.table(Character)}
+        onClick={() => verifier()}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>
