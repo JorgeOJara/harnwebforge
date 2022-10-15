@@ -43,6 +43,6 @@ checkforAll()
   if(this.obj.morality == 0){this.obj.morality = this.helper.moralAttribute(this.obj.Race)}
   if(this.obj.deity == ""){this.obj.deity = "non believer"}
 }
-   displayer(){alert(this.obj)}
+   displayer(){console.table(this.obj)}
       
 }
