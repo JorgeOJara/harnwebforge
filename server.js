@@ -44,7 +44,7 @@ app.get('/login', function (req, res) {
 app.post("/CreateCharacter",(reques,response)=>{
   console.log(reques.body)
   
-  response.send("hello" + request.body.Name)
+  response.send("hello" + reques.body.Name)
   response.end();
 })
 
