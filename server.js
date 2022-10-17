@@ -42,7 +42,7 @@ app.get('/login', function (req, res) {
 
 /// building the api.....
 app.post("/CreateCharacter",(reques,response)=>{
-  console.log(reques.body.main)
+  console.log(reques.body)
 
   response.send("done")
   response.end();
