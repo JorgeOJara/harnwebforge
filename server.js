@@ -72,13 +72,11 @@ app.post("/getCharacters",(request,response)=>{
     var query = { discordUsername: q};
     dbo.collection("Characters").find(query).toArray(function(err, result) {
       if (err) throw err;
-      console.log(result);
+        response.send(result);
+        response.end();
       db.close();
     });
   });
-
-  response.send("found something");
-  response.end();
 })
 
 app.get('*', function(req, res){
