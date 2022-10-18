@@ -291,9 +291,15 @@ export const CHARACTERFORMCREATOR = (props) => {
 
   const verifier = ()=>
   {
+    //prepare to safe
       final.collect(Character)
       final.checkforAll()
       final.displayer()
+
+   ///  safe the username of the player who created this character..
+    let userName =  localStorage.getItem("username");
+    let updatedValue = {discordUsername:userName};
+    setCharacter(Character => ({...Character,...updatedValue}));
 
      axios.post('https://harnforge.com/CreateCharacter', Character)
        .then(function(response) {
