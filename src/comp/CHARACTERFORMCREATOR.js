@@ -2,6 +2,8 @@ import React, { setState, useState, useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
 
+const axios = require('axios');
+
 
 import alita from './imgs/azula.jpg';
 // safer... 
@@ -292,6 +294,11 @@ export const CHARACTERFORMCREATOR = (props) => {
       final.collect(Character)
       final.checkforAll()
       final.displayer()
+
+     axios.post('https://harnforge.com/CreateCharacter', Character)
+       .then(function(response) {
+           console.log(response.data);
+        })
   }
 
 
