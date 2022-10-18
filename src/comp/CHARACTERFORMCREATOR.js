@@ -297,9 +297,7 @@ export const CHARACTERFORMCREATOR = (props) => {
       final.displayer()
 
    ///  safe the username of the player who created this character
-    let ussss = localStorage.getItem("username");
-    let updatedValue = {discordUsername:ussss};
-    setCharacter(Character => ({...Character,...updatedValue}));
+
 
      axios.post('https://harnforge.com/CreateCharacter', Character)
        .then(function(response) {
@@ -342,6 +340,12 @@ export const CHARACTERFORMCREATOR = (props) => {
             name="name"
             placeholder="Full Name"
             onChange={(event) => {
+
+              let ussss = localStorage.getItem("username");
+
+              let updateValue = {discordUsername : ussss};
+              setCharacter(Character => ({...Character,...updateValue}));
+
               let updatedValue = { Name : event.target.value }
               setCharacter(Character => ({...Character,...updatedValue}));
           }}
