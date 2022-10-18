@@ -42,10 +42,20 @@ app.get('/login', function (req, res) {
 
 /// building the api.....
 app.post("/CreateCharacter",(reques,response)=>{
-  console.log(reques.body)
+  let content = reques.body;
   
-  response.send("hello " + reques.body.Name)
-  response.end();
+  var MongoClient = require('mongodb').MongoClient;
+  var url = "mongodb://localhost:27017/";
+  
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("mydb");
+    dbo.collection("customers").insertOne(content, function(err, res) {
+      if (err) throw err;
+      console.log("1 document inserted");
+      db.close();
+    });
+  });
 })
 
 app.get('*', function(req, res){
