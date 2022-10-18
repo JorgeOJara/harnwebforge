@@ -60,6 +60,27 @@ app.post("/CreateCharacter",(reques,response)=>{
   response.end();
 })
 
+
+app.post("/getCharacters",(request,response)=>{
+  var MongoClient = require('mongodb').MongoClient;
+  var url = "mongodb://localhost:27017/";
+  
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("troops");
+    var q = request.body.peticion;
+    var query = { discordUsername: q};
+    dbo.collection("Characters").find(query).toArray(function(err, result) {
+      if (err) throw err;
+      console.log(result);
+      db.close();
+    });
+  });
+
+  response.send("found something");
+  response.end();
+})
+
 app.get('*', function(req, res){
 res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });

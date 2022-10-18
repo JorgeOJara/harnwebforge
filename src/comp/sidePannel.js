@@ -1,39 +1,28 @@
 import React, { setState ,useState,useEffect } from 'react';
-import logo from './imgs/pngegg.png';
-import alita from './imgs/azula.jpg';
-
 import axios from 'axios';
 
 
-let [list,setList] = useState("No characters registered!");
+export const SidePanels = (props)=>{
 
-checkForCaharacters()
+checkForCharacterts()
 {
-  var MongoClient = require('mongodb').MongoClient;
-  var url = "mongodb://localhost:27017/";
-  
-  MongoClient.connect(url, function(err, db) {
-    if (err) throw err;
-    var dbo = db.db("troops");
-    let u = localStorage.getItem("username")
-    var query = { discordUsername: u };
-    dbo.collection("Characters").find(query).toArray(function(err, result) {
-      if (err) throw err;
-        setList(result)
-      db.close();
-    });
-  });
+let u = localStorage.getItem("username");
+let pen = { peticion : u }
+
+axios.post('https://harnforge.com/getCharacters', pen)
+.then(function(response) {
+   console.log(response.data);
+})
 }
 
 useEffect(() => {
-  setTimeout(() => {
-     checkForCaharacters();
-  }, 1000);
+const timer = setTimeout(() => {
+checkForCharacterts();
+}, 1000);
 }, []);
 
-export const SidePanels = (props)=>{
-     return(
-    <>
+return(
+<>
 <div id="list" className="col-12 col-md-5 h-100">
 <div className="mb-4 h-100 card" style={{}}>
 <div className="bg-primary d-flex align-items-center justify-content-between card-header">
@@ -51,7 +40,7 @@ Your Characters
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-{ list }
+No characters registered!
 <div id="spacer" className="p-4" />
 </div>
 </div>
@@ -63,6 +52,6 @@ style={{ bottom: 20, right: 20 }}
 </div>
 </div>
 </div> 
-   </>
-  )
+</>
+)
 }
