@@ -241,8 +241,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 
                          {/* end block */}
                    {/* Character creation... */}
-
-   <CHARACTERFORMCREATOR />
+            <CHARACTERFORMCREATOR />
          
          {/*end of the character creation functions. */}   
                 </div>

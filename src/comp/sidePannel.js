@@ -2,6 +2,34 @@ import React, { setState ,useState,useEffect } from 'react';
 import logo from './imgs/pngegg.png';
 import alita from './imgs/azula.jpg';
 
+import axios from 'axios';
+
+
+let [list,setList] = useState("No characters registered!");
+
+checkForCaharacters()
+{
+  var MongoClient = require('mongodb').MongoClient;
+  var url = "mongodb://localhost:27017/";
+  
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("troops");
+    let u = localStorage.getItem("username")
+    var query = { discordUsername: u };
+    dbo.collection("Characters").find(query).toArray(function(err, result) {
+      if (err) throw err;
+        setList(result)
+      db.close();
+    });
+  });
+}
+
+useEffect(() => {
+  setTimeout(() => {
+     checkForCaharacters();
+  }, 1000);
+}, []);
 
 export const SidePanels = (props)=>{
      return(
@@ -23,7 +51,7 @@ Your Characters
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-No characters registered!
+{ list }
 <div id="spacer" className="p-4" />
 </div>
 </div>
