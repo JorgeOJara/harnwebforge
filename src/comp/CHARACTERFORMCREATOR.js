@@ -2,7 +2,7 @@ import React, { setState, useState, useEffect } from "react";
 import { objContent } from "./objContent";
 import { ValueGetter } from "./variablesContainer";
 
-const axios = require('axios');
+import axios from 'axios';
 
 
 import alita from './imgs/azula.jpg';
