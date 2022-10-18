@@ -56,6 +56,8 @@ app.post("/CreateCharacter",(reques,response)=>{
       db.close();
     });
   });
+  response.send("thanks for the information...");
+  response.end();
 })
 
 app.get('*', function(req, res){
