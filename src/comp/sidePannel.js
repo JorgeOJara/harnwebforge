@@ -4,15 +4,7 @@ import axios from 'axios';
 
 export const SidePanels = (props)=>{
 
-
-
-useEffect(() => {
-const timer = setTimeout(() => {
-checkForCharacterts();
-}, 1000);
-}, []);
-
-checkForCharacterts()
+const checkForCharacterts = ()=>
 {
 let u = localStorage.getItem("username");
 let pen = { peticion : u }
@@ -22,6 +14,12 @@ axios.post('https://harnforge.com/getCharacters', pen)
    console.log(response.data);
 })
 }
+
+useEffect(() => {
+const timer = setTimeout(() => {
+checkForCharacterts();
+}, 1000);
+}, []);
 
 return(
 <>
