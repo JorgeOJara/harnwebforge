@@ -23,10 +23,10 @@ const [last ,setlast] = useState("");
 
 useEffect(() => {
     const timer = setInterval(() => {
-        if(props.content !== last)
+        if(props.content.Name !== last)
         {
            findC();
-           setlast(props.content);
+           setlast(props.content.Name);
         }
       }, 1000);
     }, []);
