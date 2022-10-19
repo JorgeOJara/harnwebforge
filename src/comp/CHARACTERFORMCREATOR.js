@@ -390,7 +390,7 @@ export const CHARACTERFORMCREATOR = (props) => {
           onChange={(e) => setRace(e)}
         >
           <option value="">Choose</option>
-          <option value="Humman">Humman</option>
+          <option value="Human">Human</option>
           <option value="Sindarin">Sindarin</option>
           <option value="Khuzdul">Khuzdul</option>
         </select>
