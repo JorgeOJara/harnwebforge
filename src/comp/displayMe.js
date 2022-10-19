@@ -10,7 +10,7 @@ import axios from 'axios';
 export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState();
-let pen = { id : props.content }
+let pen = { con : props.content }
 
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
@@ -20,10 +20,12 @@ axios.post('https://harnforge.com/idsFinder', pen)
  
   return (
     <>
-       { ufehieugciu.map( d => {
+     <div>
+       {/* { ufehieugciu.map( d => {
               return <h2>{d.Name}</h2> 
            })
-       }
+       } */}
+     </div>
     </>
   );
 };

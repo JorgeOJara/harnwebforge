@@ -87,8 +87,8 @@ app.post("/idsFinder",(request,response)=>{
   MongoClient.connect(url, function(err, db) {
     if (err) throw err;
     var dbo = db.db("troops");
-    var ids = request.body.id;
-    var query = { _id : ids};
+    var ids = request.body.con;
+    var query = { _id : ids };
     dbo.collection("Characters").find(query).toArray(function(err, result) {
       if (err) throw err;
         response.send(result);
