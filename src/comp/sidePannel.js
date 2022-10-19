@@ -41,6 +41,7 @@ Your Characters
 </div>
 </div>
 </div>
+<center>
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
@@ -50,7 +51,7 @@ completed.map(item => {
    })
 }
 <div id="spacer" className="p-4" />
-</div>
+</div></center>
 </div>
 <div className="position-absolute text-right floating-action-menu mx-2 d-md-none active"
 style={{ bottom: 20, right: 20 }}
