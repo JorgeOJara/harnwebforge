@@ -46,7 +46,7 @@ Your Characters
 {
 completed.map(item => {
     return <div className="btn btn-secondary b">
-          <i className="text-danger">{item.Name}</i>
+          <i className="none">{item.Name}</i>
       </div>
    })
 }
