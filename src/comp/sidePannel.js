@@ -19,7 +19,7 @@ axios.post('https://harnforge.com/getCharacters', pen)
 
 const go = (id)=>
 {
-  props.show()
+  props.show(id)
   console.log(id);
 }
 
@@ -52,7 +52,7 @@ Your Characters
 {
 completed.map(item => {
     return <button className="btn btn-secondary ch"
-             onClick={ () => go( item.Name ) }
+             onClick={ () => go( item ) }
             >
           <i className="none">{item.Name}</i>
       </button>
