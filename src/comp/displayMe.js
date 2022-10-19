@@ -103,8 +103,8 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.eyeColor }</h4>
          </div>
       </div>
+      <h3>Character Stats</h3>
       <div className="row form-group disc">
-             <h2>Stats</h2>
         <div className="col">
           <label className="">strength</label>
           <h4>{ ufehieugciu.strength }</h4>
