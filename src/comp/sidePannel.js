@@ -45,7 +45,9 @@ Your Characters
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
-    return <div className="btn btn-secondary ch">
+    return <div className="btn btn-secondary ch"
+             onClick={props.displayMe(item)}
+            >
           <i className="none">{item.Name}</i>
       </div>
    })
