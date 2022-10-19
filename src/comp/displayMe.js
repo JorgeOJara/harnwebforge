@@ -149,7 +149,7 @@ if( props.content != ufehieugciu.Name )
       <div className="row form-group disc">
         <div className="col">
           <label className="">intelligence</label>
-          <h4>{ ufehieugciu.intelligence[0] } : { ufehieugciu.intelligence[1]}</h4>
+          <h4>{ ufehieugciu.intelligence }</h4>
         </div>
       </div>
 
