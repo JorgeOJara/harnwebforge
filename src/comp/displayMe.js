@@ -9,18 +9,21 @@ import axios from 'axios';
 
 export const DisplayMe = (props) => {
 
-const [completed,setList] = useState();
+const [ufehieugciu,ddoijhdbeiu] = useState();
 let pen = { id : props.content }
 
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-   setList(response.data);
+    ddoijhdbeiu(response.data);
    console.log(response.data);
 })
  
   return (
     <>
-       {completed.map( d => <h2>{d.Name}</h2> )}
+       { ufehieugciu.map( d => {
+              return <h2>{d.Name}</h2> 
+           })
+       }
     </>
   );
 };
