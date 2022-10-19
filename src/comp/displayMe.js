@@ -11,6 +11,7 @@ export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState();
 let pen = { name : props.content , member : localStorage.getItem("username")}
+
 const findC = ()=>{
     axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
@@ -18,11 +19,15 @@ const findC = ()=>{
       console.log(response.data);
   })
 }
-
+let check ;
 useEffect(() => {
-    const timer = setTimeout(() => {
-    findC();
-    }, 1000);
+    const timer = setInterval(() => {
+        if(props.content != check)
+        {
+            findC();
+            check = props.content;
+        }
+      }, 1000);
     }, []);
  
   return (
