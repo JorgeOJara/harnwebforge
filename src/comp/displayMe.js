@@ -30,6 +30,32 @@ if( props.content != ufehieugciu.Name )
     <>
      <div>
           <h2>{ufehieugciu.Name}</h2>
+          <h5>{ufehieugciu.Sex}</h5>
+          <h5>{ufehieugciu.Race}</h5>
+          <h5>{ufehieugciu.Sunsigns}</h5>
+          <h5>{ufehieugciu.birthPlace}</h5>
+          <h5>{ufehieugciu.Culture}</h5>
+          <h5>{ufehieugciu.SocialClass}</h5>
+          <h5>{ufehieugciu.height}</h5>
+          <h5>{ufehieugciu.weight}</h5>
+          <h5>{ufehieugciu.frame}</h5>
+          <h5>{ufehieugciu.comeliness}</h5>
+          <h5>{ufehieugciu.eyeColor}</h5>
+          <h5>{ufehieugciu.hairColor}</h5>
+          <h5>{ufehieugciu.strength}</h5>
+          <h5>{ufehieugciu.stamina}</h5>
+          <h5>{ufehieugciu.dexterity}</h5>
+          <h5>{ufehieugciu.agility}</h5>
+          <h5>{ufehieugciu.eyesight}</h5>
+          <h5>{ufehieugciu.hearing}</h5>
+          <h5>{ufehieugciu.smell}</h5>
+          <h5>{ufehieugciu.intelligence[0]}</h5>
+          <h5>{ufehieugciu.aura}</h5>
+          <h5>{ufehieugciu.will}</h5>
+          <h5>{ufehieugciu.morality}</h5>
+          <h5>{ufehieugciu.deity}</h5>
+          <h5>{ufehieugciu.piety}</h5>
+
      </div>
     </>
   );
