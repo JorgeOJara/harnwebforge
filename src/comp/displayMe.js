@@ -10,7 +10,7 @@ import axios from 'axios';
 export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState();
-let pen = { con : props.content }
+let pen = { name : props.content , member : localStorage.getItem("username")}
 
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
