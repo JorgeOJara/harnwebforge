@@ -42,7 +42,10 @@ Your Characters
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-{ list.map( d => d.name)}
+{list.map(item => {
+    return <h2>{item.Name}</h2>;
+   })
+}
 <div id="spacer" className="p-4" />
 </div>
 </div>
