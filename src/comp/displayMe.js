@@ -29,7 +29,7 @@ if( props.content != ufehieugciu.Name )
   return (
     <>
      <div>
-          <h1>{ufehieugciu.Name}</h1>
+          <h4>{ufehieugciu.Name}</h4>
      </div>
     </>
   );
