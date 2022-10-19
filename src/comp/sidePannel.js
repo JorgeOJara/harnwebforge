@@ -44,7 +44,9 @@ Your Characters
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
-    return <h6>{item.Name} :: {item.itsAlive }</h6>
+    return <button className="btn btn-secondary b">
+          <i className="text-danger fas fa-trash o">{item.Name}</i>
+      </button>
    })
 }
 <div id="spacer" className="p-4" />
