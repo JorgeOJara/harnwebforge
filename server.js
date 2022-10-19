@@ -89,7 +89,7 @@ app.post("/idsFinder",(request,response)=>{
     var dbo = db.db("troops");
     var ids = request.body.con;
     var query = { _id : ids };
-    dbo.collection("Characters").find(query).toArray(function(err, result) {
+    dbo.collection("Characters").findOne(query).toArray(function(err, result) {
       if (err) throw err;
         response.send(result);
         response.end();
@@ -97,6 +97,7 @@ app.post("/idsFinder",(request,response)=>{
     });
   });
 })
+
 
 app.get('*', function(req, res){
 res.sendFile(path.join(__dirname, 'build', 'index.html'));
