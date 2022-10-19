@@ -46,7 +46,7 @@ Your Characters
 {
 completed.map(item => {
     return <div className="btn btn-secondary ch"
-             onClick={props.displayMe(item)}
+             onClick={props.show(item.id)}
             >
           <i className="none">{item.Name}</i>
       </div>
