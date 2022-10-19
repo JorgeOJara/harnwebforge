@@ -34,9 +34,8 @@ useEffect(() => {
   return (
     <>
      <div>
-       { ufehieugciu.map( d => {
-              return <h2>{d.Name}</h2> 
-           })
+       { 
+           ufehieugciu
        }
      </div>
     </>
