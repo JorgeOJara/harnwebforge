@@ -9,7 +9,7 @@ import axios from 'axios';
 
 export const DisplayMe = (props) => {
 
-const [ufehieugciu,ddoijhdbeiu] = useState();
+const [ufehieugciu,ddoijhdbeiu] = useState([]);
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
 const findC = ()=>{
