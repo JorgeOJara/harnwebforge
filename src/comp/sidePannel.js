@@ -4,6 +4,9 @@ import axios from 'axios';
 
 export const SidePanels = (props)=>{
 
+const [list,setList] = useState("No characters registered!");
+
+  
 const checkForCharacterts = ()=>
 {
 let u = localStorage.getItem("username");
@@ -11,7 +14,7 @@ let pen = { peticion : u }
 
 axios.post('https://harnforge.com/getCharacters', pen)
 .then(function(response) {
-   console.log(response.data);
+     setList(response.data);
 })
 }
 
@@ -26,7 +29,7 @@ return(
 <div id="list" className="col-12 col-md-5 h-100">
 <div className="mb-4 h-100 card" style={{}}>
 <div className="bg-primary d-flex align-items-center justify-content-between card-header">
-Your Characters
+{list.map(d =>{d.name})}
 <div className="row align-items-center" slot="cardTitle">
 {/* button large display */}
 <div className="action-menu">
@@ -40,7 +43,7 @@ Your Characters
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-No characters registered!
+
 <div id="spacer" className="p-4" />
 </div>
 </div>
