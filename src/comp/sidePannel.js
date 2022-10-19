@@ -52,7 +52,7 @@ Your Characters
 {
 completed.map(item => {
     return <button className="btn btn-secondary ch"
-             onClick={ () => go( item._id ) }
+             onClick={ () => go( item.Name ) }
             >
           <i className="none">{item.Name}</i>
       </button>

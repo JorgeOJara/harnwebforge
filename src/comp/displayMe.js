@@ -15,7 +15,7 @@ const findC = ()=>{
     axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
     ddoijhdbeiu(response.data);
-   console.log(response.data);
+      console.log(response.data);
   })
 }
 
