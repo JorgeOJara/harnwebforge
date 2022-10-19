@@ -49,7 +49,6 @@ if( props.content != ufehieugciu.Name )
           <h5>{ufehieugciu.eyesight}</h5>
           <h5>{ufehieugciu.hearing}</h5>
           <h5>{ufehieugciu.smell}</h5>
-          <h5>{ufehieugciu.intelligence[0]}</h5>
           <h5>{ufehieugciu.aura}</h5>
           <h5>{ufehieugciu.will}</h5>
           <h5>{ufehieugciu.morality}</h5>
