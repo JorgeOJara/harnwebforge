@@ -35,7 +35,7 @@ useEffect(() => {
     <>
      <div>
        { 
-           ufehieugciu
+           JSON.parse(ufehieugciu)
        }
      </div>
     </>
