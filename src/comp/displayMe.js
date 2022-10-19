@@ -8,12 +8,19 @@ import axios from 'axios';
 /// just to display Characters info
 
 export const DisplayMe = (props) => {
+
+const [completed,setList] = useState();
+let pen = { id : props.content }
+
+axios.post('https://harnforge.com/idsFinder', pen)
+.then(function(response) {
+   setList(response.data);
+   console.log(response.data);
+})
  
   return (
     <>
-     
-        <h1>{props.content}</h1>
-      
+       {completed.map( d => <h2>{d.Name}</h2> )}
     </>
   );
 };

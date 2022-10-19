@@ -79,6 +79,25 @@ app.post("/getCharacters",(request,response)=>{
   });
 })
 
+
+app.post("/idsFinder",(request,response)=>{
+  var MongoClient = require('mongodb').MongoClient;
+  var url = "mongodb://localhost:27017/";
+  
+  MongoClient.connect(url, function(err, db) {
+    if (err) throw err;
+    var dbo = db.db("troops");
+    var ids = request.body.id;
+    var query = { _id : ids};
+    dbo.collection("Characters").find(query).toArray(function(err, result) {
+      if (err) throw err;
+        response.send(result);
+        response.end();
+      db.close();
+    });
+  });
+})
+
 app.get('*', function(req, res){
 res.sendFile(path.join(__dirname, 'build', 'index.html'));
 });
