@@ -19,6 +19,7 @@ const findC = ()=>{
       ddoijhdbeiu(response.data);
       console.log(response.data);
   })
+}
 
 if( props.content != ufehieugciu.Name )
 {
