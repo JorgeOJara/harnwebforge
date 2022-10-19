@@ -40,13 +40,13 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.Name }</h4>
         </div>
         <div className="col">
-          <label className="">Sex</label>
+          <label className="">Race</label>
           <h4>{ ufehieugciu.Rece }</h4>
         </div>
         <div className="col">
-          <label className="" />
-          <h4>{ ufehieugciu.Sex }</h4>
-        </div>
+          <label className="">Sex</label>
+            <h4>{ ufehieugciu.Sex }</h4>
+         </div>
       </div>
     </>
   );
