@@ -10,27 +10,21 @@ import axios from 'axios';
 export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
+
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
 const findC = ()=>{
     axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-    ddoijhdbeiu(response.data);
+      ddoijhdbeiu(response.data);
       console.log(response.data);
   })
-}
-const [last ,setlast] = useState("");
 
-useEffect(() => {
-    const timer = setInterval(() => {
-        if(props.content.Name !== last)
-        {
-           findC();
-           setlast(props.content.Name);
-        }
-      }, 1000);
-    }, []);
- 
+if( props.content != ufehieugciu.Name )
+{
+    findC();
+}
+
   return (
     <>
      <div>
