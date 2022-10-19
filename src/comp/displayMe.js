@@ -104,6 +104,7 @@ if( props.content != ufehieugciu.Name )
          </div>
       </div>
       <div className="row form-group disc">
+             <h2>Stats</h2>
         <div className="col">
           <label className="">strength</label>
           <h4>{ ufehieugciu.strength }</h4>
@@ -113,7 +114,6 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.stamina }</h4>
          </div>
       </div>
-
       <div className="row form-group disc">
         <div className="col">
           <label className="">dexterity</label>
@@ -124,7 +124,6 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.agility }</h4>
          </div>
       </div>
-
       <div className="row form-group disc">
         <div className="col">
           <label className="">eyesight</label>
@@ -135,7 +134,6 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.hearing }</h4>
          </div>
       </div>
-
       <div className="row form-group disc">
         <div className="col">
           <label className="">smell</label>
@@ -152,7 +150,6 @@ if( props.content != ufehieugciu.Name )
           <h4>{ ufehieugciu.intelligence }</h4>
         </div>
       </div>
-
       <div className="row form-group disc">
         <div className="col">
           <label className="">aura</label>
@@ -163,7 +160,6 @@ if( props.content != ufehieugciu.Name )
           <h4>{ ufehieugciu.will }</h4>
         </div>
       </div>
-
       <div className="row form-group disc">
         <div className="col">
           <label className="">morality</label>
@@ -173,9 +169,11 @@ if( props.content != ufehieugciu.Name )
           <label className="">deity</label>
           <h4>{ ufehieugciu.deity }</h4>
         </div>
+      </div>
+      <div className="row form-group disc">
         <div className="col">
           <label className="">piety</label>
-          <h4>{ ufehieugciu.piety }</h4>
+           <h4>{ ufehieugciu.piety }</h4>
         </div>
       </div>
     </>
