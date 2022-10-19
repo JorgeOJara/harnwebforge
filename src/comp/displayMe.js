@@ -19,13 +19,14 @@ const findC = ()=>{
       console.log(response.data);
   })
 }
-let check ;
+const [last ,setlast] = useState("");
+
 useEffect(() => {
     const timer = setInterval(() => {
         if(props.content != check)
         {
             findC();
-            check = props.content;
+           setlast(props.content);
         }
       }, 1000);
     }, []);
@@ -33,10 +34,10 @@ useEffect(() => {
   return (
     <>
      <div>
-       {/* { ufehieugciu.map( d => {
+       { ufehieugciu.map( d => {
               return <h2>{d.Name}</h2> 
            })
-       } */}
+       }
      </div>
     </>
   );
