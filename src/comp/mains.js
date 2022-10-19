@@ -8,6 +8,8 @@ import axios from 'axios';
 
 import { SidePanels } from './sidePannel';
 
+import { DisplayMe } from "./displayMe";
+
 
 export const Main = ()=>{
 
@@ -96,9 +98,19 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
   const [sidePanel,setSidePanel] = useState(true);
 
 
+  const [ch,setCh] = useState([])
+  const [swither,setSwisher] = useState(false)
+
+
 //  change side pannel to none display..
     let sideContainer;
-    if(sidePanel === true){sideContainer = <SidePanels changeSidePanel={content=>setSidePanel(content)} />};
+    if(sidePanel === true){
+      sideContainer = <SidePanels 
+      changeSidePanel={content=>{setSidePanel(content);setSwisher(false)}} 
+      displayMe={content=>{setCh(content);setSwisher(true)}} 
+     />
+    
+    };
 
      return(
     <>
@@ -220,7 +232,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
               <div className="h-100 overflow-hidden flex-nowrap row">
 
                 {/* start of side panel */}
-                     {sideContainer}
+                     { sideContainer}
                 {/* end of side panel */}
 
                 {/* form */}
@@ -233,17 +245,12 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
   
                             {/* block */}
 
-
-
-
-
-
-
                          {/* end block */}
                    {/* Character creation... */}
-            <CHARACTERFORMCREATOR />
+
+                     { swither == false? <CHARACTERFORMCREATOR />: <DisplayMe content={ch} /> }  
          
-         {/*end of the character creation functions. */}   
+                   {/*end of the character creation functions. */}   
                 </div>
                     {/* <div>No tuppers selected!</div> */}
           </div></div></div></div></div></div></div>
