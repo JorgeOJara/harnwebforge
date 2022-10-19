@@ -30,30 +30,30 @@ if( props.content != ufehieugciu.Name )
     <>
      <div>
           <h2>{ufehieugciu.Name}</h2>
-          <h5>{ufehieugciu.Sex}</h5>
-          <h5>{ufehieugciu.Race}</h5>
-          <h5>{ufehieugciu.Sunsigns}</h5>
-          <h5>{ufehieugciu.birthPlace}</h5>
-          <h5>{ufehieugciu.Culture}</h5>
-          <h5>{ufehieugciu.SocialClass}</h5>
-          <h5>{ufehieugciu.height}</h5>
-          <h5>{ufehieugciu.weight}</h5>
-          <h5>{ufehieugciu.frame}</h5>
-          <h5>{ufehieugciu.comeliness}</h5>
-          <h5>{ufehieugciu.eyeColor}</h5>
-          <h5>{ufehieugciu.hairColor}</h5>
-          <h5>{ufehieugciu.strength}</h5>
-          <h5>{ufehieugciu.stamina}</h5>
-          <h5>{ufehieugciu.dexterity}</h5>
-          <h5>{ufehieugciu.agility}</h5>
-          <h5>{ufehieugciu.eyesight}</h5>
-          <h5>{ufehieugciu.hearing}</h5>
-          <h5>{ufehieugciu.smell}</h5>
-          <h5>{ufehieugciu.aura}</h5>
-          <h5>{ufehieugciu.will}</h5>
-          <h5>{ufehieugciu.morality}</h5>
-          <h5>{ufehieugciu.deity}</h5>
-          <h5>{ufehieugciu.piety}</h5>
+          <h5>Sex : {ufehieugciu.Sex}</h5>
+          <h5>Race : {ufehieugciu.Race}</h5>
+          <h5>Sunsigns :{ufehieugciu.Sunsigns}</h5>
+          <h5>birthPlace : {ufehieugciu.birthPlace}</h5>
+          <h5>Culture : {ufehieugciu.Culture}</h5>
+          <h5>SocialClass :{ufehieugciu.SocialClass}</h5>
+          <h5>height : {ufehieugciu.height}</h5>
+          <h5>weight : {ufehieugciu.weight}</h5>
+          <h5>frame : {ufehieugciu.frame}</h5>
+          <h5>comeliness : {ufehieugciu.comeliness}</h5>
+          <h5>eyeColor : {ufehieugciu.eyeColor}</h5>
+          <h5>hairColor : {ufehieugciu.hairColor}</h5>
+          <h5>strength : {ufehieugciu.strength}</h5>
+          <h5>stamina : {ufehieugciu.stamina}</h5>
+          <h5>dexterity : {ufehieugciu.dexterity}</h5>
+          <h5>agility : {ufehieugciu.agility}</h5>
+          <h5>eyesight : {ufehieugciu.eyesight}</h5>
+          <h5>hearing : {ufehieugciu.hearing}</h5>
+          <h5>smell :{ufehieugciu.smell}</h5>
+          <h5>aura : {ufehieugciu.aura}</h5>
+          <h5>will:{ufehieugciu.will}</h5>
+          <h5>morality : {ufehieugciu.morality}</h5>
+          <h5>deity :{ufehieugciu.deity}</h5>
+          <h5>piety : {ufehieugciu.piety}</h5>
 
      </div>
     </>
