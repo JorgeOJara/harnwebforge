@@ -9,7 +9,7 @@ import axios from 'axios';
 
 export const DisplayMe = (props) => {
 
-const [ufehieugciu,ddoijhdbeiu] = useState([]);
+const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
 const findC = ()=>{
@@ -23,9 +23,9 @@ const [last ,setlast] = useState("");
 
 useEffect(() => {
     const timer = setInterval(() => {
-        if(props.content != last)
+        if(props.content !== last)
         {
-            findC();
+           findC();
            setlast(props.content);
         }
       }, 1000);
