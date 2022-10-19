@@ -44,7 +44,7 @@ Your Characters
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
-    return <h2>{item.Name}</h2>
+    return <h6>{item.Name}</h6>
    })
 }
 <div id="spacer" className="p-4" />
