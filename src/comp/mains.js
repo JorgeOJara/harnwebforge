@@ -107,8 +107,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
     if(sidePanel === true){
       sideContainer = <SidePanels 
       changeSidePanel={content=>{setSidePanel(content);setSwisher(false)}} 
-
-      show={content=>{ setCh(content); setSwisher(true); console.log(content)}} 
+      show={ () => setSwisher(true)} 
 
      />
     

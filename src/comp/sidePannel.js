@@ -17,6 +17,12 @@ axios.post('https://harnforge.com/getCharacters', pen)
 })
 }
 
+const go = (id)=>
+{
+  props.show()
+  console.log(id);
+}
+
 useEffect(() => {
 const timer = setTimeout(() => {
 checkForCharacterts();
@@ -46,7 +52,7 @@ Your Characters
 {
 completed.map(item => {
     return <button className="btn btn-secondary ch"
-             onClick={props.show(item.id)}
+             onClick={ () => go( item.id ) }
             >
           <i className="none">{item.Name}</i>
       </button>
