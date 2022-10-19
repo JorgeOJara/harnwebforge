@@ -45,11 +45,11 @@ Your Characters
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
-    return <div className="btn btn-secondary ch"
+    return <button className="btn btn-secondary ch"
              onClick={props.show(item.id)}
             >
           <i className="none">{item.Name}</i>
-      </div>
+      </button>
    })
 }
 <div id="spacer" className="p-4" />
