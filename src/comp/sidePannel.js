@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const SidePanels = (props)=>{
 
-const [list,setList] = useState("No characters registered!");
+const [completed,setList] = useState("No characters registered!");
   
 const checkForCharacterts = ()=>
 {
@@ -42,7 +42,7 @@ Your Characters
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-{list.map(item => {
+{completed.map(item => {
     return <h2>{item.Name}</h2>;
    })
 }
