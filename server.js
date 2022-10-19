@@ -89,7 +89,7 @@ app.post("/idsFinder",(request,response)=>{
     var dbo = db.db("troops");
     var ids = request.body.con;
     var query = { _id : ids };
-    dbo.collection("Characters").findOne(query).toArray(function(err, result) {
+    dbo.collection("Characters").findOne(query, function(err, result) {
       if (err) throw err;
         response.send(result);
         response.end();
