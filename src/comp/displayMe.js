@@ -34,14 +34,11 @@ if( props.content != ufehieugciu.Name )
             <h4>{ ufehieugciu.Name }</h4>
         </div>
       </div>
+
       <div className="row form-group">
         <div className="col">
-          <label className="">Characters Info</label>{" "}
-            <h4>{ ufehieugciu.Name }</h4>
-        </div>
-        <div className="col">
           <label className="">Race</label>
-          <h4>{ ufehieugciu.Rece }</h4>
+          <h4>{ ufehieugciu.Race }</h4>
         </div>
         <div className="col">
           <label className="">Sex</label>
