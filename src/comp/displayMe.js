@@ -11,12 +11,19 @@ export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState();
 let pen = { name : props.content , member : localStorage.getItem("username")}
-
-axios.post('https://harnforge.com/idsFinder', pen)
+const findC = ()=>{
+    axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
     ddoijhdbeiu(response.data);
    console.log(response.data);
-})
+  })
+}
+
+useEffect(() => {
+    const timer = setTimeout(() => {
+    findC();
+    }, 1000);
+    }, []);
  
   return (
     <>
