@@ -5,7 +5,6 @@ import axios from 'axios';
 export const SidePanels = (props)=>{
 
 const [list,setList] = useState("No characters registered!");
-
   
 const checkForCharacterts = ()=>
 {
@@ -14,7 +13,7 @@ let pen = { peticion : u }
 
 axios.post('https://harnforge.com/getCharacters', pen)
 .then(function(response) {
-     setList(response.data);
+   setList(response.data)
 })
 }
 
@@ -29,7 +28,7 @@ return(
 <div id="list" className="col-12 col-md-5 h-100">
 <div className="mb-4 h-100 card" style={{}}>
 <div className="bg-primary d-flex align-items-center justify-content-between card-header">
-{list.map(d =>{d.name})}
+Your Characters
 <div className="row align-items-center" slot="cardTitle">
 {/* button large display */}
 <div className="action-menu">
@@ -43,7 +42,7 @@ return(
 </div>
 </div>
 <div className="overflow-auto h-100 p-3">
-
+{ list.map( d => d.name)}
 <div id="spacer" className="p-4" />
 </div>
 </div>
