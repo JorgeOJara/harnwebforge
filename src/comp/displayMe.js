@@ -52,7 +52,7 @@ if( props.content != ufehieugciu.Name )
      </div></div></div>
      <div className="col-12 col-md">
        <div className="form-group">
-            <h4 className="n">JUAN THE ORC</h4>
+            <h4 className="n">{ufehieugciu.Name}</h4>
         </div>
     </div>
 </div>
