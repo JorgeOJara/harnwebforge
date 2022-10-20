@@ -304,7 +304,16 @@ export const CHARACTERFORMCREATOR = (props) => {
            console.log(response.data);
         })
   }
+ const setAndsafeAvatare = (e)=>
+ {
+  setAvatare(e.target.value);
 
+  let updatedValue = {Avatare:e.target.value};
+  setCharacter(Character => ({...Character,...updatedValue}));
+
+ }
+
+ 
 
   return (
     <>
@@ -362,7 +371,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             maxLength={250}
             type="url"
             className="bg-secondary pl-2 text-white w-50 form-control"
-            onChange={(event) => setAvatare(event.target.value)}
+            onChange={(event) => setAndsafeAvatare(event)}
             placeholder="AVATAR URL"
           />
         </div>
