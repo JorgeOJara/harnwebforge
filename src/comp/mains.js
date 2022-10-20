@@ -94,15 +94,15 @@ useEffect(() => {
 
 const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAvatare + ".png";
 
-  // hooks
-  const [sidePanel,setSidePanel] = useState(true);
+//   // hooks
+ const [sidePanel,setSidePanel] = useState(true);
 
 
   const [ch,setCh] = useState([])
-  const [swither,setSwisher] = useState(false)
+  const [swither,setSwisher] = useState(false);
 
 
-//  change side pannel to none display..
+// //  change side pannel to none display..
     let sideContainer;
     if(sidePanel === true){
       sideContainer = <SidePanels 
@@ -174,10 +174,10 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
               <li className="dropdown nav-item" disabled="false">
                 <img
                   alt="discord avatar"
-                  src={ UserId!=0?imagerFinder: alita }
+                  // src={ UserId!=0?imagerFinder: alita }
                   className="rounded-circle avatar-user"
                 />
-                <span className="d-none d-md-inline">{User}</span>
+                <span className="d-none d-md-inline"></span>
               </li>
             </ul>
           </nav>

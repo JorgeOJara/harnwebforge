@@ -28,155 +28,209 @@ if( props.content != ufehieugciu.Name )
 
   return (
     <>
-       <div className="row form-group">
-        <div className="col">
-          <label className="">Characters Name</label>{" "}
-            <h4>{ ufehieugciu.Name }</h4>
+    <div className="justify-content-center row">
+    <div className="col-auto mb-3">
+    <div className="avatar-wrapper">
+   <img
+        draggable="false"
+        src={ufehieugciu.Avatare}
+        alt="Avatar"
+        className="avatar rounded-circle"
+      />
+      <div
+        className="not-allowed"
+        data-toggle="tooltip"
+        data-placement="right"
+        title="Upgrade to premium to upload avatars!"
+      >
+        <div className="upload-button disabled">
+          <i
+            className="fas fa-upload"
+            aria-hidden="true"
+          />
         </div>
-      </div>
+     </div></div></div>
+     <div className="col-12 col-md">
+       <div className="form-group">
+            <h4 className="n">JUAN THE ORC</h4>
+        </div>
+    </div>
+</div>
+{/* CLASS */}
+<div class="card text-center">
+  <div class="card-header">
+    Character Basic info
+  </div>
+  <div class="card-body">
+  <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+    RACE
+    <span class="badge badge-primary badge-pill">{ufehieugciu.Race}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+   Sex
+    <span class="badge badge-primary badge-pill">{ufehieugciu.Sex}</span>
+  </li>
+</ul>
+  </div>
+  {/* <div class="card-footer text-muted">
+  
+  </div> */}
+</div>
+<div class="card text-center">
+  <div class="card-header">
+    Character backgroundS
+  </div>
+  <div class="card-body">
+  <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  Sunsigns
+    <span class="badge badge-primary badge-pill">{ufehieugciu.Sunsigns}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  birthPlace
+    <span class="badge badge-primary badge-pill">{ufehieugciu.birthPlace}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  Culture
+    <span class="badge badge-primary badge-pill">{ufehieugciu.Culture}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  SocialClass
+    <span class="badge badge-primary badge-pill">{ufehieugciu.SocialClass}</span>
+  </li>
+</ul>
+  </div>
+  {/* <div class="card-footer text-muted">
+  
+  </div> */}
+</div>
 
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">Race</label>
-          <h4>{ ufehieugciu.Race }</h4>
-        </div>
-        <div className="col">
-          <label className="">Sex</label>
-            <h4>{ ufehieugciu.Sex }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">Sunsigns</label>
-          <h4>{ ufehieugciu.Sunsigns }</h4>
-        </div>
-        <div className="col">
-          <label className="">birthPlace</label>
-            <h4>{ ufehieugciu.birthPlace }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">Culture</label>
-          <h4>{ ufehieugciu.Culture }</h4>
-        </div>
-        <div className="col">
-          <label className="">SocialClass</label>
-            <h4>{ ufehieugciu.SocialClass }</h4>
-         </div>
-      </div>
+<div class="card text-center">
+  <div class="card-header">
+    Character'S appearance
+  </div>
+  <div class="card-body">
+  <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  height
+      <span class="badge badge-primary badge-pill">{ufehieugciu.height}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  weight
+    <span class="badge badge-primary badge-pill">{ufehieugciu.weight}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  frame
+    <span class="badge badge-primary badge-pill">{ufehieugciu.frame}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  comeliness
+    <span class="badge badge-primary badge-pill">{ufehieugciu.comeliness}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  complexion
+    <span class="badge badge-primary badge-pill">{ufehieugciu.complexion}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  eyeColor
+    <span class="badge badge-primary badge-pill">{ufehieugciu.eyeColor}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  hairColor
+    <span class="badge badge-primary badge-pill">{ufehieugciu.hairColor}</span>
+  </li>
+</ul>
+  </div>
+  {/* <div class="card-footer text-muted">
+  
+  </div> */}
+</div>
 
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">Description</label>
-          <h4>{ ufehieugciu.Description }</h4>
-        </div>
-      </div>
 
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">height</label>
-          <h4>{ ufehieugciu.height }</h4>
-        </div>
-        <div className="col">
-          <label className="">weight</label>
-            <h4>{ ufehieugciu.weight }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">frame</label>
-          <h4>{ ufehieugciu.frame }</h4>
-        </div>
-        <div className="col">
-          <label className="">comeliness</label>
-            <h4>{ ufehieugciu.comeliness }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">complexion</label>
-          <h4>{ ufehieugciu.complexion }</h4>
-        </div>
-        <div className="col">
-          <label className="">eyeColor</label>
-            <h4>{ ufehieugciu.eyeColor }</h4>
-         </div>
-      </div>
+<div class="card text-center">
+  <div class="card-header">
+    Character'S stats
+  </div>
+  <div class="card-body">
+  <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  strength
+    <span class="badge badge-primary badge-pill">{ufehieugciu.strength}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  stamina
+    <span class="badge badge-primary badge-pill">{ufehieugciu.stamina}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  dexterity
+    <span class="badge badge-primary badge-pill">{ufehieugciu.dexterity}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  agility
+    <span class="badge badge-primary badge-pill">{ufehieugciu.agility}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  eyesight
+    <span class="badge badge-primary badge-pill">{ufehieugciu.eyesight}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  hearing
+    <span class="badge badge-primary badge-pill">{ufehieugciu.hearing}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  smell
+    <span class="badge badge-primary badge-pill">{ufehieugciu.smell}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  voice
+    <span class="badge badge-primary badge-pill">{ufehieugciu.voice}</span>
+  </li>
+</ul>
+  </div>
+  {/* <div class="card-footer text-muted">
+  
+  </div> */}
+</div>
 
-      <h3 className="space">Character Stats</h3>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">strength</label>
-          <h4>{ ufehieugciu.strength }</h4>
-        </div>
-        <div className="col">
-          <label className="">stamina</label>
-            <h4>{ ufehieugciu.stamina }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">dexterity</label>
-          <h4>{ ufehieugciu.dexterity }</h4>
-        </div>
-        <div className="col">
-          <label className="">agility</label>
-            <h4>{ ufehieugciu.agility }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">eyesight</label>
-          <h4>{ ufehieugciu.eyesight }</h4>
-        </div>
-        <div className="col">
-          <label className="">hearing</label>
-            <h4>{ ufehieugciu.hearing }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">smell</label>
-          <h4>{ ufehieugciu.smell }</h4>
-        </div>
-        <div className="col">
-          <label className="">voice</label>
-            <h4>{ ufehieugciu.hearing }</h4>
-         </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">intelligence</label>
-          <h4>{ ufehieugciu.intelligence }</h4>
-        </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">aura</label>
-           <h4>{ ufehieugciu.aura }</h4>
-        </div>
-        <div className="col">
-          <label className="">will</label>
-          <h4>{ ufehieugciu.will }</h4>
-        </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">morality</label>
-           <h4>{ ufehieugciu.morality }</h4>
-        </div>
-        <div className="col">
-          <label className="">deity</label>
-          <h4>{ ufehieugciu.deity }</h4>
-        </div>
-      </div>
-      <div className="row form-group disc">
-        <div className="col">
-          <label className="">piety</label>
-           <h4>{ ufehieugciu.piety }</h4>
-        </div>
-      </div>
+
+<div class="card text-center">
+  <div class="card-header">
+    Character'S personality
+  </div>
+  <div class="card-body">
+  <ul class="list-group">
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  intelligence
+    <span class="badge badge-primary badge-pill">{ufehieugciu.intelligence}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  aura
+    <span class="badge badge-primary badge-pill">{ufehieugciu.aura}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  will
+    <span class="badge badge-primary badge-pill">{ufehieugciu.will}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  morality
+    <span class="badge badge-primary badge-pill">{ufehieugciu.morality}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  deity
+    <span class="badge badge-primary badge-pill">{ufehieugciu.deity}</span>
+  </li>
+  <li class="list-group-item d-flex justify-content-between align-items-center">
+  piety
+    <span class="badge badge-primary badge-pill">{ufehieugciu.piety}</span>
+  </li>
+</ul>
+  </div>
+  {/* <div class="card-footer text-muted">
+  
+  </div> */}
+</div>
+
     </>
   );
 };

@@ -7,11 +7,13 @@ export const objContent =
    Avatare:"",
    Race:"",
    Sex: "",
+
    Sunsigns:"",
    birthPlace:"",
    Culture:"",
    SocialClass:"",
    Description:"",
+
    height:0,
    weight:0,
    frame:"",
@@ -19,6 +21,7 @@ export const objContent =
    complexion:"",
    eyeColor:"",
    hairColor:"",
+
    strength:0,
    stamina:0,
    dexterity:0,
@@ -27,13 +30,16 @@ export const objContent =
    hearing:0,
    smell:0,
    voice:0,
+
    medicalOption:"",
+
    intelligence:"",
    aura:0,
    will:0,
    morality:0,
    deity:"",
    piety:0,
+   
    weapons:[],
    armor:[],
    psyche:"",
