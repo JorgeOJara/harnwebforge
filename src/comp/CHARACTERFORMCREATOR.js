@@ -318,9 +318,8 @@ export const CHARACTERFORMCREATOR = (props) => {
   return (
     <>
     <div className="justify-content-center row">
-    <div className="col-auto mb-3">
-    <div className="bg-primary d-flex align-items-center justify-content-between card-header">
-   Character sheet
+<div className="bg-primary d-flex align-items-center justify-content-between card-header">
+Character sheet
 <div className="row align-items-center" slot="cardTitle">
 {/* button large display */}
 <div className="action-menu">
@@ -333,6 +332,8 @@ export const CHARACTERFORMCREATOR = (props) => {
 </div>
 </div>
 </div>
+    <div className="col-auto mb-3">
+    
     <div className="avatar-wrapper">
    <img
         draggable="false"
