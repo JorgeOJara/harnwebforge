@@ -48,7 +48,7 @@ const getToken = async (code) => {
           client_secret:process.env.REACT_APP_CLIENT_SECRET,
           code,
           grant_type: 'authorization_code',
-          redirect_uri:"http://harnforge.com/",
+          redirect_uri:"https://harnforge.com/",
           scope: 'identify',
       });
       const result = await axios.post('https://discord.com/api/oauth2/token', options);
