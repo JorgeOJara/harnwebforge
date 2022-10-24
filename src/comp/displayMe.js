@@ -16,8 +16,8 @@ let pen = { name : props.content , member : localStorage.getItem("username")}
 const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-ddoijhdbeiu(response.data);
-console.log(response.data);
+  ddoijhdbeiu(response.data);
+  console.log(response.data);
 })
 }
 
@@ -29,45 +29,31 @@ findC();
 return (
 <>
 <div className="justify-content-center row">
-<div className="bg-primary d-flex align-items-center justify-content-between card-header">
-Character sheet
-<div className="row align-items-center" slot="cardTitle">
-{/* button large display */}
-<div className="action-menu">
-<div className="floating-action">
-<div className="badge badge-dark"></div>
-<button className="btn btn-floating btn-sm btn-success">
-<i className="fas fa-plus" />
-</button>
-</div>
-</div>
-</div>
-</div>
 <div className="col-auto mb-3">
 <div className="avatar-wrapper">
 <img
-draggable="false"
-src={ufehieugciu.Avatare}
-alt="Avatar"
-className="avatar rounded-circle"
-/>
-<div
-className="not-allowed"
-data-toggle="tooltip"
-data-placement="right"
-title="Upgrade to premium to upload avatars!"
->
-<div className="upload-button disabled">
-<i
-className="fas fa-upload"
-aria-hidden="true"
-/>
-</div>
-</div></div></div>
-<div className="col-12 col-md">
-<div className="form-group">
-<h4 className="n">{ufehieugciu.Name}</h4>
-</div>
+    draggable="false"
+    src={ufehieugciu.Avatare}
+    alt="Avatar"
+    className="avatar rounded-circle"
+  />
+  <div
+    className="not-allowed"
+    data-toggle="tooltip"
+    data-placement="right"
+    title="Upgrade to premium to upload avatars!"
+  >
+    <div className="upload-button disabled">
+      <i
+        className="fas fa-upload"
+        aria-hidden="true"
+      />
+    </div>
+  </div></div></div>
+  <div className="col-12 col-md">
+    <div className="form-group">
+        <h4 className="n">{ufehieugciu.Name}</h4>
+    </div>
 </div>
 </div>
 {/* CLASS */}
@@ -128,7 +114,7 @@ Character'S appearance
 <ul class="list-group">
 <li class="list-group-item d-flex justify-content-between align-items-center">
 height
-<span class="badge badge-primary badge-pill">{ufehieugciu.height}</span>
+  <span class="badge badge-primary badge-pill">{ufehieugciu.height}</span>
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 weight
