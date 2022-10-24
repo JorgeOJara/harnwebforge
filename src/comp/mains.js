@@ -241,8 +241,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
                   <div className="h-100 mb-4 p-2 card" style={{}}>
                     <div className="overflow-auto h-100 m-2 pr-3 d-flex flex-nowrap flex-column">
                       <div className="h-75 row">
-                        <div className="col text-center">
-<div className="bg-primary d-flex align-items-center justify-content-between card-header">
+                      <div className="bg-primary d-flex align-items-center justify-content-between card-header">
 Character sheet
 <div className="row align-items-center" slot="cardTitle">
 {/* button large display */}
@@ -256,6 +255,8 @@ Character sheet
 </div>
 </div>
 </div>
+                        <div className="col text-center">
+{/* nice */}
                             <div className="w-50 mx-auto my-3">
   
                             {/* block */}
