@@ -238,7 +238,6 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 
                 {/* form */}
                 <div id="details" className="col-12 col-md-7">
-                  <div className="h-100 mb-4 p-2 card" style={{}}>
 <div className="bg-primary d-flex align-items-center justify-content-between card-header">
 Character sheet
 <div className="row align-items-center" slot="cardTitle">
@@ -253,6 +252,9 @@ Character sheet
 </div>
 </div>
 </div>
+                  <div className="h-100 mb-4 p-2 card" style={{}}>
+                {/* nice */}
+
                     <div className="overflow-auto h-100 m-2 pr-3 d-flex flex-nowrap flex-column">
                       <div className="h-75 row">
            {/* row */}
