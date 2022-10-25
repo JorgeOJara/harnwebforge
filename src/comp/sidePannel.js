@@ -40,7 +40,7 @@ Your Characters
 <div className="action-menu">
 <div className="floating-action">
 <div className="badge badge-dark"></div>
-<button className="btn btn-floating btn-sm btn-success" onClick={()=>props.changeSidePanel("false")}>
+<button className="btn btn-floating btn-sm btn-success" onClick={()=> props.changeSidePanel("false")}>
 <i className="fas fa-plus" />
 </button>
 </div>

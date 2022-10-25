@@ -100,15 +100,13 @@ const [sidePanel,setSidePanel] = useState(true);
 
 const [ch,setCh] = useState([])
 const [swither,setSwisher] = useState(false);
-
-
+const [actions,setactions] = useState(true);
 // //  change side pannel to none display..
 let sideContainer;
 if(sidePanel === true){
 sideContainer = <SidePanels 
 changeSidePanel={content=>{setSidePanel(content);setSwisher(false)}} 
 show={ (content) => { setCh( content); setSwisher(true) }} 
-
 />
 
 };
@@ -211,11 +209,9 @@ title="This page is coming soon!"
 className="not-allowed"
 data-toggle="tooltip"
 data-placement="right"
-title="This page is coming soon!"
->
+title="This page is coming soon!">
 <a className="nav-link disabled" href="">
 <div className="nav-link-icon">
-{/* <i class="fas fa-server" slot="leftIcon"></i> */}
 </div>
 </a>
 </div>
@@ -233,7 +229,7 @@ title="This page is coming soon!"
 <div className="h-100 overflow-hidden flex-nowrap row">
 
 {/* start of side panel */}
-{ sideContainer}
+     { sideContainer}
 {/* end of side panel */}
 
 {/* form */}
@@ -246,7 +242,12 @@ Character sheet
 <div className="floating-action">
 <div className="badge badge-dark"></div>
 <button className="btn btn-floating btn-sm btn-success">
-<i className="fas fa-plus" />
+<i className="fas fa-plus" 
+    onClick={()=>{
+        setactions(false);
+        setSidePanel(true)
+      }}
+  />
 </button>
 </div>
 </div>
@@ -267,7 +268,7 @@ Character sheet
 {/* end block */}
 {/* Character creation... */}
 
-{ swither == false? <CHARACTERFORMCREATOR />: <DisplayMe content={ch} /> }  
+{ actions == true ? swither == false? <CHARACTERFORMCREATOR />: <DisplayMe content={ch} /> : null }  
 
 {/*end of the character creation functions. */}   
 </div>
