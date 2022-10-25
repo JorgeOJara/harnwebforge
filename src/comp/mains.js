@@ -123,6 +123,15 @@ show={ (content) => {
 />
 
 };
+const [screen,setscreen]  = useState("");
+
+if(window.innerWidth <= 767)
+{
+ setscreen("mx-auto my-3")
+}else
+{
+  setscreen("w-50 mx-auto my-3")
+}
 
 return(
 <>
@@ -274,7 +283,7 @@ Character sheet
 {/* row */}
 <div className="col text-center">
 {/* nice */}
-<div className="mx-auto my-3">
+<div className={screen}>
 
 {/* block */}
 

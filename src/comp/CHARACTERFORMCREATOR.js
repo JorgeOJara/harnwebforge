@@ -4,6 +4,7 @@ import { ValueGetter } from "./variablesContainer";
 
 import axios from 'axios';
 
+// w-50
 
 import alita from './imgs/azula.jpg';
 // safer... 
