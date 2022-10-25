@@ -101,12 +101,13 @@ const [sidePanel,setSidePanel] = useState(true);
 const [ch,setCh] = useState([])
 const [swither,setSwisher] = useState(false);
 const [actions,setactions] = useState(true);
+
 // //  change side pannel to none display..
 let sideContainer;
 if(sidePanel === true){
 sideContainer = <SidePanels 
-changeSidePanel={content=>{setSidePanel(content);setSwisher(false)}} 
-show={ (content) => { setCh( content); setSwisher(true) }} 
+changeSidePanel={content=>{setSidePanel(content);setSwisher(false); setactions(true)}} 
+show={ (content) => { setCh( content); setSwisher(true); setactions(true) }} 
 />
 
 };
