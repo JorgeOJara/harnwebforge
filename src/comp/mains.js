@@ -107,11 +107,7 @@ let sideContainer;
 if(sidePanel === true){
 sideContainer = <SidePanels 
 changeSidePanel={content=>{
-    if(w <= 300){
-        setSidePanel(content);
-      }  
-      console.log(typeof w)
-      console.log(w)
+    if(w <= 767){ setSidePanel(content);}  
     setSwisher(false); 
     setactions(true);
   }
@@ -120,14 +116,12 @@ show={ (content) => {
 
     console.log(typeof w)
     console.log(w)
-    
+
     setCh( content);
      setSwisher(true); 
      setactions(true); 
 // close side pannel.... if screen its small
-   if(w <= 300){
-        setSidePanel(false);
-      }  
+   if(w <= 767){setSidePanel(false);}  
 }
 } 
 />
