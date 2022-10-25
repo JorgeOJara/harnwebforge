@@ -113,10 +113,6 @@ changeSidePanel={content=>{
   }
 } 
 show={ (content) => { 
-
-    console.log(typeof w)
-    console.log(w)
-
     setCh( content);
      setSwisher(true); 
      setactions(true); 

@@ -1047,7 +1047,7 @@ export const CHARACTERFORMCREATOR = (props) => {
         ></input>
       </div>
       <button
-        className="btn btn-secondary b"
+        className="btn btn-secondary b box"
         onClick={() => verifier()}
       >
         <i className="text-danger fas fa-trash o">Create</i>
