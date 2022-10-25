@@ -96,7 +96,7 @@ const imagerFinder ="https://cdn.discordapp.com/avatars/"+ UserId+ "/" + userAva
 
 //   // hooks
 const [sidePanel,setSidePanel] = useState(true);
-
+const [screen,setscreen]  = useState("w-50 mx-auto my-");
 
 const [ch,setCh] = useState([])
 const [swither,setSwisher] = useState(false);
@@ -108,6 +108,7 @@ if(sidePanel === true){
 sideContainer = <SidePanels 
 changeSidePanel={content=>{
     if(w <= 767){ setSidePanel(content);}  
+    if(window.innerWidth <= 767){setscreen("mx-auto my-3")}else{setscreen("w-50 mx-auto my-3")}
     setSwisher(false); 
     setactions(true);
   }
@@ -118,20 +119,12 @@ show={ (content) => {
      setactions(true); 
 // close side pannel.... if screen its small
    if(w <= 767){setSidePanel(false);}  
-}
+   if(window.innerWidth <= 767){setscreen("mx-auto my-3")}else{setscreen("w-50 mx-auto my-3")}
+ }
 } 
 />
 
 };
-const [screen,setscreen]  = useState("w-50 mx-auto my-");
-
-if(window.innerWidth <= 767)
-{
- setscreen("mx-auto my-3")
-}else
-{
-  setscreen("w-50 mx-auto my-3")
-}
 
 return(
 <>
