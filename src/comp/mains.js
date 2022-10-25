@@ -266,7 +266,7 @@ Character sheet
 </div>
 </div>
 </div>
-<div className="h-100 mb-4 p-2 card" style={{}}>
+<div className="h-100 mb-4 p-2 card">
 {/* nice */}
 
 <div className="overflow-auto h-100 m-2 pr-3 d-flex flex-nowrap flex-column">
@@ -274,7 +274,7 @@ Character sheet
 {/* row */}
 <div className="col text-center">
 {/* nice */}
-<div className="w-50 mx-auto my-3">
+<div className="mx-auto my-3">
 
 {/* block */}
 
