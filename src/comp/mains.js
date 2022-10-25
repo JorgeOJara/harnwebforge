@@ -256,7 +256,7 @@ Character sheet
 <div className="action-menu">
 <div className="floating-action">
 <div className="badge badge-dark"></div>
-<button className="btn btn-floating btn-sm btn-success">
+<button className="btn btn-floating btn-sm btn-danger">
 <i className="fas fa-plus" 
     onClick={()=>{
         setactions(false);
