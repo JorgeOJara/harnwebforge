@@ -63,7 +63,7 @@ Character Basic info
 </div>
 <div class="card-body">
 <ul class="list-group">
-<li class="list-group-item d-flex justify-content-center align-items-center">
+<li class="list-group-item d-flex justify-content-between align-items-center">
 RACE
 <span class="badge badge-primary badge-pill">{ufehieugciu.Race}</span>
 </li>
