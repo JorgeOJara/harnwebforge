@@ -107,7 +107,7 @@ let sideContainer;
 if(sidePanel === true){
 sideContainer = <SidePanels 
 changeSidePanel={content=>{setSidePanel(content);setSwisher(false); setactions(true)}} 
-show={ (content) => { setCh( content); setSwisher(true); setactions(true) }} 
+show={ (content) => { setCh( content); setSwisher(true); setactions(true); setSidePanel(false);}} 
 />
 
 };
