@@ -1046,14 +1046,12 @@ export const CHARACTERFORMCREATOR = (props) => {
           value="Bike"
         ></input>
       </div>
-      <center>
       <button
         className="btn btn-secondary b box"
         onClick={() => verifier()}
       >
         <i className="text-danger fas fa-trash o">Create</i>
       </button>
-      </center>
     </>
   );
 };
