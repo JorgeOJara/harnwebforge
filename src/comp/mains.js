@@ -123,7 +123,7 @@ show={ (content) => {
 />
 
 };
-const [screen,setscreen]  = useState("");
+const [screen,setscreen]  = useState("w-50 mx-auto my-");
 
 if(window.innerWidth <= 767)
 {
