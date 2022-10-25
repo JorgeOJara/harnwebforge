@@ -101,13 +101,29 @@ const [sidePanel,setSidePanel] = useState(true);
 const [ch,setCh] = useState([])
 const [swither,setSwisher] = useState(false);
 const [actions,setactions] = useState(true);
-
+var w = window.innerWidth;
 // //  change side pannel to none display..
 let sideContainer;
 if(sidePanel === true){
 sideContainer = <SidePanels 
-changeSidePanel={content=>{setSidePanel(content);setSwisher(false); setactions(true)}} 
-show={ (content) => { setCh( content); setSwisher(true); setactions(true); setSidePanel(false);}} 
+changeSidePanel={content=>{
+    if(w < 300){
+        setSidePanel(content);
+      }  
+    setSwisher(false); 
+    setactions(true);
+  }
+} 
+show={ (content) => { 
+    setCh( content);
+     setSwisher(true); 
+     setactions(true); 
+// close side pannel.... if screen its small
+   if(w < 300){
+        setSidePanel(false);
+      }  
+}
+} 
 />
 
 };
@@ -119,8 +135,8 @@ return(
 <meta
 content="width=device-width,initial-scale=1,shrink-to-fit=no"
 name="viewport"
-/>{" "}
-<meta content="#333333" name="theme-color" /> {/*<base href="/">*/}
+/>
+<meta content="#333333" name="theme-color" /> 
 
 {/* CSS only */}
 
