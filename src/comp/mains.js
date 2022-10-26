@@ -21,11 +21,8 @@ const [User,setUser]= useState("");
 const [userAvatare,setUserAvatare] = useState("");
 const [UserId,setUserId] = useState(0);
 
-const [ update, setUpdate] = useState(true)
+const [ update, setUpdate] = useState(true);
 //pass the name to be safe in creation objec
-const [Namer,setName] = useState("");
-
-const updateListedCh = useRef(null);
 
 const getUserInfo = async (accessToken) => {
 // console.log(accessToken);
@@ -116,6 +113,7 @@ changeSidePanel={content=>{
   }
 } 
 updated={ content => setUpdate(content) }
+
 fina = {update}
 
 show={ (content) => { 
