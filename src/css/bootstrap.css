@@ -533,7 +533,7 @@ pre code {
 }
 
 .pre-scrollable {
-  max-height: 340px;
+  max-height: 1000px;
   overflow-y: scroll;
 }
 
@@ -7248,7 +7248,7 @@ button.bg-dark:focus {
 
   .float-md-right {
     float: right !important;
-  }
+  }f
 
   .float-md-none {
     float: none !important;
