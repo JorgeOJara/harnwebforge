@@ -21,6 +21,7 @@ axios.post('https://harnforge.com/idsFinder', pen)
 }
 
 if( props.content != ufehieugciu.Name ){ findC(); }
+if(props.fina == false){ findC();  props.updated(true) }
 
 
 return (
