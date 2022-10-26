@@ -240,7 +240,7 @@ title="This page is coming soon!">
 
 <main id="app-content" className="with-sidenav">
 <div className="container-fluid h-100 d-flex flex-column py-4">
-<div className="h-100 overflow-hidden flex-nowrap row lil">
+<div className="h-100 overflow-hidden flex-nowrap row">
 
 {/* start of side panel */}
      { sideContainer}

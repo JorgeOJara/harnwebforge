@@ -29,7 +29,7 @@ useEffect(() => {
    }, 1000);
    return () => clearInterval(interval);
  }, []);
- 
+
 return(
 <>
 <div id="list" className="col-12 col-md-5 h-100">
@@ -62,7 +62,7 @@ completed.map(item => {
 <div id="spacer" className="p-4" />
 </div></center>
 </div>
-<div className="position-absolute text-right floating-action-menu mx-2 d-md-none active"
+<div className="position-absolute text-right floating-action-menu mx-2 d-md-none active lil"
 style={{ bottom: 20, right: 20 }}
 >
 <div className="action-menu">
