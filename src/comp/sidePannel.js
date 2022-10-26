@@ -49,7 +49,7 @@ Your Characters
 </div>
 </div>
 <center>
-<div className="overflow-scroll h-100 p-3 lil">
+<div className="overflow-auto h-100 p-3 lil">
 {
 completed.map(item => {
     return <button className="btn btn-secondary ch"
