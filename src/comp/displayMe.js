@@ -1,4 +1,4 @@
-import React, { useState, useImperativeHandle, useRef} from "react";
+import React, { useState, useImperativeHandle, useRef,forwardRef} from "react";
 
 
 import axios from 'axios';
@@ -6,7 +6,7 @@ import axios from 'axios';
 
 /// just to display Characters info
 
-export const DisplayMe = (props,ref) => {
+export const DisplayMe = forwardRef((props,ref) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
 
@@ -24,7 +24,7 @@ if( props.content != ufehieugciu.Name ){ findC(); }
 
 useImperativeHandle(ref, () => ({
   gettingListed() {
-        findC()
+        findC();
     },
 }));
 
@@ -235,4 +235,4 @@ piety
 
 </>
 );
-};
+});
