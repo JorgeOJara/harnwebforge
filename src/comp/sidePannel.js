@@ -49,7 +49,7 @@ Your Characters
 </div>
 </div>
 <center>
-<div className="overflow-auto h-100 p-3">
+<div className="overflow-auto h-100 p-3 lil">
 {
 completed.map(item => {
     return <button className="btn btn-secondary ch"
@@ -62,7 +62,7 @@ completed.map(item => {
 <div id="spacer" className="p-4" />
 </div></center>
 </div>
-<div className="position-absolute text-right floating-action-menu mx-2 d-md-none active lil"
+<div className="position-absolute text-right floating-action-menu mx-2 d-md-none active"
 style={{ bottom: 20, right: 20 }}
 >
 <div className="action-menu">
