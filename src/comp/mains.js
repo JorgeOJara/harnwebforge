@@ -21,7 +21,6 @@ const [User,setUser]= useState("");
 const [userAvatare,setUserAvatare] = useState("");
 const [UserId,setUserId] = useState(0);
 
-const [ update, setUpdate] = useState(true);
 //pass the name to be safe in creation objec
 
 const getUserInfo = async (accessToken) => {
@@ -112,9 +111,6 @@ changeSidePanel={content=>{
     setactions(true);
   }
 } 
-updated={ content => setUpdate(content) }
-
-fina = {update}
 
 show={ (content) => { 
     setCh( content);
@@ -286,7 +282,7 @@ Character sheet
 {/* end block */}
 {/* Character creation... */}
 
-{ actions == true ? swither == false? <CHARACTERFORMCREATOR updated={ content => setUpdate(content) } backonMain={ () =>{  setactions(false); setSidePanel(true); }}/>: <DisplayMe content={ch} /> : null }  
+{ actions == true ? swither == false? <CHARACTERFORMCREATOR backonMain={ () =>{  setactions(false); setSidePanel(true); }}/>: <DisplayMe content={ch} /> : null }  
 
 {/*end of the character creation functions. */}   
 </div>

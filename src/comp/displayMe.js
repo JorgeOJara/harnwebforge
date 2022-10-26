@@ -17,12 +17,17 @@ axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
   ddoijhdbeiu(response.data);
   console.log(response.data);
-})
+ })
 }
 
 if( props.content != ufehieugciu.Name ){ findC(); }
-if(props.fina == false){ findC();  props.updated(true); console.log("done")}
 
+useEffect(() => {
+  const interval = setInterval(() => {
+    findC();
+  }, 1000);
+  return () => clearInterval(interval);
+}, []);
 
 return (
 <>
