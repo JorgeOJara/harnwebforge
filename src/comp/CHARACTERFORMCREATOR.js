@@ -252,18 +252,18 @@ export const CHARACTERFORMCREATOR = (props) => {
   setCharacter(Character => ({...Character,...updatedValue}));}
   
 
-  // medicalOption it needs to be ramdomize
-
+  
   const setintelligence= (e) => {let updatedValue = {intelligence:e.target.value};
+  // medicalOption it needs to be ramdomize
   setCharacter(Character => ({...Character,...updatedValue}));}
   
-  const setAura= (e) => {let updatedValue = {aura:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
-
+  const setAura= (e) => {let updatedValue = {aura:e.target.value};
 
     
-  const setwill= (e) => {let updatedValue = {will:e.target.value};
+
   setCharacter(Character => ({...Character,...updatedValue}));}
+  const setwill= (e) => {let updatedValue = {will:e.target.value};
 
   const setmorality= (e) => {let updatedValue = {morality:e.target.value};
   setCharacter(Character => ({...Character,...updatedValue}));}
