@@ -1,4 +1,4 @@
-import React, { useState, useImperativeHandle, useRef,forwardRef} from "react";
+import React, { useState} from "react";
 
 
 import axios from 'axios';
@@ -6,7 +6,7 @@ import axios from 'axios';
 
 /// just to display Characters info
 
-export const DisplayMe = forwardRef((props,ref) => {
+export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
 
@@ -22,11 +22,6 @@ axios.post('https://harnforge.com/idsFinder', pen)
 
 if( props.content != ufehieugciu.Name ){ findC(); }
 
-useImperativeHandle(ref, () => ({
-  gettingListed() {
-        findC();
-    },
-}));
 
 return (
 <>
@@ -235,4 +230,4 @@ piety
 
 </>
 );
-});
+};
