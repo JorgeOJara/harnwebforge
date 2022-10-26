@@ -22,12 +22,7 @@ axios.post('https://harnforge.com/idsFinder', pen)
 
 if( props.content != ufehieugciu.Name ){ findC(); }
 
-useEffect(() => {
-  const interval = setInterval(() => {
-    findC();
-  }, 1000);
-  return () => clearInterval(interval);
-}, []);
+
 
 return (
 <>

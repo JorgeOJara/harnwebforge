@@ -24,11 +24,12 @@ const go = (id)=>
 }
 
 useEffect(() => {
-const timer = setTimeout(() => {
-checkForCharacterts();
-}, 1000);
-}, []);
-
+   const interval = setInterval(() => {
+      checkForCharacterts();
+   }, 1000);
+   return () => clearInterval(interval);
+ }, []);
+ 
 return(
 <>
 <div id="list" className="col-12 col-md-5 h-100">
