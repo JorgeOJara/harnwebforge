@@ -283,7 +283,7 @@ Character sheet
 {/* end block */}
 {/* Character creation... */}
 
-{ actions == true ? swither == false? <CHARACTERFORMCREATOR />: <DisplayMe content={ch} /> : null }  
+{ actions == true ? swither == false? <CHARACTERFORMCREATOR backonMain={ () =>{  setactions(false); setSidePanel(true) }}/>: <DisplayMe content={ch} /> : null }  
 
 {/*end of the character creation functions. */}   
 </div>

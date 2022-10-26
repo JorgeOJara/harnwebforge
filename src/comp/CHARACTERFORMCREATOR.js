@@ -304,6 +304,9 @@ export const CHARACTERFORMCREATOR = (props) => {
        .then(function(response) {
            console.log(response.data);
         })
+      // here its the effect you wanna safe..
+
+      props.backonMain();
   }
  const setAndsafeAvatare = (e)=>
  {
