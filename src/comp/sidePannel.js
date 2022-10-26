@@ -51,11 +51,9 @@ Your Characters
 <div className="overflow-auto h-100 p-3">
 {
 completed.map(item => {
-    return <button className="btn btn-secondary ch"
-             onClick={ () => go( item.Name ) }
-            >
-          <i className="none">{item.Name}</i>
-      </button>
+    return <ul class="list-group">
+            <li class="list-group-item disabled"  onClick={ () => go( item.Name ) }>{item.Name}</li>
+         </ul>
    })
 }
 <div id="spacer" className="p-4" />
