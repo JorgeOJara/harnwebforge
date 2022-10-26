@@ -1,4 +1,4 @@
-import React, { setState ,useState,useEffect,Redirect } from 'react';
+import React, { setState ,useState,useEffect,useRef } from 'react';
 import logo from './imgs/pngegg.png';
 import alita from "./imgs/azula.jpg";
 
@@ -24,6 +24,7 @@ const [UserId,setUserId] = useState(0);
 //pass the name to be safe in creation objec
 const [Namer,setName] = useState("");
 
+const updateListedCh = useRef(null);
 
 const getUserInfo = async (accessToken) => {
 // console.log(accessToken);
@@ -283,7 +284,7 @@ Character sheet
 {/* end block */}
 {/* Character creation... */}
 
-{ actions == true ? swither == false? <CHARACTERFORMCREATOR backonMain={ () =>{  setactions(false); setSidePanel(true) }}/>: <DisplayMe content={ch} /> : null }  
+{ actions == true ? swither == false? <CHARACTERFORMCREATOR backonMain={ () =>{  setactions(false); setSidePanel(true); updateListedCh.current.gettingListed(); }}/>: <DisplayMe content={ch} /> : null }  
 
 {/*end of the character creation functions. */}   
 </div>

@@ -1,13 +1,12 @@
-import React, { setState, useState, useEffect } from "react";
-import { objContent } from "./objContent";
-import { ValueGetter } from "./variablesContainer";
+import React, { useState } from "react";
+
 
 import axios from 'axios';
 
 
 /// just to display Characters info
 
-export const DisplayMe = (props) => {
+export const DisplayMe = (props,ref) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
 
@@ -21,10 +20,13 @@ axios.post('https://harnforge.com/idsFinder', pen)
 })
 }
 
-if( props.content != ufehieugciu.Name )
-{
-findC();
-}
+if( props.content != ufehieugciu.Name ){ findC(); }
+
+useImperativeHandle(ref, () => ({
+  gettingListed() {
+        findC()
+    },
+}));
 
 return (
 <>
