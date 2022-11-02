@@ -18,7 +18,7 @@ checkforAll()
   if(this.obj.Name == ""){ console.log("Name its required..")}
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
-  if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("undefined","undefined")}
+  if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
   if(this.obj.Culture == "")
   {
     let done = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);

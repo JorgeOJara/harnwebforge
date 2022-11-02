@@ -78,7 +78,7 @@ export const makeitForMe = class
 
          // it expects 2 numbers the first one from 1 - 12  and the second from 1 - 30
         let results;
-        if(month !== 'undefined' || day !== 'undefined'){
+        if(month !== 'one' || day !== 'one'){
             let mul = (month - 1) * 30;
             results = mul + day;
         }else{
