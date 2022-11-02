@@ -12,17 +12,39 @@ collect(obj) {
  }
 checkforAll()
 {
+  let lculture;
+  let lsocialClass;
+
   if(this.obj.Name == ""){ console.log("Name its required..")}
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("undefined","undefined")}
   if(this.obj.Culture == "")
-  {let done = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);this.obj.Culture = done[0]}
+  {
+    let done = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);
+    this.obj.Culture = done[0];
+    lculture = done[0];
+    lsocialClass = done[1]
+  }
   if(this.obj.giveBackbirthplace == ""){this.obj.birthPlace = this.helper.birthPlace(this.obj.Culture,this.helper.roll(100))}
   if(this.obj.SocialClass == "")
-  {let done  = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace) ; this.obj.SocialClass = done[1];}
+  {
+    if(lculture !=""){
+      let done  = this.helper.giveMeAsocialClass(this.helper.roll(100),
+      lculture,this.obj.birthPlace);
+      this.obj.SocialClass = done[1];
+    }else{
+      let done  = this.helper.giveMeAsocialClass(this.helper.roll(100),lculture,this.obj.birthPlace);
+      this.obj.SocialClass = done[1];
+    }
+  }
   if(this.obj.ocupation == ""){this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture)}
-  if(this.obj.height == ""){ this.obj.height = this.helper.giveMeMyHeiGHt(this.obj.Race,this.obj.Sex)}
+  
+  if(this.obj.height == "")
+  {
+    this.obj.height = this.helper.giveMeMyHeiGHt(this.obj.Race,this.obj.Sex);
+  }
+
   if(this.obj.frame == ""){this.obj.frame = this.helper.howFatItsMycharacter()}
   if(this.obj.weight == 0){this.obj.weight = this.helper.howHavyItsMyCharacter(this.obj.height,this.obj.frame)}
   if(this.obj.comeliness == ""){this.obj.comeliness = this.helper.itsMyCharacterCute()}
