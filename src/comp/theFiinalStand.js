@@ -26,7 +26,13 @@ checkforAll()
     lculture = done[0];
     lsocialClass = done[1]
   }
-  if(this.obj.giveBackbirthplace == ""){this.obj.birthPlace = this.helper.birthPlace(this.obj.Culture,this.helper.roll(100))}
+  if(this.obj.giveBackbirthplace == ""){
+     if(lculture !=""){
+       this.obj.birthPlace = this.helper.birthPlace(lculture,this.helper.roll(100))
+    }else{
+      this.obj.birthPlace = this.helper.birthPlace(this.obj.Culture,this.helper.roll(100))
+    }
+  }
   if(this.obj.SocialClass == "")
   {
     if(lculture !=""){
@@ -38,7 +44,14 @@ checkforAll()
       this.obj.SocialClass = done[1];
     }
   }
-  if(this.obj.ocupation == ""){this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture)}
+  if(this.obj.ocupation == ""){
+    if(lculture != ""){
+      this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);
+    }else
+    {
+      this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
+    }
+  }
   
   if(this.obj.height == "")
   {
