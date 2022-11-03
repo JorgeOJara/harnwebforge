@@ -82,10 +82,7 @@ checkforAll()
   if(this.obj.will == 0 ){ this.obj.will = this.helper.willAttribute(this.obj.Race)}
   if(this.obj.morality == 0){this.obj.morality = this.helper.moralAttribute(this.obj.Race)}
   if(this.obj.deity == ""){this.obj.deity = "non believer"}
-  if(this.obj.items.length == 0 ){
-    this.obj.items = this.obj.items = [weaponsAval[0],weaponsAval[1],weaponsAval[2]]
-   
-  }
+  if(this.obj.items.length > 0 ){this.obj.items = this.obj.items = [weaponsAval[0],weaponsAval[1],weaponsAval[2]]}
 }
    displayer(){console.table(this.obj)}     
 }
