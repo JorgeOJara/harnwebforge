@@ -310,9 +310,9 @@ export const CHARACTERFORMCREATOR = (props) => {
   }
  const setAndsafeAvatare = (e)=>
  {
-  setAvatare(e.target.value);
+  setAvatare(JSON.parse(e.target.value));
 
-  let updatedValue = {Avatare:e.target.value};
+  let updatedValue = {Avatare:JSON.parse(e.target.value)};
   setCharacter(Character => ({...Character,...updatedValue}));
 
  }
