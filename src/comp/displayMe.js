@@ -234,7 +234,7 @@ piety
 {/* items */}
 <div class="card text-center">
 <div class="card-header">
-Character'S personality
+ Character Items
 </div>
 <div class="card-body">
 <ul class="list-group">
