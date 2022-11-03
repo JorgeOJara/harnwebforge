@@ -886,7 +886,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-            {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+            {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -898,7 +898,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
              <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+             {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -913,7 +913,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -925,7 +925,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -940,7 +940,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -952,7 +952,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -968,7 +968,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+            { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -980,7 +980,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-             { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+             { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -995,7 +995,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+            { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -1007,7 +1007,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-           { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+           { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
@@ -1022,7 +1022,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e => {  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+            { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
         <div className="col">
@@ -1034,7 +1034,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e => {  itemsCollector(e) }}
           >
             <option value="None">None</option> 
-            { ARMORval.map( d => <option value={d.ItemName}>{d.ItemName} ({d.ArmorType})</option> )}
+            { ARMORval.map( d => <option value={d}>{d.ItemName} ({d.ArmorType})</option> )}
           </select>
         </div>
       </div>
