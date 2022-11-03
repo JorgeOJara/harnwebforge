@@ -229,6 +229,28 @@ piety
 </div>
 </div>
 
+
+
+{/* items */}
+<div class="card text-center">
+<div class="card-header">
+Character'S personality
+</div>
+<div class="card-body">
+<ul class="list-group">
+  { ufehieugciu.items.map( d => {
+   <li class="list-group-item d-flex justify-content-between align-items-center">
+      Item :
+      <span class="badge badge-primary badge-pill">{d.itemName}</span>
+    </li>
+  } 
+)}
+</ul>
+</div>
+<div class="card-footer text-muted">
+      
+</div>
+</div>
 </>
 );
 };

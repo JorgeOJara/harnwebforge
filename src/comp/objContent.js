@@ -44,6 +44,6 @@ export const objContent =
    armor:[],
    psyche:"",
    itsAlive:true,
-   items:'',
+   items:[],
    discordUsername:""
 }

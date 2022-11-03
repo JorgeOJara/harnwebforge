@@ -588,6 +588,7 @@ let Culture;
          let initialWeight;
          let modifier;
          let results;
+         
          function displatNone(){return null;}
          // finalWeight
          done.finalWeight.Weight.map(d =>

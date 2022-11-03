@@ -1,5 +1,6 @@
 export const weaponsAval = [
 //Unarmed Strikes
+
 {id:29715,itemName:"Hand/Arm",skills:"Unarmed",effects:{B:0,E:null,P:null,},Ad:[0,15],wt:null,WQ:null,hm:null,price:null},
 {id:10,itemName:"Foot/Leg/Knee",skills:"Unarmed",effects:{B:1,E:null,P:null},Ad:[5,5],wt:null,WQ:null,hm:null,price:null},
 {id:8762,itemName:"Head",skills:"Unarmed",effects:{B:1,E:null,P:null},Ad:[0,0],wt:null,WQ:null,hm:null,price:null},

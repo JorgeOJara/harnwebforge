@@ -1,6 +1,8 @@
 import { toHaveAccessibleName, toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import { makeitForMe } from "./autocharactercreationFunctionality";
 
+//  the weapons information object
+import { weaponsAval } from "./weapons";
 export const  checkBeforeSafe =  class 
 {
 
@@ -28,7 +30,7 @@ checkforAll()
     lsocialClass = done[1]
   }
 
-  
+
   if(this.obj.birthPlace == ""){
      if(lculture !=""){
        this.obj.birthPlace = this.helper.giveBackbirthplace(lculture,this.helper.roll(100))
@@ -80,7 +82,11 @@ checkforAll()
   if(this.obj.will == 0 ){ this.obj.will = this.helper.willAttribute(this.obj.Race)}
   if(this.obj.morality == 0){this.obj.morality = this.helper.moralAttribute(this.obj.Race)}
   if(this.obj.deity == ""){this.obj.deity = "non believer"}
+  if(this.obj.items.length == 0 ){
+    this.obj.items = this.obj.push(weaponsAval[0]);
+    this.obj.items = this.obj.push(weaponsAval[1]);
+    this.obj.items = this.obj.push(weaponsAval[3]);
+  }
 }
-   displayer(){console.table(this.obj)}
-      
+   displayer(){console.table(this.obj)}     
 }
