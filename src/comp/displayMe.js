@@ -8,7 +8,7 @@ import axios from 'axios';
 
 export const DisplayMe = (props) => {
 
-const [ufehieugciu,ddoijhdbeiu] = useState([ { Nothing:"nothing" } ]);
+const [ufehieugciu,ddoijhdbeiu] = useState([]);
 
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
@@ -236,7 +236,7 @@ piety
 </div>
 <div class="card-body">
 <ul class="list-group">
-  { ufehieugciu.items.map( d => <li class="list-group-item d-flex justify-content-between align-items-center">Item :<span class="badge badge-primary badge-pill">{d}</span></li>) }
+  { ufehieugciu.items.map( d => <li class="list-group-item d-flex justify-content-between align-items-center">Item :<span class="badge badge-primary badge-pill">{ d }</span></li>) }
 </ul>
 </div>
 <div class="card-footer text-muted">
