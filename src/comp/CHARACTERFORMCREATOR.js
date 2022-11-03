@@ -283,10 +283,10 @@ export const CHARACTERFORMCREATOR = (props) => {
 // collect weapons
   const itemsCollector = (e) => 
   {
-      setItemsc(itemsc => [...itemsc, JSON.parse(e.target.value) ]);
+      setItemsc(itemsc => [...itemsc, e.target.value]);
 
       let updatedValue = {items:itemsc};
-      
+
       setCharacter(Character => ({...Character,...updatedValue}));
   }
 
@@ -887,7 +887,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-            {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+            {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -899,7 +899,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
              <option value="None">None</option> 
-             {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+             {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -914,7 +914,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -926,7 +926,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
@@ -941,7 +941,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
         <div className="col">
@@ -953,7 +953,7 @@ export const CHARACTERFORMCREATOR = (props) => {
             onChange={ e =>{  itemsCollector(e) }}
           >
               <option value="None">None</option> 
-              {weaponsAval.map( d => <option value={d}>{d.itemName}</option> )}
+              {weaponsAval.map( d => <option value={d.itemName}>{d.itemName}</option> )}
           </select>
         </div>
       </div>
