@@ -15,7 +15,7 @@ let pen = { name : props.content , member : localStorage.getItem("username")}
 const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-  ddoijhdbeiu(JSON.parse(response.data));
+  ddoijhdbeiu(response.data);
   console.log(response.data.items);
  })
 }
