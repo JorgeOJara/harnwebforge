@@ -8,15 +8,16 @@ import axios from 'axios';
 
 export const DisplayMe = (props) => {
 
-const [ufehieugciu,ddoijhdbeiu] = useState([]);
+const [ufehieugciu,ddoijhdbeiu] = useState(null);
 
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
 const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-  ddoijhdbeiu(response.data);
-  console.log(ufehieugciu);
+   if(ddoijhdbeiu(response.data))
+   {console.log(ufehieugciu)};
+   
  })
 }
 
