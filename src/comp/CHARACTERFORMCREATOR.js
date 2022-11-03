@@ -283,9 +283,10 @@ export const CHARACTERFORMCREATOR = (props) => {
 // collect weapons
   const itemsCollector = (e) => 
   {
-      setItemsc(itemsc => [...itemsc, e.target.value ]);
+      setItemsc(itemsc => [...itemsc, JSON.parse(e.target.value) ]);
 
       let updatedValue = {items:itemsc};
+      
       setCharacter(Character => ({...Character,...updatedValue}));
   }
 
