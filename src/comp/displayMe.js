@@ -15,8 +15,7 @@ let pen = { name : props.content , member : localStorage.getItem("username")}
 const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
-   ddoijhdbeiu(response.data);
-    
+  ddoijhdbeiu(ufehieugciu => [...ufehieugciu, response.data ]);
  })
 }
 
@@ -24,7 +23,7 @@ if( props.content != ufehieugciu.Name ){ findC(); }
 
 useEffect(() => {
   setInterval(() => {
-       console.log(ufehieugciu);
+       alert(ufehieugciu);
   }, 1000);
 }, []);
 
