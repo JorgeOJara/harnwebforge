@@ -21,12 +21,6 @@ axios.post('https://harnforge.com/idsFinder', pen)
 
 if( props.content != ufehieugciu.Name ){ findC(); }
 
-useEffect(() => {
-  setInterval(() => {
-       alert(ufehieugciu);
-  }, 1000);
-}, []);
-
 return (
 <>
 <div className="justify-content-center row">
