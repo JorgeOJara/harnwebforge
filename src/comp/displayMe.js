@@ -9,15 +9,15 @@ import axios from 'axios';
 export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([]);
+const [objs,setobjs] = useState("");
 
 let pen = { name : props.content , member : localStorage.getItem("username")}
-let done;
 
 const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
   ddoijhdbeiu(response.data);
-  done = response.data;
+  setobjs(JSON.parse(response.data.items));
  })
 }
 
@@ -235,16 +235,11 @@ piety
 </div>
 <div class="card-body">
 <ul class="list-group">
- 
+   { objs.map( d => <li class="list-group-item d-flex justify-content-between align-items-center">Item<span class="badge badge-primary badge-pill">{d.itemName}</span></li>)}
 </ul>
 </div>
 <div class="card-footer text-muted">
-   {ufehieugciu.items.map(({ itemName }) => (
-        <li class="list-group-item d-flex justify-content-between align-items-center">
-          Item : 
-          <span class="badge badge-primary badge-pill">{ itemName }</span>
-        </li>
-      ))}
+    
 </div>
 </div>
 </>
