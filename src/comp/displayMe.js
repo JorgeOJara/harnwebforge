@@ -234,7 +234,7 @@ piety
 </div>
 <div class="card-body">
 <ul class="list-group">
-   { JSON.parse(ufehieugciu.items).map(d => <li class="list-group-item d-flex justify-content-between align-items-center">Items
+   { JSON.stringify(ufehieugciu.items).map(d => <li class="list-group-item d-flex justify-content-between align-items-center">Items
     <span class="badge badge-primary badge-pill">{d}</span></li>)}
 </ul>
 </div>
