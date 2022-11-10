@@ -93,7 +93,8 @@ app.post("/idsFinder",(request,response)=>{
     var query = { Name : names, discordUsername : member }
     dbo.collection("Characters").findOne(query, function(err, result) {
       if (err) throw err;
-        response.send(result);
+       let str = JSON.stringify(result)
+        response.send(str);
         response.end();
       db.close();
     });
