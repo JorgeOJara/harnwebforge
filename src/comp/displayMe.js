@@ -235,7 +235,7 @@ piety
 </div>
 <div class="card-body">
 <ul class="list-group">
- {  done.items.map(d => <li class="list-group-item d-flex justify-content-between align-items-center"><span class="badge badge-primary badge-pill">{d.itemName}</span></li>)}
+ {  ufehieugciu.items.map(d => <li class="list-group-item d-flex justify-content-between align-items-center"><span class="badge badge-primary badge-pill">{d.itemName}</span></li>)}
 </ul>
 </div>
 <div class="card-footer text-muted">
