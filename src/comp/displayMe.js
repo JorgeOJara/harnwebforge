@@ -9,7 +9,6 @@ import axios from 'axios';
 export const DisplayMe = (props) => {
 
 const [ufehieugciu,ddoijhdbeiu] = useState([]);
-const [objs,setobjs] = useState("");
 
 let pen = { name : props.content , member : localStorage.getItem("username")}
 
@@ -235,11 +234,11 @@ piety
 <div class="card-body">
 <ul class="list-group">
     <li class="list-group-item d-flex justify-content-between align-items-center">Items
-   <span class="badge badge-primary badge-pill">{JSON.parse(ufehieugciu.items)}</span></li>
+   <span class="badge badge-primary badge-pill">{ ufehieugciu.items[1]}</span></li>
 </ul>
 </div>
 <div class="card-footer text-muted">
-    
+
 </div>
 </div>
 </>
