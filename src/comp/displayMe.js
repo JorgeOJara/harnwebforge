@@ -227,20 +227,7 @@ piety
 </div>
 
 {/* items */}
-<div class="card text-center">
-<div class="card-header">
- Character Items
-</div>
-<div class="card-body">
-<ul class="list-group">
-    <li class="list-group-item d-flex justify-content-between align-items-center">Items
-   <span class="badge badge-primary badge-pill">{ JSON.parse(ufehieugciu.items)}</span></li>
-</ul>
-</div>
-<div class="card-footer text-muted">
 
-</div>
-</div>
 </>
 );
 };
