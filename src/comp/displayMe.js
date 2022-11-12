@@ -16,7 +16,12 @@ const findC = ()=>{
 axios.post('https://harnforge.com/idsFinder', pen)
 .then(function(response) {
   ddoijhdbeiu(response.data);
+  console.log(response.data);
  })
+}
+
+const deleteMe =() =>{
+     console.log("done...")
 }
 
 if( props.content != ufehieugciu.Name ){ findC(); }
@@ -222,7 +227,12 @@ piety
 </ul>
 </div>
 <div class="card-footer text-muted">
-      
+<button
+        className="btn btn-secondary b box"
+        onClick={() => deleteMe()}
+      >
+        <i className="text-danger fas fa-trash o">Create</i>
+      </button>
 </div>
 </div>
 
