@@ -4,7 +4,7 @@ import axios from 'axios';
 
 export const SidePanels = (props)=>{
 
-const [completed,setList] = useState([ { Name : "No characters registered!"} ]);
+const [completed,setList] = useState([ { Name : "Loading..."} ]);
   
 const checkForCharacterts = ()=>
 {
