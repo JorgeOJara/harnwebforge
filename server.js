@@ -112,7 +112,7 @@ app.post("/usRemcon",(request,response)=>{
 
 
     var query = { Name : names, discordUsername : member }
-      dbo.collection("customers").deleteOne(query, function(err, obj) {
+      dbo.collection("Characters").deleteOne(query, function(err, obj) {
             if (err) throw err;
              response.send("deleted...")
             db.close();
