@@ -11,6 +11,16 @@ export const Join = ()=>{
     window.location.replace(enlace);
 }
   return (
+    <>
+    <head>
+<meta httpEquiv="Content-Type" content="text/html; charset=UTF-8" />
+<meta
+content="width=device-width,initial-scale=1,shrink-to-fit=no"
+name="viewport"
+/>
+<meta content="#333333" name="theme-color" /> 
+     <title>Harn Forge</title>
+    </head>
         <div className="voy">
             <div className="topleft">
             <nav className="topnav navbar-expand navbar navbar-expand-md bg-primary">
@@ -29,6 +39,7 @@ export const Join = ()=>{
             <p>by Debiano</p>
          </div>
        </div>
+       </>
   );
 }
 

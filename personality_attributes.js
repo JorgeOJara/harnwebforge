@@ -14,7 +14,7 @@ const Species = {"Species Modifiers": [+3] }
 
 //morality => choice or 3d6 + modifiers
 const  morality = {
-"Species Modifiers":[+3]
+"Species Modifiers":[+3],
 "Morality Descriptions":['Diabolical','Unscrupulous','Corruptible','Law-Abiding','Principled','Exemplary']
 }
 
