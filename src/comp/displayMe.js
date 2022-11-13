@@ -21,7 +21,10 @@ axios.post('https://harnforge.com/idsFinder', pen)
 }
 
 const deleteMe =() =>{
-     console.log("done...")
+  axios.post('https://harnforge.com/usRemcon', pen)
+  .then(function(response) {
+      console.log(response.data);
+   });
 }
 
 if( props.content != ufehieugciu.Name ){ findC(); }
@@ -227,17 +230,17 @@ piety
 </ul>
 </div>
 <div class="card-footer text-muted">
+
+</div>
+</div>
+
+{/* buttton */}
 <button
         className="btn btn-secondary b box"
         onClick={() => deleteMe()}
       >
         <i className="text-danger fas fa-trash o">Create</i>
-      </button>
-</div>
-</div>
-
-{/* items */}
-
+</button>
 </>
 );
 };
