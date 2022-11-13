@@ -236,10 +236,10 @@ piety
 
 {/* buttton */}
 <button
-        className="btn btn-secondary b box"
+        className="btn btn-secondary b box destroy"
         onClick={() => deleteMe()}
       >
-        <i className="text-danger fas fa-trash o">Create</i>
+        <i className="text-danger fas fa-trash o">Destroy</i>
 </button>
 </>
 );
