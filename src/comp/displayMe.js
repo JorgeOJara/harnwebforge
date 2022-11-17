@@ -204,8 +204,8 @@ Character'S personality
 <div class="card-body">
 <ul class="list-group">
 <li class="list-group-item d-flex justify-content-between align-items-center">
-intelligence : 
-<b class="badge badge-primary badge-pill">{ufehieugciu.intelligence}</b>
+intelligence 
+<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence}</span>
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 aura
