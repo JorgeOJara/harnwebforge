@@ -187,13 +187,8 @@ smell
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 voice Description
-<span class="badge badge-primary badge-pill">{ufehieugciu.voice[0]}</span>
+<span class="badge badge-primary badge-pill">{ufehieugciu.voice}</span>
 </li>
-<li class="list-group-item d-flex justify-content-between align-items-center">
-voice value
-<span class="badge badge-primary badge-pill">{ufehieugciu.voice[1]}</span>
-</li>
-</ul>
 </div>
 {/* <div class="card-footer text-muted">
 
@@ -208,12 +203,7 @@ Character'S personality
 <div class="card-body">
 <ul class="list-group">
 <li class="list-group-item d-flex justify-content-between align-items-center">
-intelligence
-<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence[0] + ufehieugciu.intelligence[1]}</span>
-</li>
-<li class="list-group-item d-flex justify-content-between align-items-center">
-intelligence value
-<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence[2]}</span>
+intelligence : {ufehieugciu.intelligence}
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 aura
