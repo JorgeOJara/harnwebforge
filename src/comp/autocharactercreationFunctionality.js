@@ -554,7 +554,7 @@ let Culture;
        let convertIntonormal = finalheight / 12;
        let finalDisplayebleValue = convertIntonormal.toFixed(1)
    // first return its the inches values second feets values
-       return convertIntonormal;
+       return finalheight;
    }
 
    howFatItsMycharacter()

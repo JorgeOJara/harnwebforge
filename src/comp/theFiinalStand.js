@@ -15,9 +15,8 @@ checkforAll()
 {
   let lculture;
   let lsocialClass;
-  if(this.obj.Name == ""){ this.obj.Name = "Jonh Doe"; }
+  if(this.obj.Name == ""){ this.obj.Name = "Jane Doe"; }
   if(this.obj.Avatare == ""){ this.obj.Avatare = "https://i.pinimg.com/736x/5c/af/9d/5caf9d86a387587259326d963971adc3.jpg"}
-  if(this.obj.Name == ""){ console.log("Name its required..")}
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
