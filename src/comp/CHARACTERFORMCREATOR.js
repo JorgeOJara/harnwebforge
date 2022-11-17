@@ -347,7 +347,6 @@ export const CHARACTERFORMCREATOR = (props) => {
      <div className="col-12 col-md">
        <div className="form-group">
           <input
-            required="true"
             maxLength={80}
             type="text"
             className="bg-secondary pl-2 text-white form-control-lg form-control"
@@ -390,7 +389,7 @@ export const CHARACTERFORMCREATOR = (props) => {
           onChange={e => setSex(e)}
         >
           <option value="">choose</option>
-          <option value="Female">Female</option>
+          <option value="female">Female</option>
           <option value="Male">Male</option>
         </select>
       </div>
