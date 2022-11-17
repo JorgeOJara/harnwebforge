@@ -1,4 +1,3 @@
-import { toHaveAccessibleName, toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import { makeitForMe } from "./autocharactercreationFunctionality";
 
 //  the weapons information object
@@ -16,7 +15,8 @@ checkforAll()
 {
   let lculture;
   let lsocialClass;
-
+  if(this.obj.Name == ""){ this.obj.Name == "Jonh Doe" }
+  if(this.obj.Avatare == ""){ this.obj.Avatare = "https://i.pinimg.com/736x/5c/af/9d/5caf9d86a387587259326d963971adc3.jpg"}
   if(this.obj.Name == ""){ console.log("Name its required..")}
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
@@ -64,7 +64,9 @@ checkforAll()
   }
 
   if(this.obj.frame == ""){this.obj.frame = this.helper.howFatItsMycharacter()}
+  
   if(this.obj.weight == 0){this.obj.weight = this.helper.howHavyItsMyCharacter(this.obj.height,this.obj.frame)}
+
   if(this.obj.comeliness == ""){this.obj.comeliness = this.helper.itsMyCharacterCute()}
   if(this.obj.complexion == ""){this.obj.complexion = this.helper.tellMeMyCoMPlexion(this.helper.roll(100),this.obj.Race)}
   if(this.obj.eyeColor == ""){this.obj.eyeColor = this.helper.whatsMyEyeColor(this.helper.roll(100),this.obj.Race)}
