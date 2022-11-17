@@ -186,8 +186,12 @@ smell
 <span class="badge badge-primary badge-pill">{ufehieugciu.smell}</span>
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
-voice
-<span class="badge badge-primary badge-pill">{ufehieugciu.voice}</span>
+voice Description
+<span class="badge badge-primary badge-pill">{ufehieugciu.voice[0]}</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+voice value
+<span class="badge badge-primary badge-pill">{ufehieugciu.voice[1]}</span>
 </li>
 </ul>
 </div>
@@ -205,7 +209,11 @@ Character'S personality
 <ul class="list-group">
 <li class="list-group-item d-flex justify-content-between align-items-center">
 intelligence
-<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence}</span>
+<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence[0] + ufehieugciu.intelligence[1]}</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+intelligence value
+<span class="badge badge-primary badge-pill">{ufehieugciu.intelligence[2]}</span>
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 aura
