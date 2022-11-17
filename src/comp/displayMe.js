@@ -187,7 +187,7 @@ smell
 </li>
 <li class="list-group-item d-flex justify-content-between align-items-center">
 voice Description
-<span class="badge badge-primary badge-pill">{ufehieugciu.voice[0]}</span>
+<span class="badge badge-primary badge-pill">{ufehieugciu.voice}</span>
 </li>
 </ul>
 </div>
