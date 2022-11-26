@@ -21,13 +21,16 @@ checkforAll()
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
 
-  let cul =  this.helper.giveMebackMyculture(this.helper.roll(100));
-  let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
+  let cul;
+  let bt;
   console.log(cul);
   console.log(bt);
 
   if(this.obj.Culture == "")
   {
+    cul =  this.helper.giveMebackMyculture(this.helper.roll(100));
+    bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
+    
     let done = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
     this.obj.Culture = done[0];
     // setting for next variables...
@@ -70,8 +73,6 @@ checkforAll()
     }  
   }
 
-
-  
   if(this.obj.height == "")
   {
     this.obj.height = this.helper.giveMeMyHeiGHt(this.obj.Race,this.obj.Sex);
