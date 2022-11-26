@@ -28,7 +28,7 @@ checkforAll()
 
   if(this.obj.Culture == "")
   {
-    let done = this.helper.giveMeAsocialClass(60,cul,bt);
+    let done = this.helper.giveMeAsocialClass(60,"Chybisa","Shebra");
     this.obj.Culture = done[0];
     // setting for next variables...
     lculture = done[0];
