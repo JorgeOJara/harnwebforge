@@ -213,7 +213,7 @@ const [finallSkills,setSkills] =  useState("");
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const changeValueforskillsList = (val,so) =>{
      if(so == "Slave"){ 
-      skillsObj.Freeman.map( d => {
+      skillsObj.Slave.map( d => {
               if(d[0] == val){
                 let updatedValue = {skills:d[2]};
                 setCharacter(Character => ({...Character,...updatedValue}));
@@ -222,7 +222,7 @@ const changeValueforskillsList = (val,so) =>{
           })
       }
       if(so == "Serf"){ 
-        skillsObj.Freeman.map( d => {
+        skillsObj.Serf.map( d => {
             if(d[0] == val){
               let updatedValue = {skills:d[2]};
               setCharacter(Character => ({...Character,...updatedValue}));
@@ -240,7 +240,7 @@ const changeValueforskillsList = (val,so) =>{
       })
   }
   if(so == "guilded"){ 
-    skillsObj.Freeman.map( d => {
+    skillsObj.guilded.map( d => {
         if(d[0] == val){
           let updatedValue = {skills:d[2]};
           setCharacter(Character => ({...Character,...updatedValue}));
@@ -249,7 +249,7 @@ const changeValueforskillsList = (val,so) =>{
     })
   }
   if(so == "Nobility"){ 
-    skillsObj.Freeman.map( d => {
+    skillsObj.Nobility.map( d => {
         if(d[0] == val){
           let updatedValue = {skills:d[2]};
           setCharacter(Character => ({...Character,...updatedValue}));
