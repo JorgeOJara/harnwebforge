@@ -49,17 +49,15 @@ checkforAll()
     }
   }
   if(this.obj.ocupation == ""){
-    if(lculture != ""){
-      this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);
-    }else
-    {
-      this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
-    }
+       this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
   }
+
   if(this.obj.skills == "")
   {
      this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);
   }
+
+
   
   if(this.obj.height == "")
   {
