@@ -21,7 +21,7 @@ checkforAll()
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
 
-  let cul =  this.helper.giveMebackMyculture(this.helper.roll(100);
+  let cul =  this.helper.giveMebackMyculture(this.helper.roll(100));
   let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
 
   if(this.obj.Culture == "")
