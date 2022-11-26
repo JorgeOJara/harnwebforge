@@ -22,13 +22,14 @@ checkforAll()
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
 
   let cul =  this.helper.giveMebackMyculture(this.helper.roll(100));
+  
   let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
   console.log(cul);
   console.log(bt);
 
   if(this.obj.Culture == "")
   {
-    let done = this.helper.giveMeAsocialClass(60,"Chybisa","Shebra");
+    let done = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
     this.obj.Culture = done[0];
     // setting for next variables...
     lculture = done[0];
