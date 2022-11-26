@@ -58,7 +58,9 @@ checkforAll()
 
   if(this.obj.skills == "")
   {
-     this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);
+    if(lsocialClass != ""){
+      this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,lsocialClass);
+     }else{this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);}  
   }
 
 
