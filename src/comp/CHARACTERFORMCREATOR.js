@@ -215,7 +215,7 @@ const changeValueforskillsList = (val,so) =>{
      if(so == "Slave"){ 
       skillsObj.Freeman.map( d => {
               if(d[0] == val){
-                let updatedValue = {skills:e.target.value};
+                let updatedValue = {skills:d[2]};
                 setCharacter(Character => ({...Character,...updatedValue}));
                 setSkills(d[2])
               }
@@ -224,7 +224,7 @@ const changeValueforskillsList = (val,so) =>{
       if(so == "Serf"){ 
         skillsObj.Freeman.map( d => {
             if(d[0] == val){
-              let updatedValue = {skills:e.target.value};
+              let updatedValue = {skills:d[2]};
               setCharacter(Character => ({...Character,...updatedValue}));
               setSkills(d[2])
             }
@@ -233,7 +233,7 @@ const changeValueforskillsList = (val,so) =>{
     if(so == "Freeman"){ 
       skillsObj.Freeman.map( d => {
           if(d[0] == val){
-            let updatedValue = {skills:e.target.value};
+            let updatedValue = {skills:d[2]};
             setCharacter(Character => ({...Character,...updatedValue}));
             setSkills(d[2])
           }
@@ -242,7 +242,7 @@ const changeValueforskillsList = (val,so) =>{
   if(so == "guilded"){ 
     skillsObj.Freeman.map( d => {
         if(d[0] == val){
-          let updatedValue = {skills:e.target.value};
+          let updatedValue = {skills:d[2]};
           setCharacter(Character => ({...Character,...updatedValue}));
           setSkills(d[2])
         }
@@ -251,13 +251,14 @@ const changeValueforskillsList = (val,so) =>{
   if(so == "Nobility"){ 
     skillsObj.Freeman.map( d => {
         if(d[0] == val){
-          let updatedValue = {skills:e.target.value};
+          let updatedValue = {skills:d[2]};
           setCharacter(Character => ({...Character,...updatedValue}));
           setSkills(d[2])
         }
     })
   }
 }
+
   const setSocialOcupation = (e) => {
     let updatedValue = {ocupation:e.target.value};
     setCharacter(Character => ({...Character,...updatedValue}));
