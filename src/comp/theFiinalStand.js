@@ -51,7 +51,6 @@ checkforAll()
      }
   }
 
-  }
   if(this.obj.ocupation == ""){
     if(lsocialClass != ""){
       this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);
