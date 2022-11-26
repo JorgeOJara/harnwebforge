@@ -212,9 +212,6 @@ const [finallSkills,setSkills] =  useState("");
 
 ///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 const changeValueforskillsList = (val,so) =>{
-  console.log(val)
-  console.log(so)
-  console.log(skillsObj);
      if(so == "Slave"){ 
       skillsObj.Slave.map( d => {
               if(d[0] == val){

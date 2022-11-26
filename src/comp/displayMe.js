@@ -102,6 +102,13 @@ Culture
 SocialClass
 <span class="badge badge-primary badge-pill">{ufehieugciu.SocialClass}</span>
 </li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+ocupation
+<span class="badge badge-primary badge-pill">{ufehieugciu.ocupation}</span>
+</li>
+<li class="list-group-item d-flex justify-content-between align-items-center">
+ sk:{ufehieugciu.skills}
+</li>
 </ul>
 </div>
 {/* <div class="card-footer text-muted">

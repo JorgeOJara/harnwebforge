@@ -896,7 +896,57 @@ let Culture;
          return moral; 
       }
 // all functions  before this ending brack......⬆️⬆️⬆️
+
+giveMeMyskills(val,so){
+   if(so == "Slave"){ 
+    skillsObj.Slave.map( d => {
+            if(d[0] == val){
+              let updatedValue = {skills:d[2]};
+              setCharacter(Character => ({...Character,...updatedValue}));
+              setSkills(d[2])
+            }
+        })
+    }
+    if(so == "Serf"){ 
+      skillsObj.Serf.map( d => {
+          if(d[0] == val){
+            let updatedValue = {skills:d[2]};
+            setCharacter(Character => ({...Character,...updatedValue}));
+            setSkills(d[2])
+          }
+      })
+  }
+  if(so == "Freeman"){ 
+    skillsObj.Freeman.map( d => {
+        if(d[0] == val){
+          let updatedValue = {skills:d[2]};
+          setCharacter(Character => ({...Character,...updatedValue}));
+          setSkills(d[2])
+        }
+    })
 }
+if(so == "guilded"){ 
+  skillsObj.guilded.map( d => {
+      if(d[0] == val){
+        let updatedValue = {skills:d[2]};
+        setCharacter(Character => ({...Character,...updatedValue}));
+        setSkills(d[2])
+      }
+  })
+}
+if(so == "Nobility"){ 
+  skillsObj.Nobility.map( d => {
+      if(d[0] == val){
+        let updatedValue = {skills:d[2]};
+        setCharacter(Character => ({...Character,...updatedValue}));
+        setSkills(d[2])
+      }
+  })
+ }
+}
+// end of script
+}
+
 
 
 
