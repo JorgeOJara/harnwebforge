@@ -1,4 +1,4 @@
-const skillsObj = {
+export const skillsObj = {
     Slave: [  
         ["Cook/Servant",3,"Intrigue/4, Rhetoric/4, Cookery/4, Textilecraft/4, Herblore/2"],
         ["Farmer" , 4, "Agriculture/4, Weatherlore/4, Animalcraft/3"],   
