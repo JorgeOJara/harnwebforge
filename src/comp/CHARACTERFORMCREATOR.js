@@ -21,6 +21,8 @@ import { weaponsAval } from "./weapons";
 // the armor information object
 import { ARMORval } from "./armor";
 
+import { skillsObj } from "./skills";
+
 // this component, its the form on the website, where the magic happens..
 // IN here you can found all the form imputs also the desing and structure of the form
 
@@ -102,6 +104,9 @@ export const CHARACTERFORMCREATOR = (props) => {
   // this its the list of ocupations avaliables for the social class choosen...
   const [ocupation,setOcupation] = useState(["None"]);
 
+  const [oValue,setOvalue] =  useState(["None"]);
+
+
 
   const showMeMyculture = (valueChoosen) =>
   {
@@ -140,10 +145,12 @@ export const CHARACTERFORMCREATOR = (props) => {
     showMeMyculture(val);
   }
 
+  const [s,setS] = useState("none");
 
   const setSocialClass = (e) => {
     let updatedValue = {SocialClass:e.target.value};
     setCharacter(Character => ({...Character,...updatedValue}));
+    setS(e.target.value);
     // call weapons options function to update equipment
 
     if(Culture == "Tribal")
@@ -196,12 +203,69 @@ export const CHARACTERFORMCREATOR = (props) => {
       if(e.target.value == "Nobility"){dt.khuzanCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
     }
 }
-  const setSocialOcupation = (e) => {
 
+
+
+
+
+const [finallSkills,setSkills] =  useState("");
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
+const changeValueforskillsList = (val,so) =>{
+     if(so == "Slave"){ 
+      skillsObj.Freeman.map( d => {
+              if(d[0] == val){
+                let updatedValue = {skills:e.target.value};
+                setCharacter(Character => ({...Character,...updatedValue}));
+                setSkills(d[2])
+              }
+          })
+      }
+      if(so == "Serf"){ 
+        skillsObj.Freeman.map( d => {
+            if(d[0] == val){
+              let updatedValue = {skills:e.target.value};
+              setCharacter(Character => ({...Character,...updatedValue}));
+              setSkills(d[2])
+            }
+        })
+    }
+    if(so == "Freeman"){ 
+      skillsObj.Freeman.map( d => {
+          if(d[0] == val){
+            let updatedValue = {skills:e.target.value};
+            setCharacter(Character => ({...Character,...updatedValue}));
+            setSkills(d[2])
+          }
+      })
+  }
+  if(so == "guilded"){ 
+    skillsObj.Freeman.map( d => {
+        if(d[0] == val){
+          let updatedValue = {skills:e.target.value};
+          setCharacter(Character => ({...Character,...updatedValue}));
+          setSkills(d[2])
+        }
+    })
+  }
+  if(so == "Nobility"){ 
+    skillsObj.Freeman.map( d => {
+        if(d[0] == val){
+          let updatedValue = {skills:e.target.value};
+          setCharacter(Character => ({...Character,...updatedValue}));
+          setSkills(d[2])
+        }
+    })
+  }
+}
+  const setSocialOcupation = (e) => {
     let updatedValue = {ocupation:e.target.value};
     setCharacter(Character => ({...Character,...updatedValue}));
-
+    changeValueforskillsList(e.target.value,s);
 }
+
+
+///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
 
   const setHeight = (e) => {let updatedValue = {Height:e.target.value};
@@ -425,7 +489,7 @@ export const CHARACTERFORMCREATOR = (props) => {
         </div>
         <div className="col">
           <label className="" />
-          {/*    <input type="number" class="pl-2 text-white overflow-hidden form-control-plaintext" name="posts"  placeholder=""> */}
+          {/*    <input type="number" class="pl-2 text-white overflow-hidden form-control-plaintext" name="posts"  placeholder="">  */}
         </div>
       </div>
 
@@ -494,6 +558,10 @@ export const CHARACTERFORMCREATOR = (props) => {
           >
                {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
+        </div>
+        <div className="col">
+          <label className="">Skills</label>
+            <h4>{ finallSkills }</h4>
         </div>
       </div>
       {/* family dev  */}
