@@ -563,11 +563,13 @@ const changeValueforskillsList = (val,so) =>{
                {ocupation.map( d => <option value={d}>{d}</option> )}
           </select>
         </div>
-        <div className="col">
+      </div>
+      <div class="row form-group">
+      <div className="col">
           <label className="">Skills</label>
             <h4>{ finallSkills }</h4>
         </div>
-      </div>
+    </div>
       {/* family dev  */}
       <div className="form-group">
         <label className="">Description</label>
