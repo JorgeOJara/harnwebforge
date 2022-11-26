@@ -33,7 +33,7 @@ export const skillsObj = {
            ["Thatcher", 4 , "Climbing/5, Woodcraft/4, Engineering/2"],
            ["Toymaker", 5 ,"Woodcraft/5, Lockcraft/3, Drawing/3, Hidework/3"]
      ],
-   GUILDED:[
+     guilded:[
         ["Alchemist", 7 ,"Alchemy/4, Mathematics/3, Herblore/3, Mining/2, Physician/2, Script"],
         ["Apothecary", 6 , "Herblore/4, Alchemy/2, Mathematics/2, Physician/2, Script"],
         ["Astrologer", 4 , "Astrology/4, Mathematics/3, Drawing/3, Tarotry/2, Script"],
@@ -71,7 +71,7 @@ export const skillsObj = {
         ["Weaponcrafter",7,"Weaponcraft/4, Two weapons at OML, Metalcraft/3, Fletching/3, Mining/2"],
         ["Woodcrafter",7 , "Woodcraft/5, Metalcraft/2, Hidework/3"]
       ],
- NOBLE:[
+  Nobility:[
     ["Herald", 5 , "Heraldry/4, Oratory/4, Rhetoric/4, Intrigue/5, Drawing/4, 2nd Language, Script (plus Knight skills to OML)"],
     ["Knight Bachelor" , 7 , "??????"],
     ["Knight/Bailiff",7 , "Knight Bachelor, plus Law/3, Agriculture/2."],
