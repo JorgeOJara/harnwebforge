@@ -2,6 +2,7 @@ import { toHaveDisplayValue } from "@testing-library/jest-dom/dist/matchers";
 import { findByAltText } from "@testing-library/react";
 import { ValueGetter } from "./variablesContainer";
 const done = new ValueGetter();
+import { skillsObj } from "./skills";
 
 //  this are all functions to create a character automaticly 
 // in here you can find a function to automate every part of the character 
