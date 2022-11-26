@@ -20,9 +20,13 @@ checkforAll()
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
+
+  let cul =  this.helper.giveMebackMyculture(this.helper.roll(100);
+  let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
+
   if(this.obj.Culture == "")
   {
-    let done = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);
+    let done = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
     this.obj.Culture = done[0];
     //  setting for next variables...
     lculture = done[0];
@@ -31,22 +35,22 @@ checkforAll()
 
 
   if(this.obj.birthPlace == ""){
-     if(lculture !=""){
-       this.obj.birthPlace = this.helper.giveBackbirthplace(lculture,this.helper.roll(100))
+     if(bt == ""){
+       this.obj.birthPlace = bt;
     }else{
       this.obj.birthPlace = this.helper.giveBackbirthplace(this.obj.Culture,this.helper.roll(100))
     }
   }
+
   if(this.obj.SocialClass == "")
   {
-    if(lculture !=""){
-      let done  = this.helper.giveMeAsocialClass(this.helper.roll(100),
-      lculture,this.obj.birthPlace);
-      this.obj.SocialClass = done[1];
-    }else{
-      let done  = this.helper.giveMeAsocialClass(this.helper.roll(100),lculture,this.obj.birthPlace);
-      this.obj.SocialClass = done[1];
-    }
+    if(lsocialClass != ""){
+      this.obj.SocialClass = lsocialClass;
+     }else{
+        this.obj.socialClass = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);
+     }
+  }
+
   }
   if(this.obj.ocupation == ""){
     if(lsocialClass != ""){
@@ -58,9 +62,11 @@ checkforAll()
 
   if(this.obj.skills == "")
   {
-    if(lsocialClass != ""){
+    if(lsocialClass == ""){
+      this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);
+     }else{
       this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,lsocialClass);
-     }else{this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);}  
+    }  
   }
 
 
