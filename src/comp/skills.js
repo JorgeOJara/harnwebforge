@@ -11,7 +11,7 @@ const skillsObj = {
         ["Farmer" , 4, "Agriculture/4, Weatherlore/4, Animalcraft/3"],   
         ["Herdsman", 2 ,"Animalcraft/4, Tracking/4, Survival/4, Weatherlore/4"],
      ],
-    Freeman: [
+     Freeman: [
            ["Animal Trainer",3,"Animalcraft/4,Hidework/3,Riding/2"],
            ["Beggar", 1 , "Drawing/4, Mathematics/2, Script"],
            ["Cartographer/Artist", 5 ,"Drawing/4, Mathematics/2, Script"],
