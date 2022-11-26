@@ -936,6 +936,7 @@ if(so == "Nobility"){
       }
   })
  }
+   return finalOne;
 }
 // end of script
 }
