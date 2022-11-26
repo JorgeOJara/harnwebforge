@@ -900,38 +900,39 @@ let Culture;
 // all functions  before this ending brack......⬆️⬆️⬆️
 
 giveMeMyskills(val,so){
+   let finalOne;
    if(so == "Slave"){ 
     skillsObj.Slave.map( d => {
             if(d[0] == val){
-                return d[2];
+                finalOne =  d[2];
             }
         })
     }
     if(so == "Serf"){ 
       skillsObj.Serf.map( d => {
           if(d[0] == val){
-             return d[2];
+            finalOne =  d[2];
           }
       })
   }
   if(so == "Freeman"){ 
     skillsObj.Freeman.map( d => {
         if(d[0] == val){
-           return d[2];
+         finalOne =  d[2];
         }
     })
 }
 if(so == "guilded"){ 
   skillsObj.guilded.map( d => {
       if(d[0] == val){
-         return d[2];
+         finalOne =  d[2];
       }
   })
 }
 if(so == "Nobility"){ 
   skillsObj.Nobility.map( d => {
       if(d[0] == val){
-         return d[2];
+         finalOne =  d[2];
       }
   })
  }
