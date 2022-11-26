@@ -49,7 +49,11 @@ checkforAll()
     }
   }
   if(this.obj.ocupation == ""){
-       this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
+    if(lsocialClass != ""){
+      this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);
+    }else{
+      this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
+    }
   }
 
   if(this.obj.skills == "")
