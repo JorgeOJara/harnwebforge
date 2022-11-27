@@ -463,7 +463,7 @@ let Culture;
       let fSocialClass;
       function displayNothing(){}
       let RealCulture;
-      switch(culture) {
+      switch(culture) { 
          case "Barbarian":
            // Tribal 
           //   if this its your culture this are the values for you social classes
@@ -506,7 +506,7 @@ let Culture;
                       num >= 99 && num <= 100? fSocialClass = "Noble": displayNothing();
                       RealCulture  = "Khuzan";
               }
-              else if(finalplace== "elshavel" || finalplace == "ulfshafen")
+              else if(finalplace == "elshavel" || finalplace == "ulfshafen")
               {
                // Sindarin
               //   if this its your culture this are the values for you social classes

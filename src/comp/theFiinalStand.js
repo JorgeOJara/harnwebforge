@@ -5,8 +5,6 @@ import { weaponsAval } from "./weapons";
 export const  checkBeforeSafe =  class 
 {
 
-    
-
 collect(obj) {
      this.helper = new makeitForMe();
      this.obj = obj 
