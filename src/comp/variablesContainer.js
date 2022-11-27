@@ -142,12 +142,12 @@ sunsigns = {
 
 //social class
 socialClass = {
-"Tribal":['Slave','Freeman','Nobility'],
-"Viking":['Slave','Freeman','guilded','Nobility'],
-"Feudal":['Slave','Serf','Freeman','guilded','Nobility'],
-"Imperial":['Slave','Freeman','guilded','Nobility'],
-"Sindarin":['Freeman','guilded','Nobility'],
-"Khuzan":['Freeman','guilded','Nobility']
+"Tribal":['Slave','Unguilded','Nobility'],
+"Viking":['Slave','Unguilded','Guilded','Nobility'],
+"Feudal":['Slave','Serf','Unguilded','Guilded','Nobility'],
+"Imperial":['Slave','Unguilded','Guilded','Nobility'],
+"Sindarin":['Unguilded','Guilded','Nobility'],
+"Khuzan":['Unguilded','Guilded','Nobility']
 }
 
 // /////////////////////////////
@@ -157,18 +157,18 @@ socialClass = {
 //tribal culture
 tribalCulture = {
 "Slave":['Farmer','Herdsman','Servant Cook'],
-"Freeman":['Cleric Shaman','Fisherman','Herdsman','Hunter Trapper'],
+"Unguilded":['Cleric Shaman','Fisherman','Herdsman','Hunter Trapper'],
 "Nobility":['Tribal Chieftain']
 }
 
 //viking culture
 vikingCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook'],
-"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Teamster','Thatcher','Toymaker'],
-"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"Guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -180,11 +180,11 @@ vikingCulture = {
 feudalCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook'],
 "Serf":['Farmer','Herdsman','Servant/Cook'],
-"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Soldier: Yeoman','Teamster','Thatcher','Toymaker'],
-"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"Guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -195,11 +195,11 @@ feudalCulture = {
 //imperial culture
 imperialCulture = {
 "Slave":['Farmer','Herdsman','Servant/Cook','Gladiator/Guard'],
-"Freeman":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
+"Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
 	'Teamster','Thatcher','Toymaker'],
-"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
+"Guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier','Courtesan',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -209,9 +209,9 @@ imperialCulture = {
 
 //sindarin culture
 sindarinCulture = { 
-"Freeman":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant','Fisherman',
+"Unguilded":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant','Fisherman',
 	'Hunter/Trapper','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking','Teamster','Thatcher','Toymaker'],
-"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
+"Guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Ostler','Perfumer','Physician','Pilot','Potter','Salter','Seaman','Shipwright','Tentmaker','Thespian',
@@ -221,10 +221,10 @@ sindarinCulture = {
 
 //khuzan culture
 khuzanCulture = {
-"Freeman":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant',
+"Unguilded":['Animal Trainer','Cartographer/Artist','Cleric/Shaman','Cook/Servant',
 	'Hunter/Trapper','Laborer/Longshoreman','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman',
 	'Teamster','Toymaker'],
-"guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
+"Guilded":['Alchemist','Apothecary','Astrologer','Chandler','Charcoaler','Clothier',
 	'Embalmer','Glassworker','Harper/Skald','Hideworker','Innkeeper','Jeweler','Lexigrapher','Litigant',
 	'Locksmith','Mage (Shek-Pvar)','Mason','Mercantyler','Metalsmith','Miller/Millwright','Miner',
 	'Perfumer','Physician','Potter','Salter','Tentmaker','Thespian','Thief (Lia-Kavair)','Timberwright',

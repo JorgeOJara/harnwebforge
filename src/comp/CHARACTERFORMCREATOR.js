@@ -157,7 +157,7 @@ export const CHARACTERFORMCREATOR = (props) => {
     { 
           setOcupation([]);
           if(e.target.value == "Slave"){dt.tribalCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-          if(e.target.value == "Freeman"){dt.tribalCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+          if(e.target.value == "Unguilded"){dt.tribalCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
           if(e.target.value == "Nobility"){dt.tribalCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
   
     }
@@ -165,8 +165,8 @@ export const CHARACTERFORMCREATOR = (props) => {
     {
         setOcupation([]);
         if(e.target.value == "Slave"){dt.vikingCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-        if(e.target.value == "Freeman"){dt.vikingCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-        if(e.target.value == "guilded"){dt.vikingCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+        if(e.target.value == "Unguilded"){dt.vikingCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+        if(e.target.value == "Guilded"){dt.vikingCulture.Guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
         if(e.target.value == "Nobility"){dt.vikingCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
   
     }
@@ -175,8 +175,8 @@ export const CHARACTERFORMCREATOR = (props) => {
       setOcupation([]);
       if(e.target.value == "Slave"){dt.feudalCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
       if(e.target.value== "Serf"){dt.feudalCulture.Serf.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "Freeman"){dt.feudalCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "guilded"){dt.feudalCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Unguilded"){dt.feudalCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Guilded"){dt.feudalCulture.Guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
       if(e.target.value == "Nobility"){dt.feudalCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
   
     }
@@ -184,22 +184,22 @@ export const CHARACTERFORMCREATOR = (props) => {
     {
       setOcupation([]);
       if(e.target.value == "Slave"){dt.imperialCulture.Slave.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "Freeman"){dt.imperialCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "guilded"){dt.imperialCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Unguilded"){dt.imperialCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Guilded"){dt.imperialCulture.Guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
       if(e.target.value == "Nobility"){dt.imperialCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
     }
     if(Culture == "Sindarin")
     {
       setOcupation([]);
-      if(e.target.value == "Freeman"){dt.sindarinCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "guilded"){dt.sindarinCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Unguilded"){dt.sindarinCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Guilded"){dt.sindarinCulture.Guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
       if(e.target.value == "Nobility"){dt.sindarinCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
     }
     if(Culture == "Khuzan")
     {
       setOcupation([]);
-      if(e.target.value == "Freeman"){dt.khuzanCulture.Freeman.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
-      if(e.target.value == "guilded"){dt.khuzanCulture.guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Unguilded"){dt.khuzanCulture.Unguilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
+      if(e.target.value == "Guilded"){dt.khuzanCulture.Guilded.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
       if(e.target.value == "Nobility"){dt.khuzanCulture.Nobility.map(d =>  setOcupation(ocupation => [...ocupation, d ]))}
     }
 }
@@ -230,8 +230,8 @@ const changeValueforskillsList = (val,so) =>{
             }
         })
     }
-    if(so == "Freeman"){ 
-      skillsObj.Freeman.map( d => {
+    if(so == "Unguilded"){ 
+      skillsObj.Unguilded.map( d => {
           if(d[0] == val){
             let updatedValue = {skills:d[2]};
             setCharacter(Character => ({...Character,...updatedValue}));
@@ -239,8 +239,8 @@ const changeValueforskillsList = (val,so) =>{
           }
       })
   }
-  if(so == "guilded"){ 
-    skillsObj.guilded.map( d => {
+  if(so == "Guilded"){ 
+    skillsObj.Guilded.map( d => {
         if(d[0] == val){
           let updatedValue = {skills:d[2]};
           setCharacter(Character => ({...Character,...updatedValue}));
