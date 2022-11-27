@@ -23,17 +23,11 @@ checkforAll()
 
   let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
 
-  console.log(cul);
-  console.log(bt);
+  let socialandcultural  = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
+  lculture = socialandcultural[0];
+  lsocialClass = socialandcultural[1];
 
-  if(this.obj.Culture == "")
-  {
-    let done = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
-    this.obj.Culture = done[0];
-    // setting for next variables...
-    lculture = done[0];
-    lsocialClass = done[1];
-  }
+  if(this.obj.Culture == ""){this.obj.Culture = socialandcultural[0];}
 
   if(this.obj.birthPlace == ""){
      if(bt == ""){
