@@ -526,8 +526,8 @@ let Culture;
                  num == 99 && num <= 100? fSocialClass = "Noble": displayNothing();
                  RealCulture = "Feudal";
               }
-             return [RealCulture , fSocialClass];  
         }
+        return [RealCulture , fSocialClass];  
    }
 
 

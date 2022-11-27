@@ -35,7 +35,6 @@ checkforAll()
     lsocialClass = done[1];
   }
 
-
   if(this.obj.birthPlace == ""){
      if(bt == ""){
        this.obj.birthPlace = bt;
