@@ -20,12 +20,6 @@ checkforAll()
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
 
 
-  let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
-
-  let socialandcultural  = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
-  lculture = socialandcultural[0];
-  lsocialClass = socialandcultural[1];
-
   if(this.obj.Culture == "")
   {  this.obj.Culture = this.helper.giveMebackMyculture(this.helper.roll(100)); }
 
