@@ -24,36 +24,19 @@ checkforAll()
   let bt = this.helper.giveBackbirthplace(cul,this.helper.roll(100));
 
   let socialandcultural  = this.helper.giveMeAsocialClass(this.helper.roll(100),cul,bt);
+
   lculture = socialandcultural[0];
   lsocialClass = socialandcultural[1];
 
-  if(this.obj.Culture == ""){this.obj.Culture = socialandcultural[0];}
+  if(this.obj.Culture == ""){ this.obj.Culture = socialandcultural[0];}
 
-  if(this.obj.birthPlace == ""){
-     if(bt == ""){
-       this.obj.birthPlace = bt;
-    }else{
-      this.obj.birthPlace = this.helper.giveBackbirthplace(this.obj.Culture,this.helper.roll(100))
-    }
-  }
+  if(this.obj.birthPlace == ""){ this.obj.birthPlace = bt; }
 
-  if(this.obj.SocialClass == "")
-  {
-    if(lsocialClass != ""){
-      this.obj.SocialClass = lsocialClass;
-     }else{
-        this.obj.socialClass = this.helper.giveMeAsocialClass(this.helper.roll(100),this.obj.Culture,this.obj.birthPlace);
-     }
-  }
+  if(this.obj.SocialClass == ""){ this.obj.SocialClass = lsocialClass;}
 
-  if(this.obj.ocupation == ""){
-    if(lsocialClass != ""){
-      this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);
-    }else{
-      this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
-    }
-  }
+  if(this.obj.ocupation == ""){ this.obj.ocupation = this.helper.chooseMyOcupationForME(lsocialClass,lculture);}
 
+  
   if(this.obj.skills == "")
   {
     if(lsocialClass == ""){
