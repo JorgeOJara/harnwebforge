@@ -529,6 +529,10 @@ let Culture;
              return [RealCulture , fSocialClass];  
         }
    }
+
+
+
+   
    giveMeMyHeiGHt(Race,Sex)
    {
       let theCreatedValueToAdd =  this.roll(6) + this.roll(6) + this.roll(6) + this.roll(6);
