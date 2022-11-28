@@ -11,8 +11,6 @@ collect(obj) {
  }
 checkforAll()
 {
-  let lculture;
-  let lsocialClass;
   if(this.obj.Name == ""){ this.obj.Name = "Jane Doe"; }
   if(this.obj.Avatare == ""){ this.obj.Avatare = "https://i.pinimg.com/736x/5c/af/9d/5caf9d86a387587259326d963971adc3.jpg"}
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
@@ -21,13 +19,22 @@ checkforAll()
 
 
   if(this.obj.Culture == "")
-  {  this.obj.Culture = this.helper.giveMebackMyculture(this.helper.roll(100)); }
+  {  
+    let content = this.helper.giveMebackMyculture(this.helper.roll(100));
+    this.obj.Culture = content;
+    console.log("culture....."+ content)
+   }
 
-  if(this.obj.birthPlace == ""){ this.obj.birthPlace = this.helper.giveBackbirthplace(this.obj.Culture,this.helper.roll(100)) }
+  if(this.obj.birthPlace == ""){
+     let content = this.helper.giveBackbirthplace(this.obj.Culture,this.helper.roll(100));
+     this.obj.birthPlace = content;
+     console.log("birthplace Created...." + content)
+     }
 
   if(this.obj.SocialClass == "")
   {
      let findContent = this.helper.giveMeAsocialClass(this.helper.roll(100), this.obj.Culture, this.helper.birthPlace);
+      console.log("socialFound ... " + findContent);
       this.obj.SocialClass = findContent[1];
       this.obj.Culture = findContent[0];
   }
