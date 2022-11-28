@@ -39,7 +39,9 @@ checkforAll()
       this.obj.Culture = findContent[0];
   }
 
-  if(this.obj.ocupation == ""){ this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture); }
+  if(this.obj.ocupation == ""){
+        this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
+     }
 
   if(this.obj.skills == "")
   {
