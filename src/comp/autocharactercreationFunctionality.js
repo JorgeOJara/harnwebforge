@@ -442,7 +442,7 @@ let Culture;
 
 // pick a  ramdom ocupations from avaliable ocupations....
 
-      let finalOcu  = ocupation[Math.floor(Math.random()*ocupation.length - 1)];
+      let finalOcu  = ocupation[Math.floor(Math.random()*ocupation.length)];
       return finalOcu;
 
       /// I need to know how to pick a ocupations from the possible list of opcupations already given....
