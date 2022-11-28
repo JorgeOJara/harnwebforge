@@ -904,37 +904,38 @@ let Culture;
       }
 // all functions  before this ending brack......⬆️⬆️⬆️
 
-giveMeMyskills(val,so){
+giveMeMyskills(val,socialClasss){
    let finalOne;
-   if(so == "Slave"){ 
+   
+   if(socialClasss == "Slave"){ 
     skillsObj.Slave.map( d => {
             if(d[0] == val){
                 finalOne =  d[2];
             }
         })
     }
-    if(so == "Serf"){ 
+    if(socialClasss == "Serf"){ 
       skillsObj.Serf.map( d => {
           if(d[0] == val){
             finalOne =  d[2];
           }
       })
   }
-  if(so == "Freeman"){ 
+  if(socialClasss == "Freeman"){ 
     skillsObj.Freeman.map( d => {
         if(d[0] == val){
          finalOne =  d[2];
         }
     })
 }
-if(so == "guilded"){ 
+if(socialClasss == "guilded"){ 
   skillsObj.guilded.map( d => {
       if(d[0] == val){
          finalOne =  d[2];
       }
   })
 }
-if(so == "Nobility"){ 
+if(socialClasss == "Nobility"){ 
   skillsObj.Nobility.map( d => {
       if(d[0] == val){
          finalOne =  d[2];
