@@ -400,14 +400,14 @@ let Culture;
       if(Culture == "Tribal")
       { 
          if(socialClass == "Slave"){done.tribalCulture.Slave.map(d =>  ocupation.push(d))}
-         if(socialClass == "Freeman"){done.tribalCulture.Freeman.map(d =>  ocupation.push(d))}
+         if(socialClass == "Unguilded"){done.tribalCulture.Unguilded.map(d =>  ocupation.push(d))}
          if(socialClass == "Nobility"){done.tribalCulture.Nobility.map(d => ocupation.push(d))}
       }
       if(Culture == "Viking")
       {
           if(socialClass == "Slave"){done.vikingCulture.Slave.map(d =>  ocupation.push(d))}
-          if(socialClass == "Freeman"){done.vikingCulture.Freeman.map(d => ocupation.push(d))}
-          if(socialClass == "guilded"){done.vikingCulture.guilded.map(d => ocupation.push(d))}
+          if(socialClass == "Unguilded"){done.vikingCulture.Unguilded.map(d => ocupation.push(d))}
+          if(socialClass == "Guilded"){done.vikingCulture.Guilded.map(d => ocupation.push(d))}
           if(socialClass == "Nobility"){done.vikingCulture.Nobility.map(d => ocupation.push(d))}
     
       }
@@ -415,28 +415,28 @@ let Culture;
       {
         if(socialClass == "Slave"){done.feudalCulture.Slave.map(d =>  ocupation.push(d))}
         if(socialClass == "Serf"){done.feudalCulture.Serf.map(d =>   ocupation.push(d))}
-        if(socialClass == "Freeman"){done.feudalCulture.Freeman.map(d =>  ocupation.push(d))}
-        if(socialClass == "guilded"){done.feudalCulture.guilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Unguilded"){done.feudalCulture.Unguilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Guilded"){done.feudalCulture.Guilded.map(d =>  ocupation.push(d))}
         if(socialClass == "Nobility"){done.feudalCulture.Nobility.map(d =>  ocupation.push(d))}
     
       }
       if(Culture == "Imperial")
       {
         if(socialClass == "Slave"){done.imperialCulture.Slave.map(d => ocupation.push(d))}
-        if(socialClass == "Freeman"){done.imperialCulture.Freeman.map(d => ocupation.push(d))}
-        if(socialClass == "guilded"){done.imperialCulture.guilded.map(d => ocupation.push(d))}
+        if(socialClass == "Unguilded"){done.imperialCulture.Unguilded.map(d => ocupation.push(d))}
+        if(socialClass == "Guilded"){done.imperialCulture.Guilded.map(d => ocupation.push(d))}
         if(socialClass == "Nobility"){done.imperialCulture.Nobility.map(d => ocupation.push(d))}
       }
       if(Culture == "Sindarin")
       {
-        if(socialClass == "Freeman"){done.sindarinCulture.Freeman.map(d =>  ocupation.push(d))}
-        if(socialClass == "guilded"){done.sindarinCulture.guilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Unguilded"){done.sindarinCulture.Unguilded.map(d =>  ocupation.push(d))}
+        if(socialClass == "Guilded"){done.sindarinCulture.Guilded.map(d =>  ocupation.push(d))}
         if(socialClass == "Nobility"){done.sindarinCulture.Nobility.map(d => ocupation.push(d))}
       }
       if(Culture == "Khuzan")
       {
-        if(socialClass == "Freeman"){done.khuzanCulture.Freeman.map(d =>  ocupation.push(d) )}
-        if(socialClass == "guilded"){done.khuzanCulture.guilded.map(d =>   ocupation.push(d) )}
+        if(socialClass == "Unguilded"){done.khuzanCulture.Unguilded.map(d =>  ocupation.push(d) )}
+        if(socialClass == "Guilded"){done.khuzanCulture.Guilded.map(d =>   ocupation.push(d) )}
         if(socialClass == "Nobility"){done.khuzanCulture.Nobility.map(d =>   ocupation.push(d) )}
       }
 
