@@ -9,6 +9,7 @@ collect(obj) {
      this.helper = new makeitForMe();
      this.obj = obj 
  }
+
 checkforAll()
 {
   if(this.obj.Name == ""){ this.obj.Name = "Jane Doe"; }
@@ -16,7 +17,6 @@ checkforAll()
   if(this.obj.Race == ""){this.obj.Race = this.helper.chooseRaceForMe(this.helper.roll(100))}
   if(this.obj.Sex == ""){this.obj.Sex = this.helper.chooseSexForMe(this.helper.roll(100),this.obj.Race)}
   if(this.obj.Sunsigns == ""){this.obj.Sunsigns = this.helper.chooseMyBirthdayForMe("one","one")}
-
 
   if(this.obj.Culture == "")
   {  
@@ -40,12 +40,13 @@ checkforAll()
   }
 
   if(this.obj.ocupation == ""){
-        this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture);
-     }
+       this.obj.ocupation = this.helper.chooseMyOcupationForME(this.obj.SocialClass,this.obj.Culture); 
+   }
 
   if(this.obj.skills == "")
   {
-    console.log("Skills log....")
+    console.log("Skills log....");
+    console.log(this.obj.Culture);
     console.log(this.obj.ocupation);
     console.log(this.obj.SocialClass);
      this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);
