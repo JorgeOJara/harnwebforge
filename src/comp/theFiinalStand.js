@@ -72,5 +72,7 @@ checkforAll()
       this.obj.items = [ weaponsAval[0].itemName,weaponsAval[1].itemName,weaponsAval[2].itemName ];
   }
 }
-   displayer(){console.table(this.obj)}     
+   displayer(){ 
+    //  console.table(this.obj);
+    }     
 }
