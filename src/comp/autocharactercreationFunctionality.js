@@ -443,8 +443,6 @@ let Culture;
 // pick a  ramdom ocupations from avaliable ocupations....
      let finalOcupation = this.roll(ocupation.length)
      let ajustOcupation = finalOcupation - 1;
-     console.log(ocupation);
-     console.log(ajustOcupation);
       return ocupation[ajustOcupation];
 
       /// I need to know how to pick a ocupations from the possible list of opcupations already given....
@@ -906,7 +904,7 @@ let Culture;
 
 giveMeMyskills(val,socialClasss){
    let finalOne;
-   
+
    if(socialClasss == "Slave"){ 
     skillsObj.Slave.map( d => {
             if(d[0] == val){

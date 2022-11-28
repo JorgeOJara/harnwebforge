@@ -374,6 +374,7 @@ const changeValueforskillsList = (val,so) =>{
 
       props.backonMain();
   }
+  
  const setAndsafeAvatare = (e)=>
  {
   setAvatare(e.target.value);
