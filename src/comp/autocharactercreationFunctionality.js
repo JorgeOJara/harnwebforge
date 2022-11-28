@@ -442,7 +442,7 @@ let Culture;
 
 // pick a  ramdom ocupations from avaliable ocupations....
 
-      let finalOcu  = ocupation[Math.floor(Math.random()*ocupation.length)];
+      let finalOcu  = ocupation[Math.floor(Math.random()*ocupation.length - 1)];
       return finalOcu;
 
       /// I need to know how to pick a ocupations from the possible list of opcupations already given....
@@ -907,35 +907,35 @@ giveMeMyskills(val,socialClasss){
 
    if(socialClasss == "Slave"){ 
     skillsObj.Slave.map( d => {
-            if(d[0] == val){
+            if(d[0] === val){
                 finalOne =  d[2];
             }
         })
     }
     if(socialClasss == "Serf"){ 
       skillsObj.Serf.map( d => {
-          if(d[0] == val){
+          if(d[0] === val){
             finalOne =  d[2];
           }
       })
   }
   if(socialClasss == "Freeman"){ 
     skillsObj.Freeman.map( d => {
-        if(d[0] == val){
+        if(d[0] === val){
          finalOne =  d[2];
         }
     })
 }
 if(socialClasss == "guilded"){ 
   skillsObj.guilded.map( d => {
-      if(d[0] == val){
+      if(d[0] === val){
          finalOne =  d[2];
       }
   })
 }
 if(socialClasss == "Nobility"){ 
   skillsObj.Nobility.map( d => {
-      if(d[0] == val){
+      if(d[0] === val){
          finalOne =  d[2];
       }
   })

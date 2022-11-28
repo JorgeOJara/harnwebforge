@@ -16,7 +16,7 @@ export const skillsObj = {
            ["Beggar", 1 , "Drawing/4, Mathematics/2, Script"],
            ["Cartographer/Artist", 5 ,"Drawing/4, Mathematics/2, Script"],
            ["Cleric/Shaman",3 , "Depends on deity. See CHaraCter 23"],
-           ["Cook/Servant",3,"Intrigue/4, Rhetoric/4, Cookery/4, Textilecraft/4, Herblore/2"],
+           ["Cook/Servant",3,"Intrigue/4, Rhetoric/4,Cookery/4, Textilecraft/4, Herblore/2"],
            ["Farmer" , 4, "Agriculture/4, Weatherlore/4, Animalcraft/3"],
            ["Fisherman",5 ,"Fishing/6, Seamanship/5, Weatherlore/4, Piloting/2, Shipwright/2"],
            ["Gladiator", 4, "Initiative/6, Three weapons at OML+SB×2, Unarmed/6, Physician/2"],
