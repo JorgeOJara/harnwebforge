@@ -406,6 +406,7 @@ let Culture;
       if(Culture == "Viking")
       {
           if(socialClass == "Slave"){done.vikingCulture.Slave.map(d =>  ocupation.push(d))}
+          if(socialClass == "Serf"){done.vikingCulture.Slave.map(d =>  ocupation.push(d))}
           if(socialClass == "Unguilded"){done.vikingCulture.Unguilded.map(d => ocupation.push(d))}
           if(socialClass == "Guilded"){done.vikingCulture.Guilded.map(d => ocupation.push(d))}
           if(socialClass == "Nobility"){done.vikingCulture.Nobility.map(d => ocupation.push(d))}
