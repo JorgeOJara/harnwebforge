@@ -921,21 +921,21 @@ giveMeMyskills(val,socialClasss){
   }
   if(socialClasss == "Freeman"){ 
     skillsObj.Freeman.map( d => {
-        if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
+        if(d[0].replace(/[^a-zA-Z ]/g, "") == val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
         }
     })
 }
 if(socialClasss == "guilded"){ 
   skillsObj.guilded.map( d => {
-      if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
+      if(d[0].replace(/[^a-zA-Z ]/g, "") == val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
       }
   })
 }
 if(socialClasss == "Nobility"){ 
   skillsObj.Nobility.map( d => {
-      if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
+      if(d[0].replace(/[^a-zA-Z ]/g, "") == val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
       }
   })
