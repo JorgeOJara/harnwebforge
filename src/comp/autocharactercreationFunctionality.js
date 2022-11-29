@@ -842,7 +842,7 @@ let Culture;
          if(voice >= 16 && voice <= 17){voiceDescription = "Excelent"};
          if(voice >= 18){voiceDescription = "Unearthly"};
 
-         return [voiceDescription, voice]
+         return voiceDescription +" "+voice;
       }
 
       intelligenceAttribute(){
