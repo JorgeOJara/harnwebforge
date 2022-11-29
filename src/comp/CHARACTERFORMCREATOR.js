@@ -584,8 +584,6 @@ const changeValueforskillsList = (val,so) =>{
             (an outcast, the favorite, etc).
             The head of my clan/family is my ___
               (uncle, grandfather's brother, etc).
-
-            
             Feel free to add further estrangement details if desired!"
         />
       </div>

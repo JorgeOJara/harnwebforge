@@ -636,7 +636,7 @@ let Culture;
       CuteValue >= 9 && CuteValue <= 12? finalcuteValue = "Average":displayNone()
       CuteValue >= 13 && CuteValue <= 15? finalcuteValue = "Attractive":displayNone()
       CuteValue >= 16? finalcuteValue = "Handsome":displayNone()
-      return finalcuteValue;
+      return finalcuteValue + " " + CuteValue;
    }
 
    // CoMPlexion
