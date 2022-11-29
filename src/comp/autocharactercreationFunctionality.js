@@ -907,35 +907,35 @@ giveMeMyskills(val,socialClasss){
 
    if(socialClasss == "Slave"){ 
     skillsObj.Slave.map( d => {
-            if(d[0] === val){
+            if(d[0].replace(/[^a-zA-Z ]/g, "") == val.replace(/[^a-zA-Z ]/g, "")){
                 finalOne =  d[2];
             }
         })
     }
     if(socialClasss == "Serf"){ 
       skillsObj.Serf.map( d => {
-          if(d[0] === val){
+          if(d[0].replace(/[^a-zA-Z ]/g, "") == val.replace(/[^a-zA-Z ]/g, "")){
             finalOne =  d[2];
           }
       })
   }
   if(socialClasss == "Freeman"){ 
     skillsObj.Freeman.map( d => {
-        if(d[0] === val){
+        if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
         }
     })
 }
 if(socialClasss == "guilded"){ 
   skillsObj.guilded.map( d => {
-      if(d[0] === val){
+      if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
       }
   })
 }
 if(socialClasss == "Nobility"){ 
   skillsObj.Nobility.map( d => {
-      if(d[0] === val){
+      if(d[0].replace(/[^a-zA-Z ]/g, "") === val.replace(/[^a-zA-Z ]/g, "")){
          finalOne =  d[2];
       }
   })
