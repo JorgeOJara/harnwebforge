@@ -564,7 +564,7 @@ const changeValueforskillsList = (val,so) =>{
       </div>
       <div class="row form-group">
       <div className="col">
-          <label className="">Skills</label>
+          <label className=""></label>
             <h4>{ finallSkills }</h4>
         </div>
     </div>

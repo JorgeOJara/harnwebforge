@@ -45,10 +45,6 @@ checkforAll()
 
   if(this.obj.skills == "")
   {
-    console.log("Skills log....");
-    console.log(this.obj.Culture);
-    console.log(this.obj.ocupation);
-    console.log(this.obj.SocialClass);
      this.obj.skills = this.helper.giveMeMyskills(this.obj.ocupation,this.obj.SocialClass);
   }
 
