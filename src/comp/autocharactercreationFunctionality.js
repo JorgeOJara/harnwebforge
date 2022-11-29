@@ -909,7 +909,6 @@ giveMeMyskills(val,socialClasss){
     skillsObj.Slave.map( d => {
             if(d[0] == val){
                 finalOne =  d[2];
-                console.log(d)
             }
         })
     }
@@ -917,23 +916,20 @@ giveMeMyskills(val,socialClasss){
       skillsObj.Serf.map( d => {
           if(d[0] == val){
             finalOne =  d[2];
-            console.log(d)
           }
       })
   }
-  if(socialClasss == "Freeman"){ 
+  if(socialClasss == "Unguilded"){ 
     skillsObj.Freeman.map( d => {
         if(d[0] == val){
          finalOne =  d[2];
-         console.log(d)
         }
     })
 }
-if(socialClasss == "guilded"){ 
+if(socialClasss == "Guilded"){ 
   skillsObj.guilded.map( d => {
       if(d[0] == val){
          finalOne =  d[2];
-         console.log(d)
       }
   })
 }
@@ -941,7 +937,6 @@ if(socialClasss == "Nobility"){
   skillsObj.Nobility.map( d => {
       if(d[0] == val){
          finalOne =  d[2];
-         console.log(d)
       }
   })
  }
