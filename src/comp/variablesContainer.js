@@ -156,14 +156,14 @@ socialClass = {
 
 //tribal culture
 tribalCulture = {
-"Slave":['Farmer','Herdsman','Servant Cook'],
+"Slave":['Farmer','Herdsman','Cook/Servant'],
 "Unguilded":['Cleric Shaman','Fisherman','Herdsman','Hunter Trapper'],
 "Nobility":['Tribal Chieftain']
 }
 
 //viking culture
 vikingCulture = {
-"Slave":['Farmer','Herdsman','Servant/Cook'],
+"Slave":['Farmer','Herdsman','Cook/Servant'],
 "Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
@@ -178,8 +178,8 @@ vikingCulture = {
 
 //feudal culture
 feudalCulture = {
-"Slave":['Farmer','Herdsman','Servant/Cook'],
-"Serf":['Farmer','Herdsman','Servant/Cook'],
+"Slave":['Farmer','Herdsman','Cook/Servant'],
+"Serf":['Farmer','Herdsman','Cook/Servant'],
 "Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
@@ -194,7 +194,7 @@ feudalCulture = {
 
 //imperial culture
 imperialCulture = {
-"Slave":['Farmer','Herdsman','Servant/Cook','Gladiator/Guard'],
+"Slave":['Farmer','Herdsman','Cook/Servant','Gladiator/Guard'],
 "Unguilded":['Animal Trainer','Beggar/Scavenger','Cartographer/Artist','Cleric/Shaman',
 	'Cook/Servant','Farmer (freehold)','Fisherman','Gladiator','Herdsman','Hunter/Trapper','Laborer/Longshoreman',
 	'Prostitute/Pimp','Ratter','Sage/Tutor','Scribe','Soldier: Legionnaire/Guardsman','Soldier: Mercenary/Viking',
