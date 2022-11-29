@@ -920,14 +920,14 @@ giveMeMyskills(val,socialClasss){
       })
   }
   if(socialClasss == "Unguilded"){ 
-    skillsObj.Freeman.map( d => {
+    skillsObj.Unguilded.map( d => {
         if(d[0] == val){
          finalOne =  d[2];
         }
     })
 }
 if(socialClasss == "Guilded"){ 
-  skillsObj.guilded.map( d => {
+  skillsObj.Guilded.map( d => {
       if(d[0] == val){
          finalOne =  d[2];
       }
