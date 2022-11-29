@@ -907,36 +907,52 @@ giveMeMyskills(val,socialClasss){
    let finalOne;
 
    if(socialClasss == "Slave"){ 
+   console.log("slave checked...")
     skillsObj.Slave.map( d => {
+      console.log(d[0]+ "    " + val);
             if(d[0] == val){
+               console.log("match")
                 finalOne =  d[2];
+
             }
         })
     }
     if(socialClasss == "Serf"){ 
+      console.log("serf checked...")
       skillsObj.Serf.map( d => {
+         console.log(d[0]+ "    " + val);
           if(d[0] == val){
+            console.log("match")
             finalOne =  d[2];
           }
       })
   }
   if(socialClasss == "Unguilded"){ 
+   console.log("Unguilded checked...")
     skillsObj.Unguilded.map( d => {
+      console.log(d[0]+ "    " + val);
         if(d[0] == val){
+         console.log("match")
          finalOne =  d[2];
         }
     })
 }
 if(socialClasss == "Guilded"){ 
+   console.log("guilded checked...")
   skillsObj.Guilded.map( d => {
+   console.log(d[0]+ "    " + val);
       if(d[0] == val){
+         console.log("match")
          finalOne =  d[2];
       }
   })
 }
 if(socialClasss == "Nobility"){ 
+   console.log("noble checked...")
   skillsObj.Nobility.map( d => {
+   console.log(d[0]+ "    " + val);
       if(d[0] == val){
+         console.log("mstch")
          finalOne =  d[2];
       }
   })
